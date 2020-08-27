@@ -1,7 +1,8 @@
-# Neumorphism <!-- omit in toc -->
+# Altmorphism <!-- omit in toc -->
 
-> Neumorphism designed Jekyll theme for personal websites, portfolios and resumes.
+> Altmorphism is an adaptation of [Neumorphism](https://longpdo.github.io/neumorphism/) Jekyll theme for my personal website.
 
+## Neumorphism
 * Featured on [JAMstack Themes](https://jamstackthemes.dev/theme/jekyll-neumorphism/)
 * Featured on [Jekyll Themes](https://jekyll-themes.com/neumorphism/)
 * Featured on [jekyllthemes](http://jekyllthemes.org/themes/neumorphism/)
