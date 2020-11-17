@@ -220,6 +220,10 @@ a {
     animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorZotero 1s linear forwards; }
   .landing-icons .zotero:hover .social-svg {
     fill: #ff3737; }
+  .landing-icons .youtube:hover .circle {
+    animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorYoutube 1s linear forwards; }
+  .landing-icons .youtube:hover .social-svg {
+    fill: #e62117; }
   .landing-icons .upc:hover .circle {
     animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards, colorUpc 1s linear forwards; }
   .landing-icons .upc:hover .social-svg {
@@ -258,6 +262,9 @@ a {
 @keyframes colorZotero {
   to {
     stroke: #ff3737; } }
+@keyframes colorYoutube {
+  to {
+    stroke: #e62117; } }
 @keyframes colorUpc {
   to {
     stroke: #007bc0; } }
@@ -443,6 +450,8 @@ a {
     fill: #a6ce39; }
   .contact-icons .zotero:hover .social-svg {
     fill: #ff3737; }
+  .contact-icons .youtube:hover .social-svg {
+    fill: #e62117; }
   .contact-icons .upc:hover .social-svg {
     fill: #007bc0; }
 
