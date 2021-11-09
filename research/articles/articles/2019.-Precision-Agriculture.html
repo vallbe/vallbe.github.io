@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" />
+  <title>Detection of irrigation inhomogeneities in an olive grove using the NDRE vegetation index obtained from UAV images</title>
+  <meta name="description" content="⊕https://doi.org/10.1080/22797254.2019.1572459  We have developed  a simple photogrammetric method to identify heterogeneous areas of irrigated olive groves ...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="/research/articles/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/research/articles/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="/research/articles/articles/2019.-Precision-Agriculture.html">
+
+  <link rel="alternate" type="application/rss+xml" title="Research Highlights" href="/research/articles/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+        <!-- <a href="/research/articles/"><img class="badge" src="/research/articles/assets/img/badge_1.png" alt="MVM"></a> -->
+  <a href="https://vallbe.github.io"><img class="badge" src="/research/articles/assets/img/badge_1.png" alt="MVM"></a> 
+	
+		
+		    
+		      <a href="/research/articles/404.html"></a>
+		    
+	    
+  	
+		
+  	
+		
+		    
+		      <a href="/research/articles/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/research/articles/about/">About</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/research/articles/css/print.css"></a>
+		    
+	    
+  	
+		
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>Detection of irrigation inhomogeneities in an olive grove using the NDRE vegetation index obtained from UAV images</h1>
+<p class="subtitle">January 19, 2019</p>
+
+<p><label for="fig_body_display_irrigation-f000" class="margin-toggle">⊕</label><input type="checkbox" id="fig_body_display_irrigation-f000" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="/research/articles//assets/img/2019-01/irrigation-inhomogeneities.png" /><br /><a href="https://doi.org/10.1080/22797254.2019.1572459">https://doi.org/10.1080/22797254.2019.1572459</a></span></p>
+<blockquote>
+  <p><span class="newthought">We have developed</span>  a simple photogrammetric <em>method to identify heterogeneous areas of irrigated olive groves and vineyard crops</em> using a commercial multispectral camera mounted on an unmanned aerial vehicle (UAV). By comparing NDVI, GNDVI, SAVI, and NDRE vegetation indices, we find that the latter shows irrigation irregularities in an olive grove not discernible with the other indices. This may render the NDRE as particularly useful to identify growth inhomogeneities in crops. Given the fact that few satellite detectors are sensible in the red-edge (RE) band and none with the spatial resolution offered by UAVs, this finding has the potential of turning UAVs into a local farmer’s favourite aid tool.
+<!--more--></p>
+</blockquote>
+
+<p><a href="https://orcid.org/0000-0002-6652-1971">J. Jorge</a><sup>1</sup>, <a href="https://orcid.org/0000-0002-7518-8971">M. Vallbé</a><label for="One" class="margin-toggle sidenote-number"></label><input type="checkbox" id="One" class="margin-toggle" /><span class="sidenote">Department of Mining, Industrial and ICT Engineering, Manresa School of Engineering, Universitat Politècnica de Catalunya, Manresa, Spain.  <a href="mailto:marc.vallbe@upc.edu">marc.vallbe@upc.edu</a> </span>, and J. A. Soler<label for="Two" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Two" class="margin-toggle" /><span class="sidenote">ZCOPTERS, S.L, Viladecans, Spain </span></p>
+
+<p><em>European Journal of Remote Sensing</em>, 2019, Vol. 52, No. 1, 169–177</p>
+
+<div class="core-license open-access">
+    <a href="https://www.tandfonline.com/openaccess"><img src="/research/articles/assets/img/2019-01/images/product/open-access.png" alt="Open Access logo" title="This is an Open Access article distributed under the terms of the Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited." /></a>
+</div>
+
+<p><strong>Keywords</strong>: <em>remote sensing, unmanned aerial vehicle (UAV), precision agriculture, multispectral, red edge, vegetation indices, crops</em></p>
+
+<p><br /></p>
+
+<hr class="slender" />
+
+<h2>Introduction</h2>
+<h3 id="index.xhtml#sec-1-1">Remote sensing uses of UAV</h3>
+
+<p>Overhead remote sensing data provide complementary input to field inspection and allow for better land surface modelling. In agriculture, most remote-sensing indicators come from photometric indices built using broad-band passbands known as vegetation indices (VI). Although a conventional photographic RGB camera can be used to generate topographic surveys and orthoimages, it takes a multispectral camera covering the visible and IR bands to make differentiating analyses of the landcover using standardised methods of image processing with a prior knowledge of the corresponding spectral signatures. Hence, the combination of modern high spatial resolution and multispectral band sensors offers the possibility to study crops for precision agriculture.<label for="Three" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Three" class="margin-toggle" /><span class="sidenote">Guo, Kujirai, &amp; Watanabe, <a href="#index.xhtml#cit0007">2012</a>; Primicerio et al., <a href="#index.xhtml#cit0024">2012</a> </span></p>
+
+<p>Orbiting satellites and manned aircraft have been the traditional platforms to obtain surface photometry. However, they present some limitations in terms of spatial, temporal, and/or spectral resolutions.<label for="Four" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Four" class="margin-toggle" /><span class="sidenote">Nebiker, Annen, Scherrer, &amp; Oesch, <a href="#index.xhtml#cit0018">2008</a> </span> Nowadays, these shortcomings can be overcome using low-cost and flexible unmanned platforms as a good alternative to traditional remote sensing platforms for different applications.<label for="Five" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Five" class="margin-toggle" /><span class="sidenote">Colomina &amp; Molina, <a href="#index.xhtml#cit0004">2014</a>; Muchiri &amp; Kimathi, <a href="#index.xhtml#cit0016">2016</a>; Nex &amp; Remondino, <a href="#index.xhtml#cit0019">2014</a>; Pádua et al., <a href="#index.xhtml#cit0020">2017</a>; Pajares, <a href="#index.xhtml#cit0021">2015</a> </span> For instance, Matese et al. (<a href="#index.xhtml#cit0014">2015</a>) concluded that rotor-based UAVs proved to be the most cost-effective solution for monitoring small fields (&lt;5 ha). They also recommended using fixed-wing small UAVs for fields of up to 1 km<sup>2</sup> with a ground sample distance (GSD) of up to 5 cm pixel<sup>−1</sup>, and for fields of up to 4 km<sup>2</sup> area with a GSD greater than 10 cm pixel<sup>−1</sup>. <a href="#tab:1">Table 1</a> summarises typical spatial resolutions and fields of view for different platforms. It hints that the spatial resolution gap between 1 and 20 cm can be filled by miniature UAVs.</p>
+
+<p><a id="tab:1"></a>
+<label for="tab:1" class="margin-toggle"> ⊕</label><input type="checkbox" id="tab:1" class="margin-toggle" /><span class="marginnote">Table 1. Comparison of UAV with other manned airborne and satellite platforms adapted from Candiago, Remondino, De Giglio, Dubbini, and Gatelli (<a href="#index.xhtml#cit0003">2015</a>) </span></p>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="header">
+<th> </th>
+<th>Spatial Resolution</th>
+<th>Field of View</th>
+<th>Cost for Data Acquisition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Satellite</td>
+<td>2–15 m</td>
+<td>10–50 km</td>
+<td>Very high, for high-res imagery</td>
+</tr>
+<tr class="even">
+<td>Aircraft (piloted)</td>
+<td>0.2–2 m</td>
+<td>2–5 km</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<td>Miniature UAV</td>
+<td>1–20 cm</td>
+<td>50–500 m</td>
+<td>Very low</td>
+</tr>
+<tr class="even">
+<td>Ground-based</td>
+<td>&lt;1 cm</td>
+<td>&lt;2 m</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>UAV platforms (fixed-wing and rotor-based) can be coupled with a multitude of sensor options for remote sensing including (1) visual RGB camera (applications in: photogrammetry, aerial mapping, DSM, surveying); (2) multispectral camera (precision agriculture, water quality, vegetation indices, environmental studies); (3) LiDAR (DEM, DSM, 3D surface modelling, object identification, utilities management); (4) thermal IR camera (search and rescue, power line inspection, security, precision agriculture, cell tower inspection, emergency response); (5) hyperspectral camera (environmental monitoring, pipeline inspection, mining and mineral exploration, remote sensing and analysis).</p>
+
+<p>Hence, all information obtained from UAV surveys helps farmers with small fields in decision-making processes, improving agricultural production, and optimising the resource utilisation. With regular flights, producers can make reliable decisions, thereby saving time and money versus using commercial satellite data. For example, UAVs could be used to study the reaction of some crops to new pesticides, as the high-definition data can be easily and quickly examined in a quantitative way. This process can reliably describe the ground situation and overcome the costs of ground inspections.<label for="Six" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Six" class="margin-toggle" /><span class="sidenote">Nebiker et al., <a href="#index.xhtml#cit0018">2008</a> </span></p>
+
+<h3 id="index.xhtml#sec-1-2">Related works</h3>
+
+<p>Usha and Singh (<a href="#index.xhtml#cit0028">2013</a>) concluded in a review of potential applications of remote sensing (RS) in horticulture that RS is advancing quickly and showed potential for applications in crop biomass detection, soil properties, soil moisture and nutrient content, green fruit counts, crop yield estimation, damage by biotic and a biotic stress, etc. Mathews and Jensen (<a href="#index.xhtml#cit0015">2013</a>) estimated the canopy leaf area index (LAI) of a vineyard with a digital camera mounted on a micro-UAV; Matese et al. (<a href="#index.xhtml#cit0013">2013</a>) mapped the wine vigour of a vineyard and extracted the NDVI index from a high-resolution multispectral camera mounted on an eight-rotor platform; Agüera, Carvajal, and Pérez (<a href="#index.xhtml#cit0001">2011</a>) measured sunflower nitrogen status with a microdrone and compared those measurements with data collected from a ground-based platform. More complex analyses have been performed using hyperspectral sensors, with an increasing number of spectral bands observed, allowing the estimation of biomass and nitrogen content.<label for="Seven" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Seven" class="margin-toggle" /><span class="sidenote">Honkavaara et al., <a href="#index.xhtml#cit0008">2012</a>; Pölönen, Saari, Kaivosoja, Honkavaara, &amp; Pesonen, <a href="#index.xhtml#cit0023">2013</a> </span>. Zarco-Tejada, González-Dugo, and Berni et al. (<a href="#index.xhtml#cit0031">2012</a>) focused on the calculation of fluorescence, temperature, and narrow band indices and applied these observations to the water stress detection; they also used data from a hyperspectral sensor to calculate relationships between photosynthesis and chlorophyll fluorescence.<label for="Eight" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Eight" class="margin-toggle" /><span class="sidenote">Zarco-Tejada, Catalina, González, &amp; Martín, <a href="#index.xhtml#cit0030">2013</a> </span> Lukas et al. (<a href="#index.xhtml#cit0011">2016</a>) compared the basic growth parameters obtained from a fixed-wing UAV equipped with a NIR camera versus data from Landsat-8. Both platforms showed a high correlation with ground measurements of biomass and nitrogen content but the satellite data had coarser resolution.</p>
+
+<h3 id="index.xhtml#sec-1-3">Vegetation indices from remote sensing imagery</h3>
+
+<p>Researchers exploit the fact that vegetation reflectance changes significantly in different passbands to obtain underlying information. As <a href="#fig:1">Figure 1</a> shows, vegetation reflectance is low in both the blue and red regions of the visible spectrum, it peaks locally in the green region, and it is highest in the near infrared (NIR) range. VIs obtained by algebraically combining these bands allow researchers to enhance different spectral signatures for different vegetation properties concerning size, vigour, shape, and colour of leaves.<label for="Nine" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Nine" class="margin-toggle" /><span class="sidenote">Salamí, Barrado, and Pastor, <a href="#index.xhtml#cit0026">2014</a>) </span> Many such VIs have been tried<label for="Ten" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Ten" class="margin-toggle" /><span class="sidenote">see review by Xue &amp; Su, <a href="#index.xhtml#cit0029">2017</a> </span> but the most widely used are NDVI, GNDVI, and SAVI.</p>
+
+<p><a id="fig:1"></a></p>
+<figure><img src="/research/articles/assets/img/2019-01/images/tejr_a_1572459_f0001_oc.jpg" /><figcaption class="maincolumn-figure">Figure 1. Spectral reflectance curve for different land covers, with spectral band intervals overplotted.</figcaption></figure>
+
+<p>The normalised difference vegetation index (NDVI), calculated from the reflectance in the NIR and red bands, has been the reference to discuss the state of vegetation since Rouse, Haas., Schell, and Deering (<a href="#index.xhtml#cit0025">1973</a>). Many studies using it have been published and, for instance, correlations have been found with biomass<label for="Eleven" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Eleven" class="margin-toggle" /><span class="sidenote">Bendig et al., 2015 </span>, and canopy structure, LAI<label for="Twelve" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Twelve" class="margin-toggle" /><span class="sidenote">Candiago et al. <a href="#index.xhtml#cit0003">2015</a> </span>.</p>
+
+<p>The green normalised difference vegetation index (GNDVI) has the same form as the NDVI where the red band is substituted by the green band.<label for="Thirteen" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Thirteen" class="margin-toggle" /><span class="sidenote">Gitelson, Kaufman, &amp; Merzlyak, <a href="#index.xhtml#cit0006">1996</a> </span> Hunt, Hively, Daugtry, and McCarty (<a href="#index.xhtml#cit0010">2008</a>) have shown that it tracks the ratio of photosynthetically absorbed radiation and is correlated with biomass and LAI. This makes the GNDVI more sensitive to chlorophyll content than NDVI.<label for="Fourteen" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Fourteen" class="margin-toggle" /><span class="sidenote">Candiago et al. <a href="#index.xhtml#cit0003">2015</a> </span></p>
+
+<p>Following the lead of Huete (<a href="#index.xhtml#cit0009">1988</a>) and others, we calculate the soil-adjusted vegetation index (SAVI) to eliminate the effect of soil in areas with poor vegetative cover and where the soil surface is exposed.</p>
+
+<h3 id="index.xhtml#sec-1-4">Red edge advantage</h3>
+
+<p>Despite its many advantages, the NDVI is not always the most accurate index to detect anomalies in crops, particularly if detailed data between the red and NIR bands are available. As shown in <a href="#fig:1">Figure 1</a>, there is an abrupt change between the red and NIR reflectance of vegetation, in what is known as the red edge band (RE). This zone marks the limit between absorption by chlorophyll in the red band, and scattering due to leaf internal structure in the NIR band. Being a transition region, the red edge position is very sensitive to changes in the vegetation properties, which can easily be exploited by researchers. For instance, the RE has been used to estimate the chlorophyll content not only of leaves<label for="Fifteen" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Fifteen" class="margin-toggle" /><span class="sidenote">Filella &amp; Peñuelas, <a href="#index.xhtml#cit0005">1994</a>; Pinar &amp; Curran, <a href="#index.xhtml#cit0022">1996</a> </span> but also on the surface of waters of a reservoir<label for="Sixteen" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Sixteen" class="margin-toggle" /><span class="sidenote">Schalles, Gitelson, Yacobi, &amp; Kroenke, <a href="#index.xhtml#cit0027">1998</a> </span>. These works led to the formulation of a new vegetation index related to the red edge reflectance, the normalised difference red edge (NDRE), which has been proved more advantageous than the NDVI to optimise harvest times based on transitions of photosynthesis activity.<label for="Seventeen" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Seventeen" class="margin-toggle" /><span class="sidenote">Maccioni, Agati, &amp; Mazzinghi, <a href="#index.xhtml#cit0012">2001</a> </span> <a href="#tab:2">Table 2</a> shows the formula of the four vegetation indices compared in our work.</p>
+
+<p><a id="tab:2"></a></p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="header">
+<th>Index</th>
+<th>Computation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NDVI (normalised difference vegetation index)</td>
+<td><span id="index.xhtml#ilm0001" role="math"><span class="math inline">$$NDVI = \frac{\rho_{NIR} - \rho_{R}}{\rho_{NIR} + \rho_{R}}$$</span></span></td>
+</tr>
+<tr class="even">
+<td>GNDVI (green normalised difference vegetation index)</td>
+<td><span id="index.xhtml#ilm0002" role="math"><span class="math inline">$$GNDVI = \frac{\rho_{NIR} - \rho_{G}}{\rho_{NIR} + \rho_{G}}$$</span></span></td>
+</tr>
+<tr class="odd">
+<td>SAVI (soil adjusted vegetation index)</td>
+<td><span id="index.xhtml#ilm0003" role="math"><span class="math inline">$$SAVI = \left( \frac{\rho_{NIR} - \rho_{R}}{\rho_{NIR} + \rho_{R} + L} \right)\left( {1 + L} \right)$$</span></span></td>
+</tr>
+<tr class="even">
+<td>NDRE (normalised difference red-edge)</td>
+<td><span id="index.xhtml#ilm0004" role="math"><span class="math inline">$$NDRE = \frac{\rho_{NIR} - \rho_{RE}}{\rho_{NIR} + \rho_{RE}}$$</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><label for="tab:2" class="margin-toggle"> ⊕</label><input type="checkbox" id="tab:2" class="margin-toggle" /><span class="marginnote">Table 2. The computed vegetation indices. <em>ρ<sub>G</sub>, ρ<sub>R</sub>, ρ<sub>RE</sub>,</em> and <em>ρ<sub>NIR</sub></em> represent the reflectance in the green, red, red edge, and near infrared band, respectively; <em>L</em> is a constant empirical value related to the vegetation density on the ground (see for example a review by Xue &amp; Su, <a href="#index.xhtml#cit0029">2017</a>). </span></p>
+
+<p>Unfortunately, few remote-sensing satellites carry sensors capable of detecting radiation in the red-NIR transition zone, or RE band. As of today, these include WorldView-3 (not the WorldView-4) with a multi-band spatial resolution of 1.4 m; RapidEye, with 5 m for ground sampling distance; Sentinel-2 satellite, with a spatial resolution of 20 m. Luckily, most commercial multispectral cameras that are installed in UAVs detect RE radiation, and this opens a niche for these smaller platforms. For instance, there are 400 7-cm spatial resolution pixels for each 1.4-m resolution pixel of the red-edge band of WorldView-3. This makes a significant difference for precision agriculture since it can unmask relevant details.</p>
+
+<p>This paper reports a study done on 13 ha of farm land using a multiband (visible and NIR) camera and a photometer onboard a UAV. Several different vegetation indices have been applied to an area where vegetation is represented by fields of olive groves and vineyards, with the aim of discerning how the red-edge band might improve our agricultural knowledge on small fields. Hence, we compare the vegetation indices, notably the NDRE index against the other usual VI.</p>
+
+<h2 id="index.xhtml#sec-2">Materials and methods</h2>
+<h3 id="index.xhtml#sec-2-1">Overview</h3>
+
+<p>This study evaluates the results and potential of green versus red versus red edge versus NIR images to obtain maps of vegetation indices to detect inhomogeneities in irrigated crops. In particular, our work comprises the following:</p>
+<ul>
+  <li>The photogrammetric planning and processing of multispectral datasets acquired with a commercial camera mounted on a UAV platform.</li>
+  <li>The creation of high-resolution orthophotos from multispectral images over two different cultivation areas (vineyard, olive grove).</li>
+  <li>The generation and evaluation of different VI maps.</li>
+  <li>Statistical analysis of the VIs crossing their values for two types of crops.</li>
+</ul>
+
+<p>These steps were performed with a critical approach to understanding the easiest and most efficient way to deliver geo-referenced information at small spatial scales useful for precision farming. Our final aim was to discriminate vegetation of the same crop with different response to the aforementioned vegetation indices without any ground radiometric measure. Careful descriptions of the agricultural characteristics provided by local farmers who manage the different crops sites were used to validate the findings.</p>
+
+<h3 id="index.xhtml#sec-2-2">Study area</h3>
+
+<p>The study area corresponds to a rural property located near Manresa (Barcelona), called “Celler el Molí”<label for="Eighteen" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Eighteen" class="margin-toggle" /><span class="sidenote"><a href="http://www.cellerelmoli.com">http://www.cellerelmoli.com</a> </span>, coordinates 41º44ʹ14.36″N, 1º46ʹ47.94″E (UTM 46213331.284, 398545.852), datum WGS84, with altitudes between 298 and 344 m above sea level with no or just a slight slope. The area enjoys a Mediterranean continental climate with a notable thermal oscillation. The lands are mainly loamy soils.</p>
+
+<figure><img src="/research/articles/assets/img/2019-01/images/tejr_a_1572459_f0002_oc.jpg" /><figcaption class="maincolumn-figure">Figure 2. Location of the study site, 60 km west of Barcelona (red dot on the maps on the left-hand side). The right figure shows an aerial view of the site.</figcaption></figure>
+
+<p>The study site has an area of approximately 13 ha and includes the housing of the farmers and the winery. In this location, there are invariant places, such as buildings, parking lots, and roads, whose coordinates could be registered to assess the quality of the orthomosaicked image (<a href="#fig:2">Figure 2</a>). There are different plots with two typical Mediterranean crops. The farm land is divided into olive groves and vineyards. The dominant crop is organic vineyard, with four grape varieties: Cabernet, Macabeu (native from Catalonia), Merlot, and Picapoll (native from Catalonia). Some vineyard plots are drip irrigated while other plots are not irrigated (see <a href="#tab:3">Table 3</a> and <a href="fig:6">Figure 6</a>), even if they are of the same grape variety. The wine that is produced with these grapes has the denomination of origin Pla de Bages.<label for="Nineteen" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Nineteen" class="margin-toggle" /><span class="sidenote"><a href="http://www.dopladebages.com/">http://www.dopladebages.com/</a> </span> The dominant olive variety is Arbequina (native from Catalonia). The crop is a super high-density plantation, with a linear structure with virtually no distance between trees and a narrow corridor between rows, and the land covered by legumes to avoid erosion and also to enrich the soil, thus favouring the biological cycles (legumes fix nitrogen which will be exploited by olive trees). The olive grove is subject to a drip irrigation system by micro irrigation pipes.</p>
+
+<h3 id="index.xhtml#sec-2-3">Data collection and preprocessing</h3>
+
+<p>The employed UAV platform was a quadcopter Phantom 4 Pro, designed and produced by DJI and provided with a commercial multispectral camera. For this work, a Parrot Sequoia 4.0 camera was used. This camera is a powerful multispectral sensor in a pocket-sized package, has a weight of 90 g, it spans 75 mm × 59 mm × 33 mm, integrates a GPS/light sensor, and the camera’s sensor acquires images 5,472 × 3,648 pixels in four narrowband imagers. The spectral ranges of the four bands are Green (530–570 nm), Red (640–680 nm), Red Edge (730–740 nm), and NIR (770–810 nm). The camera is complemented by a sunshine sensor and a reflectance calibration plate for each of the multispectral bands, so that the data provided by the set are essentially reflectance values instead of just grey level.</p>
+
+<p>To cover the entire study area, 276 images were captured for each of the four spectral bands in a first flight (GSD of 6.8 cm pixel<sup>−1</sup>). An RGB camera mounted in the UAV in a second flight allowed us to capture 239 images in the visible spectrum (24,144 × 23,700 pixels, and 0.017 m of GSD) with some overlap, which allowed us to elaborate a mosaic of orthorectified images resulting from the preprocessing operations (involving homographic corrections and stitching) upon the acquired images. The photogrammetric processing was performed using proprietary Pix4D software (Pix4D SA, Lausanne, Switzerland). The process follows three steps: (1) aerial triangulation; (2) digital surface model generation, and (3) orthomosaicking. The resulting orthomosaicked images have high resolutions and are accurate throughout consecutive images. Thus, they guarantee optimal performance of the subsequent classification analysis. After that, the data from the two flights were joined to manage, transform, and export the images (four different images, one for each channel) to a TIFF format. 239 images were calibrated and geolocated using 27,657 matches per calibrated image. In this way, the quality of the image content was evaluated to test its influence on the outcomes of the photogrammetric processing and vegetation indices.</p>
+
+<p><a href="#fig:3">Figure 3</a> shows the orthorectified image mosaic without a georeferenced legend and with the flight line and point cloud superimposed. <a href="#fig:4">Figure 4</a> shows the sparse digital surface model (DSM) before densification obtained in the previous process.</p>
+
+<p><a id="fig:3"></a></p>
+<figure><img src="/research/articles/assets/img/2019-01/images/tejr_a_1572459_f0003_oc.jpg" /><figcaption class="maincolumn-figure">Figure 3. Preprocessing steps with Pix4D software for 239 RGB images: orthorectified image mosaic, with the flight line and point cloud superimposed.</figcaption></figure>
+
+<p><a id="fig:4"></a></p>
+<figure><img src="/research/articles/assets/img/2019-01/images/tejr_a_1572459_f0004_oc.jpg" /><figcaption class="maincolumn-figure">Figure 4. Sparse digital surface model (DSM) before densification obtained in the preprocessing process. Redder colours correspond to greater heights.</figcaption></figure>
+
+<p>It should be indicated that in absence of ground measurements with spectro-radiometers, the computations of raw indices might be based on digital numbers (DN), or grey levels. Although the raw indices give a good description of the vegetation conditions, it is possible that the traditional scale ranges of the vegetation indices used are affected somewhat.</p>
+
+<h3 id="index.xhtml#sec-2-3-1">Image classification</h3>
+
+<p>Before building the vegetation indices, an unsupervised classification of the images was done in order to have a proto image of homogeneity in the crops. <a href="#fig:5">Figure 5</a> shows the resulting classification map after having visited the farm and verified the ground truth personally <em>in situ</em>, reducing the number of classes by merging them and deleting noisy pixels. Only four surface classes are differentiated: the blue colour is associated to bare soil with a small roughness (roads and vines just planted); the shade of lighter green corresponds to the legumes that are between the rows of olive trees; the darkest green corresponds to the rougher bare soil between the vines; and the orange colour corresponds to the productive olive trees and the vines.</p>
+
+<p><a id="fig:5"></a></p>
+<figure><img src="/research/articles/assets/img/2019-01/images/tejr_a_1572459_f0005_oc.jpg" /><figcaption class="maincolumn-figure">Figure 5. Unsupervised classification of the farm into four classes.</figcaption></figure>
+
+<h2 id="index.xhtml#sec-3">Vegetation indices results</h2>
+
+<p>The vegetation indices used to create vigour maps and to verify uniform growth of the crops were calculated using the raster calculator tool of QGIS, which was also used to build the maps. The VI calculation was done by applying the standard formulations (<a href="#tab:2">Table 2</a>) within the limited geographical extent where the four spectral bands (G, R, RE, and NIR) were recorded. The reflectance images were obtained from their respective band indices which were procured from the preprocessing (orthorectification) performed with the Pix4D software, as mentioned before. Each resulting image has a spatial resolution of 0.06839 m and shows pixels with reflectance value and other pixels with no data.</p>
+
+<p>We have differentiated four plots for olive crops (always Arbequina cultivar) and nine for vineyards, which have been used to mask the vegetation indices and to make statistics based on the data for each of them. <a href="#fig:6">Figure 6</a> shows the masks of olive and vine crops that have been applied on maps of vegetation indices. Tables <a href="#tab:3">3</a> and <a href="#tab:4">4</a> summarise the extension of each of the masks: 1.71 ha of olive trees and 3.72 ha of vineyard (C: Cavernet, Me: Merlot, Ma: Macabeu, P: Picapoll, R: irrigation, S: no irrigation). For each crop, we have divided the study in different plots identified with a correlative number.</p>
+
+<p><a id="tab:3"></a>
+<label for="tab:3" class="margin-toggle"> ⊕</label><input type="checkbox" id="tab:3" class="margin-toggle" /><span class="marginnote">Table 3. Extension (in ha) of the different masks built for the olive grove (O: Arbequina; R: irrigation; S: no irrigation). </span></p>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<td data-xml-align="center" colspan="6">
+<span>Olive</span>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-xml-align="left">
+<p>Plot</p>
+</td>
+<td data-xml-align="left">
+<p>O1</p>
+</td>
+<td data-xml-align="left">
+<p>O2</p>
+</td>
+<td data-xml-align="left">
+<p>O3</p>
+</td>
+<td data-xml-align="left">
+<p>O4</p>
+</td>
+<td data-xml-align="left">
+<p>Total</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>ha</p>
+</td>
+<td data-xml-align="left">
+<p>0.62</p>
+</td>
+<td data-xml-align="left">
+<p>0.47</p>
+</td>
+<td data-xml-align="left">
+<p>0.22</p>
+</td>
+<td data-xml-align="left">
+<p>0.40</p>
+</td>
+<td data-xml-align="left">
+<p>1.71</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p><a id="fig:6"></a></p>
+<figure><img src="/research/articles/assets/img/2019-01/images/tejr_a_1572459_f0006_oc.jpg" /><figcaption class="maincolumn-figure">Figure 6. Masks of olive and vines crops applied on maps of vegetation indices.</figcaption></figure>
+
+<p><a id="tab:4"></a></p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<td data-xml-align="left" colspan="14">
+<span>Vineyard</span>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-xml-align="left" rowspan="3">
+<p>Plot</p>
+</td>
+<td data-xml-align="center">
+<p>V1</p>
+</td>
+<td data-xml-align="center">
+<p>C1</p>
+</td>
+<td data-xml-align="center">
+<p>V1</p>
+</td>
+<td data-xml-align="center">
+<p>V2</p>
+</td>
+<td data-xml-align="center">
+<p>V3</p>
+</td>
+<td data-xml-align="center">
+<p>V4</p>
+</td>
+<td data-xml-align="center">
+<p>V5</p>
+</td>
+<td data-xml-align="center">
+<p>V6</p>
+</td>
+<td data-xml-align="center">
+<p>V7</p>
+</td>
+<td data-xml-align="center">
+<p>V7</p>
+</td>
+<td data-xml-align="center">
+<p>V8</p>
+</td>
+<td data-xml-align="center">
+<p>V9</p>
+</td>
+<td data-xml-align="center" rowspan="3">
+<p>Total</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="center">
+<p>C</p>
+</td>
+<td data-xml-align="center">
+<p>Me1</p>
+</td>
+<td data-xml-align="center">
+<p>Me2</p>
+</td>
+<td data-xml-align="center">
+<p>C</p>
+</td>
+<td data-xml-align="center">
+<p>C</p>
+</td>
+<td data-xml-align="center">
+<p>Me</p>
+</td>
+<td data-xml-align="center">
+<p>C</p>
+</td>
+<td data-xml-align="center">
+<p>P</p>
+</td>
+<td data-xml-align="center">
+<p>Ma1</p>
+</td>
+<td data-xml-align="center">
+<p>Ma2</p>
+</td>
+<td data-xml-align="center">
+<p>C</p>
+</td>
+<td data-xml-align="center">
+<p>Ma</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="center">
+<p>R</p>
+</td>
+<td data-xml-align="center">
+<p>R</p>
+</td>
+<td data-xml-align="center">
+<p>R</p>
+</td>
+<td data-xml-align="center">
+<p>S</p>
+</td>
+<td data-xml-align="center">
+<p>S</p>
+</td>
+<td data-xml-align="center">
+<p>S</p>
+</td>
+<td data-xml-align="center">
+<p>R</p>
+</td>
+<td data-xml-align="center">
+<p>S</p>
+</td>
+<td data-xml-align="center">
+<p>R</p>
+</td>
+<td data-xml-align="center">
+<p>R</p>
+</td>
+<td data-xml-align="center">
+<p>S</p>
+</td>
+<td data-xml-align="center">
+<p>S</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>ha</p>
+</td>
+<td data-xml-align="center">
+<p>0.25</p>
+</td>
+<td data-xml-align="center">
+<p>0.23</p>
+</td>
+<td data-xml-align="center">
+<p>0.29</p>
+</td>
+<td data-xml-align="center">
+<p>0.45</p>
+</td>
+<td data-xml-align="center">
+<p>0.40</p>
+</td>
+<td data-xml-align="center">
+<p>0.52</p>
+</td>
+<td data-xml-align="center">
+<p>0.54</p>
+</td>
+<td data-xml-align="center">
+<p>0.33</p>
+</td>
+<td data-xml-align="center">
+<p>0.12</p>
+</td>
+<td data-xml-align="center">
+<p>0.21</p>
+</td>
+<td data-xml-align="center">
+<p>0.26</p>
+</td>
+<td data-xml-align="center">
+<p>0.14</p>
+</td>
+<td data-xml-align="center">
+<p>3.72</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><label for="tab:4" class="margin-toggle"> ⊕</label><input type="checkbox" id="tab:4" class="margin-toggle" /><span class="marginnote">Table 4. Extension (in ha) of the different masks built for the vinyard (C: Cabernet; Me: Merlot; Ma: Macabeu; P: Picapoll; R: irrigation; S: no irrigation). </span></p>
+
+<h3 id="index.xhtml#sec-3-1">The olive crops</h3>
+
+<p>The NDVI, GNDVI, SAVI (<em>L</em> = 0.2, 0.5, 0.9), and NDRE indices maps for olive crops were extracted from the processed orthoimage. After comparing the minimum, maximum, mean, and standard deviation values of the VIs for the selected plots, we discarded to continue working with the values of SAVI (<em>L</em> = 0.2) and SAVI (<em>L</em> = 0.9), and concentrated only on the SAVI (<em>L</em> = 0.5) because all of them showed similar correlations to the rest of VIs. In the literature on remote sensing, vegetation indices, and agriculture, it is customary to use this index only with the soil parameter <em>L</em> = 0.5. <a href="#fig:7">Figure 7</a> shows the map values of the estimated VIs for the olive areas. The different values of the legend of each of the maps can be observed.</p>
+
+<p><a id="fig:7"></a></p>
+<figure><img src="/research/articles/assets/img/2019-01/images/tejr_a_1572459_f0007_oc.jpg" /><figcaption class="maincolumn-figure">Figure 7. Images of the various vegetation indices for the olive (continuous line) and vineyard plots (dashed line): (a) GNDVI, (b) NDRE, (c) NDVI, (d) SAVI (<em>L</em> = 0.5).</figcaption></figure>
+
+<p>After differentiating the plots of olive trees and applying their mask to the maps obtained for each of the VI, we proceeded to analyse the linear correlation that may exist between the different VI considering the whole set of pixels, regardless of the class of cover they represented. <a href="#tab:5">Table 5</a> shows the R-squared values obtained when correlating the different VIs with the NDVI and with the NDRE for each plot of olive grove.</p>
+
+<p><a id="tab:5"></a>
+<label for="tab:5" class="margin-toggle"> ⊕</label><input type="checkbox" id="tab:5" class="margin-toggle" /><span class="marginnote">Table 5. <em>R</em>-squared values obtained when correlating the different VIs with the NDVI and with the NDRE for the plots of olive grove. </span></p>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr data-xml-align="center">
+<td>
+ 
+</td>
+<td>
+<p>O1</p>
+</td>
+<td>
+<p>O2</p>
+</td>
+<td>
+<p>O3</p>
+</td>
+<td>
+<p>O4</p>
+</td>
+<td>
+<p>Total</p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-xml-align="left" colspan="6">
+<p><strong><em>R</em><sup>2</sup> correlation with NDVI (olive)</strong></p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>GNDVI</p>
+</td>
+<td data-xml-align="center">
+<p>0.79</p>
+</td>
+<td data-xml-align="center">
+<p>0.86</p>
+</td>
+<td data-xml-align="center">
+<p>0.93</p>
+</td>
+<td data-xml-align="center">
+<p>0.71</p>
+</td>
+<td data-xml-align="center">
+<p>0.83</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>NDRE</p>
+</td>
+<td data-xml-align="center">
+<p>0.41</p>
+</td>
+<td data-xml-align="center">
+<p>0.43</p>
+</td>
+<td data-xml-align="center">
+<p>0.53</p>
+</td>
+<td data-xml-align="center">
+<p>0.27</p>
+</td>
+<td data-xml-align="center">
+<p>0.37</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>SAVI (<em>L</em> = 0.5)</p>
+</td>
+<td data-xml-align="center">
+<p>0.44</p>
+</td>
+<td data-xml-align="center">
+<p>0.36</p>
+</td>
+<td data-xml-align="center">
+<p>0.51</p>
+</td>
+<td data-xml-align="center">
+<p>0.36</p>
+</td>
+<td data-xml-align="center">
+<p>0.37</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left" colspan="6">
+<p><strong><em>R</em><sup>2</sup> correlation with NDRE (olive)</strong></p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>GNDVI</p>
+</td>
+<td data-xml-align="center">
+<p>0.41</p>
+</td>
+<td data-xml-align="center">
+<p>0.49</p>
+</td>
+<td data-xml-align="center">
+<p>0.60</p>
+</td>
+<td data-xml-align="center">
+<p>0.42</p>
+</td>
+<td data-xml-align="center">
+<p>0.43</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>NDVI</p>
+</td>
+<td data-xml-align="center">
+<p>0.41</p>
+</td>
+<td data-xml-align="center">
+<p>0.43</p>
+</td>
+<td data-xml-align="center">
+<p>0.53</p>
+</td>
+<td data-xml-align="center">
+<p>0.27</p>
+</td>
+<td data-xml-align="center">
+<p>0.37</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>SAVI (<em>L</em> = 0.5)</p>
+</td>
+<td data-xml-align="center">
+<p>0.29</p>
+</td>
+<td data-xml-align="center">
+<p>0.06</p>
+</td>
+<td data-xml-align="center">
+<p>0.18</p>
+</td>
+<td data-xml-align="center">
+<p>0.14</p>
+</td>
+<td data-xml-align="center">
+<p>0.18</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="index.xhtml#sec-3-2">The vineyard crops</h3>
+
+<p>For the vineyard crops we have proceeded in the same way as for olive crops. The NDVI, GNDVI, SAVI (<em>L</em> = 0.2, 0.5, 0.9), and NDRE indices maps for vine crops were extracted from the processed orthoimage. After comparing the minimum, maximum, mean, and standard deviation values of the VIs for the selected plots, we decided to work with SAVI (<em>L</em> = 0.5) and not with SAVI (<em>L</em> = 0.2) and SAVI (<em>L</em> = 0.9) for the same reasons mentioned before. <a href="#fig:7">Figure 7</a> shows the map values of the estimated VIs for the vine crops.</p>
+
+<p>After differentiating the plots of vineyard and applying their mask to the maps obtained for each of the VI, we proceeded to analyse the linear correlations that may exist between the different VI considering the whole set of pixels, regardless of the class of cover they represented. <a href="#tab:6">Table 6</a> shows the <em>R</em>-squared values obtained when correlating the different VI with the NDVI and with the NDRE for each plot of vineyard.</p>
+
+<p><a id="tab:6"></a></p>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr data-xml-align="center">
+<td data-xml-align="left">
+</td>
+<td>
+<p>V1_C_R</p>
+</td>
+<td>
+<p>V5_C_R</p>
+</td>
+<td>
+<p>V2_C_S</p>
+</td>
+<td>
+<p>V3_C_S</p>
+</td>
+<td>
+<p>V8_C_S</p>
+</td>
+<td>
+<p>V6_P_S</p>
+</td>
+<td>
+<p>Total</p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-xml-align="left" colspan="8">
+<p><strong><em>R</em><sup>2</sup> correlation with NDVI (vineyard)</strong></p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>GNDVI</p>
+</td>
+<td data-xml-align="center">
+<p>0.89</p>
+</td>
+<td data-xml-align="center">
+<p>0.83</p>
+</td>
+<td data-xml-align="center">
+<p>0.92</p>
+</td>
+<td data-xml-align="center">
+<p>0.85</p>
+</td>
+<td data-xml-align="center">
+<p>0.72</p>
+</td>
+<td data-xml-align="center">
+<p>0.61</p>
+</td>
+<td data-xml-align="center">
+<p>0.87</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>NDRE</p>
+</td>
+<td data-xml-align="center">
+<p>0.47</p>
+</td>
+<td data-xml-align="center">
+<p>0.28</p>
+</td>
+<td data-xml-align="center">
+<p>0.32</p>
+</td>
+<td data-xml-align="center">
+<p>0.18</p>
+</td>
+<td data-xml-align="center">
+<p>0.12</p>
+</td>
+<td data-xml-align="center">
+<p>0.23</p>
+</td>
+<td data-xml-align="center">
+<p>0.40</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>SAVI (<em>L</em> = 0.5)</p>
+</td>
+<td data-xml-align="center">
+<p>0.98</p>
+</td>
+<td data-xml-align="center">
+<p>0.94</p>
+</td>
+<td data-xml-align="center">
+<p>0.96</p>
+</td>
+<td data-xml-align="center">
+<p>0.95</p>
+</td>
+<td data-xml-align="center">
+<p>0.97</p>
+</td>
+<td data-xml-align="center">
+<p>0.97</p>
+</td>
+<td data-xml-align="center">
+<p>0.96</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left" colspan="8">
+<p><strong><em>R</em><sup>2</sup> correlation with NDRE (vineyard)</strong></p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>GNDVI</p>
+</td>
+<td data-xml-align="center">
+<p>0.50</p>
+</td>
+<td data-xml-align="center">
+<p>0.28</p>
+</td>
+<td data-xml-align="center">
+<p>0.40</p>
+</td>
+<td data-xml-align="center">
+<p>0.30</p>
+</td>
+<td data-xml-align="center">
+<p>0.09</p>
+</td>
+<td data-xml-align="center">
+<p>0.14</p>
+</td>
+<td data-xml-align="center">
+<p>0.41</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>NDRE</p>
+</td>
+<td data-xml-align="center">
+<p>0.47</p>
+</td>
+<td data-xml-align="center">
+<p>0.28</p>
+</td>
+<td data-xml-align="center">
+<p>0.32</p>
+</td>
+<td data-xml-align="center">
+<p>0.18</p>
+</td>
+<td data-xml-align="center">
+<p>0.12</p>
+</td>
+<td data-xml-align="center">
+<p>0.23</p>
+</td>
+<td data-xml-align="center">
+<p>0.40</p>
+</td>
+</tr>
+<tr>
+<td data-xml-align="left">
+<p>SAVI (<em>L</em> = 0.5)</p>
+</td>
+<td data-xml-align="center">
+<p>0.43</p>
+</td>
+<td data-xml-align="center">
+<p>0.19</p>
+</td>
+<td data-xml-align="center">
+<p>0.29</p>
+</td>
+<td data-xml-align="center">
+<p>0.03</p>
+</td>
+<td data-xml-align="center">
+<p>0.08</p>
+</td>
+<td data-xml-align="center">
+<p>0.14</p>
+</td>
+<td data-xml-align="center">
+<p>0.33</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><label for="tab:6" class="margin-toggle"> ⊕</label><input type="checkbox" id="tab:6" class="margin-toggle" /><span class="marginnote">Table 6. <em>R</em>-squared values obtained when correlating the different VIs with the NDVI and with the NDRE for the plots with vineyard crops (C: Cabernet; Me: Merlot; Ma: Macabeu; P: Picapoll; R: irrigation; S: no irrigation). </span></p>
+
+<h2 id="index.xhtml#sec-4">Discussion</h2>
+
+<p>The results shown in the previous section reveal the convenience to work with several vegetation indices to detect irregularities in the crops. In the case of olives, the traditional NDVI shows a fairly elongated homogeneity compared to the other indices we have applied. NDRE is especially useful to detect small areas with different textures within the cultivated plots. In these areas, the farmer may wish to collect information <em>in situ</em>.</p>
+
+<p>In our case, we observe an inhomogeneity in the centre of the plot O1 which is most conspicuous in the NDRE. On site inspection confirmed that this inhomogeneity is due to less vigorous vegetation. At first, this seemed odd since every tree received the same amount of water and at the same time (the same overall treatment, in fact), so these variables do not play a role in the irregularity detected. However, during the inspection, the farmers noted that there used to be a stream running through the centre of the plot, which they covered with new soil to flatten the land just before planting the olive trees a few years ago. This explains why in this area the vegetation is less vigorous, given that there is likely less water retained in the first shallow inches of subsoil (where the roots of the young olive trees have access) due to percolation through the new added soil – which is less compacted and hence more porous than consolidated soil.</p>
+
+<p>The differences between NDVI, GNDVI, and NDRE should not be surprising when we take into account the spectral signature of the vegetation shown in <a href="#fig:1">Figure 1</a>. Despite the difference in absolute values, there is an excellent correspondence between the NDVI and GNDVI indices (<em>R</em><sup>2</sup> = 0.83 for olive; <em>R</em><sup>2</sup> = 0.87 for vineyard). In the case of NDRE, the correlation is quite poor with NDVI (<em>R</em><sup>2</sup> = 0.37 for olive; <em>R</em><sup>2</sup> = 0.40 vineyard), similar with GNDVI and worse with SAVI. This is likely due to the bigger dispersion of reflectance values in the RE than in the R band when water and nitrogen content change.<label for="Twenty" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Twenty" class="margin-toggle" /><span class="sidenote">Mutanga &amp; Skidmore, <a href="#index.xhtml#cit0017">2007</a> </span> The correlation data between the different VIs are exceptionally high for NDVI and SAVI in the case of vines (<em>R</em><sup>2</sup> = 0.96) and low for olive (<em>R</em><sup>2</sup> = 0.37). This difference is due to the difference in percentage of vegetation cover (being the vines very young and the bare soil dominates the image). The worst correlation is obtained between NDRE and SAVI for olive crop (<em>R</em><sup>2</sup> = 0.17); it may be due to the sensitivity of the SAVI to a variety of soil textures not covered by vegetation.</p>
+
+<h2 id="index.xhtml#sec-5">Conclusions</h2>
+
+<p>In this paper, we report a study involving the use of UAVs in precision agriculture based on the comparison of vegetation indices calculated from multispectral images (G, R, RE, NIR) of high spatial resolution (6.8 cm pixel<sup>−1</sup>). These high resolution data allow for a fairly detailed characterisation of the biophysical variables of the crops. After comparing vegetation index maps incorporating the red edge band, the use of NDRE instead of the traditional NDVI can be recommended to identify possible heterogeneities in the vegetation cover, even when the vegetation does not fully cover the ground and patches of bare soil with varying degrees of roughness are the norm. To our knowledge, this is the first time that the NDRE has been used to trace irrigation irregularities in olive crops. This has important consequences for local farmers who now have affordable UAVs to perform live assessments of their crops. It would be very useful to precision agriculture if more RE detectors were put onboard satellites.</p>
+
+<h2>Acknowledgments</h2>
+
+<p>The authors would like to thank the kind attention of Mr. Josep Mª Claret (Celler el Molí), responsible for the agricultural activity, for providing us with access to the farm, the corresponding agronomical reference data and for his agronomical advice on the interpretation of the results. We also appreciate the collaboration of Mr. J. Quesada (MAPDRONE S.L.).</p>
+
+<h2>Disclosure statement</h2>
+<p>No potential conflict of interest was reported by the authors.</p>
+
+<h2>References</h2>
+
+<div id="index.xhtml#cit0001" class="citations">
+<span class="citation">Agüera, F., Carvajal, F., &amp; Pérez, M. (2011, September 14–16). Measuring sunflower nitrogen status from an unmanned aerial vehicle-based system and an on the ground device. In <em>Proceedings of the Conference on Unmanned Aerial Vehicle in Geomatics</em> (Vol. 38 (1/C22)). Zurich, Switzerland.</span>
+</div>
+
+<div id="index.xhtml#cit0002" class="citations">
+<span class="citation">Bendig, J., Yu, K., Aasen, H., Bolten, A., Bennertz, S., Broscheit, J., &amp; Bareth, G. (2015). Combining UAV-based plant height from crop surface models, visible, and near infrared vegetation indices for biomass monitoring in barley. <em>International Journal of Applied Earth Observation and Geoinformation</em>, 39, 79–87. </span> <a href="https://doi.org/10.1016/j.jag.2015.02.012">Crossref</a>.
+</div>
+
+<div id="index.xhtml#cit0003" class="citations">
+<span class="citation">Candiago, S., Remondino, F., De Giglio, M., Dubbini, M., &amp; Gatelli, M. (2015). Evaluating multispectral images and vegetation índices for precisión farming applications fron UAV images. <em>Remote Sensing</em>, 7(4), 4026–4047. </span> <a href="https://doi.org/10.3390/rs70404026">Crossref</a>.
+</div>
+
+<div id="index.xhtml#cit0004" class="citations">
+<span class="citation">Colomina, I., &amp; Molina, P. (2014). Unmanned aerial systems for photogrammetry and remote sensing: A review. <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, 92, 79–97. </span> <a href="https://doi.org/10.1016/j.isprsjprs.2014.02.013">Crossref</a>.
+</div>
+
+<div id="index.xhtml#cit0005" class="citations">
+<span class="citation">Filella, I., &amp; Peñuelas, J. (1994). The red edge position and shape as indicators of plant chlorophyll content, biomass and hydric status. <em>International Journal of Remote Sensing</em>, 15(7), 1459–1470. </span> <a href="https://doi.org/10.1080/01431169408954177">Crossref</a>.
+</div>
+
+<div id="index.xhtml#cit0006" class="citations">
+<span class="citation">Gitelson, A.A., Kaufman, Y.J., &amp; Merzlyak, M.N. (1996). Use of a green channel in remote sensing of global vegetation from EOS-MODIS. <em>Remote Sensor Environment</em>, 58(3), 289–298. </span> <a href="https://doi.org/10.1016/S0034-4257(96)00072-7">Crossref</a>.
+</div>
+
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0007" class="citations">
+<span class="citation">Guo, T., Kujirai, T., &amp; Watanabe, T. (2012). Mapping crop status from an unmanned aerial vehicle for precision agriculture applications. <em>ISPRS - International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em>, 39(B1), 485. Melbourne, Australia.</span> <a href="https://doi.org/10.5194/isprsarchives-XXXIX-B1-485-2012">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0008" class="citations">
+<span class="citation">Honkavaara, E., Kaivosoja, J., Mäkynen, J., Pellikka, I., Pesonen, L., Saari, H., … Rosnell, T. (2012, August 25–September 1). Hyperspectral reflectance signatures and point clouds for precision agriculture by light weight UAV imaging system. In <em>Proceedings of the XXII ISPRS Congress</em>, (Vol. I-7, pp. 353–358), Melbourne, Australia.</span> <a href="https://doi.org/10.5194/isprsannals-I-7-353-2012">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0009" class="citations">
+<span class="citation">Huete, A.R. (1988). A soil adjusted vegetation index (SAVI). <em>Remote Sensing of Environment</em>, 25(3), 295–309. </span> <a href="https://doi.org/10.1016/0034-4257(88)90106-X">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0010" class="citations">
+<span class="citation">Hunt, J., Hively, W.D., Daugtry, C.S.T., &amp; McCarty, G.W. (2008, November 18–20). Remote sensing of crop leaf area index using unmanned airborne vehicles. In <em>Proceedings of the Pecora 17 Conference, American Society for Photogrammetry and Remote Sensing</em>, Denver, Colorado.</span>
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0011" class="citations">
+<span class="citation">Lukas, V., Novák, J., Neudert, L., Svobodova, I., Rodriguez-Moreno, F., Edrees, M., &amp; Kren, J. (2016, July 12–19). The combination of UAV survey and Landsat imagery for monitoring of crop vigor in precision agriculture. In <em>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em>, Volume XLI-B8, 2016 XXIII ISPRS Congress, Prague, Czech Republic. </span> <a href="https://doi.org/10.5194/isprs-archives-XLI-B8-953-2016">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0012" class="citations">
+<span class="citation">Maccioni, A., Agati, G., &amp; Mazzinghi, P. (2001). New vegetation indices for remote measurement of chlorophylls based on leaf directional reflectance spectra. <em>Journal of Photochemistry and Photobiology B: Biology</em>, 61(1–2), 52–61. </span> <a href="https://doi.org/10.1016/S1011-1344(01)00145-2">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0013" class="citations">
+<span class="citation">Matese, A., Capraro, F., Primicerio, J., Gualato, G., Gennaro, S.F.D., &amp; Agati, G. (2013). Mapping of vine vigor by UAV and anthocyanin content by a non-destructive fluorescence technique. In: Stafford J.V. (eds) <em>Precision agriculture, 13.</em> Wageningen Academic Publishers, Wageningen.</span>
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0014" class="citations">
+<span class="citation">Matese, A., Toscano, P., Di Gennaro, S.F., Genesio, L., Vaccari, F.P., Primicerio, J., &amp; Gioli, B. (2015). Intercomparison of UAV, aircraft and satellite remote sensing platforms for precision viticulture. <em>Remote Sensing</em>, 7(3), 2971–2990. </span> <a href="https://doi.org/10.3390/rs70302971">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0015" class="citations">
+<span class="citation">Mathews, A.J., &amp; Jensen, J.L.R. (2013). Visualizing and quantifying vineyard canopy LAI using an unmanned aerial vehicle (UAV) collected high density structure from motion point cloud. <em>Remote Sensing</em>, 5, 2164–2183. </span> <a href="https://doi.org/10.3390/rs5052164">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0016" class="citations">
+<span class="citation">Muchiri, N., &amp; Kimathi, S. (2016). A review of applications and potential applications of UAV. <em>Proceedings of Sustainable Research and Innovation Conference</em>, 0, 280–283, Nairobi, Kenya.</span>
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0017" class="citations">
+<span class="citation">Mutanga, O., &amp; Skidmore, A.K. (2007). Red edge shift and biochemical content in grass canopies. <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, 62(1), 34–42. </span> <a href="https://doi.org/10.1016/j.isprsjprs.2007.02.001">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0018" class="citations">
+<span class="citation">Nebiker, S., Annen, A., Scherrer, M., &amp; Oesch, D. (2008). A light-weight multispectral sensor for micro UAV—opportunities for very high resolution airborne remote sensing. <em>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em>, XXXVII(B1), 1193–1200.</span>
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0019" class="citations">
+<span class="citation">Nex, F., &amp; Remondino, F. (2014). UAV for 3D mapping applications: A review. <em>Applied Geomatics</em>, 6, 1–15. </span> <a href="https://doi.org/10.1007/s12518-013-0120-x">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0020" class="citations">
+<span class="citation">Pádua, L., Vanko, J., Hruška, J., Adão, T., Sousa, J.J., Peres, E., &amp; Morais, R. (2017). UAS, sensors, and data processing in agroforestry: A review towards practical applications. <em>International Journal of Remote Sensing</em>, 38(8–10), 2349–2391. </span> <a href="https://doi.org/10.1080/01431161.2017.1297548">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0021" class="citations">
+<span class="citation">Pajares, G. (2015). Overview and current status of remote sensing applications based on unmanned aerial vehicle (UAV). <em>Photogrammetric Engineering &amp; Remote Sensing</em>, 81(4), 281–329. </span> <a href="https://doi.org/10.14358/PERS.81.4.281">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0022" class="citations">
+<span class="citation">Pinar, A., &amp; Curran, P.J. (1996). Grass chlorophyll and the reflectance red edge. <em>International Journal of Remote Sensing</em>, 17(2), 351–357. </span> <a href="https://doi.org/10.1080/01431169608949010">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0023" class="citations">
+<span class="citation">Pölönen, I., Saari, H., Kaivosoja, J., Honkavaara, E., &amp; Pesonen, L. (2013). Hyperspectral imaging based biomass and nitrogen content estimations from light-weight UAV. In <em>Proc. SPIE, 8887</em>, </span> <a href="https://doi.org/10.1117/12.2028624">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0024" class="citations">
+<span class="citation">Primicerio, J., Di Gennaro, S.F., Fiorillo, E., Genesio, L., Lugato, E., Matese, A., &amp; Vaccari, F.P. (2012). A flexible unmanned aerial vehicle for precision agriculture. <em>Precision Agriculture</em>, 13, 517–523. </span> <a href="https://doi.org/10.1007/s11119-012-9257-6">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0025" class="citations">
+<span class="citation">Rouse, J.W., Haas., R.H., Schell, J.A., &amp; Deering, D.W. (1973, December 10-14). Monitoring vegetation systems in the great plains with ERTS. In <em>Proceedings of the Third ERTS Symposium</em> (pp. 309–317) Washington, DC: NASA. NASA SP-351.</span>
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0026" class="citations">
+<span class="citation">Salamí, E., Barrado, C., &amp; Pastor, E. (2014). UAV flight experiments applied to the remote sensing of vegetated areas. <em>Remote Sensing</em>, 6(11), 11051–11081. </span> <a href="https://doi.org/10.3390/rs61111051">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0027" class="citations">
+<span class="citation">Schalles, J.F., Gitelson, A., Yacobi, Y.Z., &amp; Kroenke, A.E. (1998). Chlorophyll estimation using whole seasonal, remotely sensed high spectral-resolution data for an eutrophic lake. <em>Journal of Phycology</em>, 34, 383–390. </span> <a href="https://doi.org/10.1046/j.1529-8817.1998.340383.x">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0028" class="citations">
+<span class="citation">Usha, K., &amp; Singh, B. (2013). Potential applications of remote sensing in horticulture—A review. <em>Scientia horticulturae</em>, 153, 71–83. </span> <a href="https://doi.org/10.1016/j.scienta.2013.01.008">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0029" class="citations">
+<span class="citation">Xue, J., &amp; Su, B. (2017). Significant remote sensing vegetation indices: A review of developments and applications. <em>Journal of Sensors</em>, 2017, 17. Article ID 1353691. </span> <a href="https://doi.org/10.1155/2017/1353691">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0030" class="citations">
+<span class="citation">Zarco-Tejada, P.J., Catalina, A., González, M.R., &amp; Martín, P. (2013). Relationships between net photosynthesis and steady-state chlorophyll fluorescence retrieved from airborne hyperspectral imagery. <em>Remote Sensing of Environment</em>, 136, 247–258. </span> <a href="https://doi.org/10.1016/j.rse.2013.05.011">Crossref</a>.
+</div>
+</div>
+<div role="doc-biblioentry" type="biblioentry">
+<div id="index.xhtml#cit0031" class="citations">
+<span class="citation">Zarco-Tejada, P.J., González-Dugo, V., &amp; Berni, J.A.J. (2012). Fluorescence, temperature and narrow-band indices acquired from a UAV platform for water stress detection using a micro-hyperspectral imager and a thermal camera. <em>Remote Sensing of Environment</em>, 117, 322–337. </span> <a href="https://doi.org/10.1016/j.rse.2011.10.007">Crossref</a>.
+
+</div></div>
+
+
+
+    </article>
+    <span class="print-footer">Detection of irrigation inhomogeneities in an olive grove using the NDRE vegetation index obtained from UAV images - January 19, 2019 - marc vallbé</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:marc.vallbe@upc.edu"><span class="icon-mail3"></span></a></li>    
+    
+      <li>
+        <a href="//vallbe.github.io"><span class="icon-html-five"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.twitter.com/fisica_profe"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/vallbe"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="/research/articles/feed.xml"><span class="icon-rss2"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+    <span>&#127279; 2021 &nbsp;&nbsp;<a href="mailto:marc.vallbe@upc.edu">MARC VALLBÉ</a></span></br> <br>
+<!-- <span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for Remote Sensing and Natural Resources </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> -->
+</div>  
+</footer>
+
+  </body>
+</html>

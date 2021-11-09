@@ -1,0 +1,2465 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" />
+  <title>Identification of a set of variables for the classification of páramo soils using a nonparametric model, remote sensing, and organic carbon</title>
+  <meta name="description" content="⊕https://doi.org/10.3390/su13169462  Páramo ecosystems  harbor important biodiversity and provide essential environmental services such as water regulation a...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="/research/articles/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/research/articles/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="/research/articles/articles/2021.-Monitoring-Land-Uses-in-the-Andean-Paramo.html">
+
+  <link rel="alternate" type="application/rss+xml" title="Research Highlights" href="/research/articles/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+        <!-- <a href="/research/articles/"><img class="badge" src="/research/articles/assets/img/badge_1.png" alt="MVM"></a> -->
+  <a href="https://vallbe.github.io"><img class="badge" src="/research/articles/assets/img/badge_1.png" alt="MVM"></a> 
+	
+		
+		    
+		      <a href="/research/articles/404.html"></a>
+		    
+	    
+  	
+		
+  	
+		
+		    
+		      <a href="/research/articles/">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/research/articles/about/">About</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/research/articles/css/print.css"></a>
+		    
+	    
+  	
+		
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>Identification of a set of variables for the classification of páramo soils using a nonparametric model, remote sensing, and organic carbon</h1>
+<p class="subtitle">August 23, 2021</p>
+
+<p><label for="fig_body_display_sustainability-13-09462-f000" class="margin-toggle">⊕</label><input type="checkbox" id="fig_body_display_sustainability-13-09462-f000" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="/research/articles//assets/img/2021-08/sustainability-13-09462-v3.png" /><br /><a href="https://doi.org/10.3390/su13169462">https://doi.org/10.3390/su13169462</a></span></p>
+<blockquote>
+  <p><span class="newthought">Páramo ecosystems</span>  harbor important biodiversity and provide essential environmental services such as water regulation and carbon sequestration. Unfortunately, the scarcity of information on their land uses makes it difficult to generate sustainable strategies for their conservation. The purpose of this study is to develop a methodology to easily monitor and document the conservation status, degradation rates, and land use changes in the páramo. We analyzed the performance of two nonparametric models (the CART decision tree, CDT, and multivariate adaptive regression curves, MARS) in the páramos of the Chambo sub-basin (Ecuador). We used three types of attributes: digital elevation model (DEM), land use cover (Sentinel 2), and organic carbon content (Global Soil Organic Carbon Map data, GSOC) and a categorical variable, land use. We obtained a set of selected variables which perform well with both models, and which let us monitor the land uses of the páramos. Comparing our results with the last report of the Ecuadorian Ministry of Environment (2012), we found that 9% of the páramo has been lost in the last 8 years.
+<!--more--></p>
+</blockquote>
+
+<p>Y. Pazmiño<label for="snOne" class="margin-toggle sidenote-number"></label><input type="checkbox" id="snOne" class="margin-toggle" /><span class="sidenote">Department of Mining, Industrial and ICT
+Engineering, Manresa School of Engineering, Universitat Politècnica de
+Catalunya, Manresa, Spain. <a href="mailto:marc.vallbe@upc.edu">marc.vallbe@upc.edu</a> </span>,
+<a href="https://orcid.org/0000-0002-7758-3967">J.J. de Felipe</a><sup>1</sup>, <a href="https://orcid.org/0000-0002-7518-8971">M.
+Vallbé</a><sup>1</sup>, F. Cargua<label for="snTwo" class="margin-toggle sidenote-number"></label><input type="checkbox" id="snTwo" class="margin-toggle" /><span class="sidenote">Research and Development Group for the Environment and Climate Change,
+Escuela Superior Politécnica de Chimborazo, Riobamba 060150, Ecuador </span>, L.
+Quevedo<label for="snThree" class="margin-toggle sidenote-number"></label><input type="checkbox" id="snThree" class="margin-toggle" /><span class="sidenote">Tourism Department, Universidad Nacional de Chimborazo
+UNACH, Riobamba 060150, Ecuador </span></p>
+
+<p><em>Sustainability</em> <strong>2021</strong>, <em>13</em>(16), 9462;</p>
+
+<p><strong>Keywords</strong>:  <em>páramo; sustainability; land use; predictive nonparametric models; natural conservation; degradation of natural resources; remote sensing</em></p>
+
+<h2 id="outline">Outline</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="#sec1-sustainability-13-09462">Introduction</a></td>
+      <td><a href="#sec4-sustainability-13-09462" title="Conclusions">Conclusions</a></td>
+    </tr>
+    <tr>
+      <td><a href="#sec2-sustainability-13-09462">Materials and Methods</a></td>
+      <td><a href="#html-ack">Acknowledgments</a></td>
+    </tr>
+    <tr>
+      <td><a href="#sec3-sustainability-13-09462">Results and Discussion</a></td>
+      <td><a href="#html-references_list">References</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://www.mdpi.com/2071-1050/13/16/9462/pdf">Download PDF</a></p>
+
+<hr class="slender" />
+
+<h2 id="sec1-sustainability-13-09462">1. Introduction</h2>
+
+<p>The Andean moorlands (known as páramos) extend along Costa Rica,
+Colombia, Ecuador, Venezuela, and Perú at heights between 3500 and 5000
+m.a.s.l. Most of them are of volcanic origin and have quite complex
+geology and topography [<a href="#B1-sustainability-13-09462">1</a>].
+They provide several ecosystem services such as water supply and
+regulation, biodiversity conservation, and carbon storage
+[<a href="#B2-sustainability-13-09462">2</a>]. In fact, Andean
+moorlands receive between 600 and 1000 mm of precipitation per year,
+which represents approximately 2/3 of the annual precipitation in the
+Andes, making them the main providers of water in this region
+[<a href="#B3-sustainability-13-09462">3</a>]. The upper layers of
+páramo ecosystems can retain up to 183 tons of carbon/ha
+[<a href="#B4-sustainability-13-09462">4</a>], which is significant
+because soil organic carbon (SOC) is considered the largest terrestrial,
+non-sedimentary carbon reserve
+[<a href="#B5-sustainability-13-09462">5</a>]. Páramo soils are
+characterized by being dark and humic with an open and porous structure
+and present a slow process of organic matter degradation due to the low
+levels of temperature and atmospheric pressure
+[<a href="#B6-sustainability-13-09462">6</a>].</p>
+
+<p>Ecuadorian páramos run from 0°49′ N to 4°52′ S and cover approximately
+833,834 ha, representing approximately 5% of the country’s total area.
+They are home to a large collection of Neotropical–Alpine ecosystems,
+containing approximately 628 endemic plant species, which is equivalent
+to 15% of the endemic flora and 4% of the total flora of the entire
+country. Forty-eight percent of this flora is located inside protected
+areas and 75% of its endemic species are threatened
+[<a href="#B7-sustainability-13-09462">7</a>]. However, anthropogenic
+activities such as urban settlements, agriculture, and livestock have
+intensified throughout history, constantly degrading páramo ecosystems
+[<a href="#B8-sustainability-13-09462">8</a>,<a href="#B9-sustainability-13-09462">9</a>],
+resulting in a decrease in carbon dioxide sinks
+[<a href="#B10-sustainability-13-09462">10</a>,<a href="#B11-sustainability-13-09462">11</a>]
+and in significant alterations in water regulation, erosion, and drought
+[<a href="#B12-sustainability-13-09462">12</a>].</p>
+
+<p>In this context, a sustainable management of the páramo becomes
+essential to balance economic growth, population growth, and
+environmental protection on one hand
+[<a href="#B13-sustainability-13-09462">13</a>,<a href="#B14-sustainability-13-09462">14</a>],
+and those who benefit directly or indirectly from its ecosystem services
+on the other hand. This challenge requires the implementation of
+adequate policies that consider the changes in land use, the growing
+population, the growing demand for agricultural products, the adverse
+effects on the climate, and the functions of the páramo ecosystem
+[<a href="#B15-sustainability-13-09462">15</a>].</p>
+
+<p>Unfortunately, the current situation is difficult to assess because
+there are no thorough databases, especially on the state of the resource
+itself. Environmental data are hard to obtain due to climatic conditions
+and difficulty of access. While performing rapid, systematic, economic,
+and efficient monitoring in hard-to-reach places is crucial for
+determining sustainability strategies and policies for natural areas,
+limited access to the páramos makes the sustainable management of this
+resource particularly challenging
+[<a href="#B16-sustainability-13-09462">16</a>]. Several studies
+recommend the use of remote sensing data to generate information in
+inaccessible areas [<a href="#B17-sustainability-13-09462">17</a>].</p>
+
+<p>Statistical methods for the management of environmental data have two
+main advantages: the first one is the simplicity of handling and
+generating large amounts of datasets and the second one is the low cost
+involved since there are free software tools available for its use.
+These statistical methods provide excellent results in the production of
+information from areas with little data available
+[<a href="#B18-sustainability-13-09462">18</a>,<a href="#B19-sustainability-13-09462">19</a>].
+Hence, the combination of geographical information systems (GIS), remote
+sensing, and statistical models is becoming increasingly popular due to
+its convenience, low cost, and time-saving features compared to field
+monitoring [<a href="#B20-sustainability-13-09462">20</a>].</p>
+
+<p>The evaluation of the different land uses through satellite imaging has
+been widely performed by many authors
+[<a href="#B21-sustainability-13-09462">21</a>] using different
+nonparametric statistical techniques, which allow the creation of
+predictive algorithms from basic remote sensing data
+[<a href="#B22-sustainability-13-09462">22</a>,<a href="#B23-sustainability-13-09462">23</a>,<a href="#B24-sustainability-13-09462">24</a>].
+Thus, neural networks have been used to determine land use through
+images from different satellites
+[<a href="#B25-sustainability-13-09462">25</a>,<a href="#B26-sustainability-13-09462">26</a>]
+and other authors have used different machine learning algorithms to
+interpret satellite data
+[<a href="#B27-sustainability-13-09462">27</a>]. In addition, some
+studies have evaluated the different land uses by analyzing the signal
+characteristics from satellite images
+[<a href="#B28-sustainability-13-09462">28</a>], while other works
+have created predictive algorithms from nonparametric statistical tools,
+complementing satellite data with data from other sources. These
+nonparametric statistical methods use various types of attributes (e.g.,
+topographic and remote data, lithology, and soil properties)
+[<a href="#B29-sustainability-13-09462">29</a>], which allow to
+determine the status of categorical variables related to the
+conservation of natural resources, such as landslides, mineralogy, or
+the SOC concentration
+[<a href="#B30-sustainability-13-09462">30</a>,<a href="#B31-sustainability-13-09462">31</a>].</p>
+
+<p>Nonparametric probabilistic (e.g., CDT) and automatic learning methods
+have been widely exploited for vegetation mapping
+[<a href="#B32-sustainability-13-09462">32</a>] and ecological
+modeling
+[<a href="#B33-sustainability-13-09462">33</a>,<a href="#B34-sustainability-13-09462">34</a>],
+while the MARS method has been used in studies related to hydrology
+[<a href="#B35-sustainability-13-09462">35</a>] and geomorphology,
+and also supporting the creation of algorithms in remote sensing
+[<a href="#B36-sustainability-13-09462">36</a>].</p>
+
+<p>The objective of this study is to evaluate the performance of a
+supervised learning algorithm that will allow to know the target
+variable by learning decision rules used from the characteristics of the
+response variable to monitor and know the different land uses of the
+páramo using three types of attributes (topographic data, Sentinel 2
+satellite remote data, and SOC data) and a categorical variable (land
+use coverage). Then, the information generated is used to assess the
+performance of two nonparametric statistical models: the CART decision
+tree (CDT) and multivariate adaptive regression splines (MARS). These
+two statistical models were analyzed to obtain a set of variables that
+allow for a reliable land use classification.</p>
+
+<p>The information that can be obtained through the proposed methodology
+contributes to the generation of databases in a fast, economical, and
+efficient way that monitors the status of the Andean moorlands. These
+databases can be used as technical inputs for changes in páramo land
+use. Together with other social and economic inputs, they become a great
+tool for conservation strategies and policies that are more in line with
+the reality of the páramo ecosystem.</p>
+
+<h2 id="sec2-sustainability-13-09462">2. Materials and Methods</h2>
+
+<h3 id="sec2dot1-sustainability-13-09462">2.1. Study Area</h3>
+
+<p><a id="fig_body_display_sustainability-13-09462-f001"></a>
+<label for="fig_body_display_sustainability-13-09462-f001" class="margin-toggle">⊕</label><input type="checkbox" id="fig_body_display_sustainability-13-09462-f001" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="/research/articles//assets/img/2021-08/9278c97f3e514702961fbebbadf40b4571b7a162.webp" /><br /><strong>Figure 1.</strong> Location of the study area.</span></p>
+
+<p>This study is set on the Andean páramos located in the Chambo sub-basin,
+which has a population of 414,495 inhabitants and an annual population
+growth rate of 1.42%. It is located at 78°39′ W and 1°39′ S at an
+altitude of 3500 m.a.s.l. and bounded by the Chimborazo Faunal
+Production Reserve and Sangay National Park (<a href="#fig_body_display_sustainability-13-09462-f001">Figure
+1</a>). It has an area of 3580 km^2^, of which 42.1% is
+páramo, and covers 51% of the total area of the province. The main land
+uses are focused on agricultural and livestock activities
+[<a href="#B37-sustainability-13-09462">37</a>]. Temperatures in the
+area can vary between 2 °C and 20 °C according to the National Institute
+of Meteorology and Hydrology of Ecuador.</p>
+
+<h3 id="sec2dot2-sustainability-13-09462">2.2. Work Flow</h3>
+
+<p>The study was carried out through the following stages: image processing,
+segmentation, variable selection, value extraction, evaluation of the supervised
+learning models CDT and MARS, and validation of the studied model (<a href="#fig_body_display_sustainability-13-09462-f002">Figure
+2</a>).</p>
+
+<p><a id="fig_body_display_sustainability-13-09462-f002"></a></p>
+<figure><img src="/research/articles//assets/img/2021-08/6209463c24ebcef10be27e47aa1fba0929756b19.webp" /><figcaption class="maincolumn-figure"><strong>Figure 2.</strong> Flow chart: main stages of the study.</figcaption></figure>
+
+<h3 id="sec2dot3-sustainability-13-09462">2.3. Satellite Images</h3>
+
+<p>Sentinel 2 images were downloaded from the European Space Agency (ESA)
+through the official Copernicus Open Access Center. Sentinel’s
+Scientific Data Hub user interface was used to set the cloudiness below
+30% with the purpose of making the visible field as wide as possible.
+Twenty satellite images were used for the study area, creating a mosaic
+(60 km × 60 km). The images corresponded to the years 2019 and 2020.</p>
+
+<h3 id="sec2dot4-sustainability-13-09462">2.4. Image Processing</h3>
+
+<p>Atmospheric correction was carried out with the free application Sen2Cor
+v2.8 of the ESA, through which the bands of the original images were
+converted from level 1C aerosol optical thickness (AOT) to level 2A
+bottom of atmosphere (BOA), also known as surface reflectance. The AOT
+was treated by eliminating the contained water vapor and the images were
+corrected according to the bands of the lower part of the atmosphere,
+for which the bands were 12 (SWIR), 4 (red), and 2 (blue)
+[<a href="#B38-sustainability-13-09462">38</a>].</p>
+
+<p>The geometric correction of the images was carried out by comparing the
+vector layers of the topographic maps with base maps of rivers and roads
+corresponding to the Ecuadorian Military Geographic Institute by means
+of QGIS software [<a href="#B39-sustainability-13-09462">39</a>].</p>
+
+<h3 id="sec2dot5-sustainability-13-09462">2.5. Checkpoints</h3>
+
+<p>Through random sampling using QGIS software
+[<a href="#B40-sustainability-13-09462">40</a>], one point per 100 ha of land was
+extracted from the official Map of Ecosystems of Continental Ecuador (2012).
+This resulted in a total of 3580 random control points that we considered
+adequate for statistical purposes. An additional 20% of points were entered for
+which there are official data from the Ministry of Agriculture and Livestock. As
+a last step, 381 points were eliminated because they were located in areas where
+the Sentinel 2 images had pixels with noise due to atmospheric effects or did
+not coincide with the coverages observed in the image. After this selection, we
+were left with a total of 3915 control points that we used in the study, of
+which a proportional 70% of the sample was verified in situ.</p>
+
+<p>At the end, the points were counted for each coverage studied and its
+distribution was as follows: 700 points for crops (C), 1290 for pastures
+(Gr), 150 for forest plantations (PF), 1600 for páramo (Pr), and 175 for
+areas without vegetation (bare soil, S). These categories correspond to
+the main land uses according to the report “Contribution to the
+integrated management of water resources planning”
+[<a href="#B41-sustainability-13-09462">41</a>].</p>
+
+<h3 id="sec2dot6-sustainability-13-09462">2.6. Variables</h3>
+
+<p>We experimented with thirteen variables that characterize the area: the digital
+elevation model (DEM), taken from the databases of the Ecuadorian Military
+Geographic Institute [<a href="#B39-sustainability-13-09462">39</a>]; the GSOC, which was
+extracted from the Global Soil Organic Carbon Map data
+[<a href="#B42-sustainability-13-09462">42</a>]; and ten spectral indices (<a href="#table_body_display_sustainability-13-09462-t001">Table
+1</a>), which were calculated
+though an algebra map expression using the Python syntax by QGIS 3.4 (2018)
+based on the combination of corresponding bands according to the methodology by
+the PyQGIS Programmer’s Guide [<a href="#B40-sustainability-13-09462">40</a>]. The
+categorical variable was the land uses of the páramo ecosystem. The types
+categorized included C, Gr, PF, Pr, and S. Accuracy was assessed with the
+statistical measures described in <a href="#table_body_display_sustainability-13-09462-t002">Table
+2</a>.</p>
+
+<p><br /></p>
+
+<p><a id="table_body_display_sustainability-13-09462-t001"></a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Index</th>
+      <th style="text-align: left">Formula</th>
+      <th style="text-align: left">Characteristics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>NDVI</strong>: Normalized difference vegetation index</td>
+      <td style="text-align: left">\({NDVI} = \frac{\left( { {NIR} - {RED} } \right)}{\left( { {NIR} + {RED} } \right)}\)</td>
+      <td style="text-align: left">Minimizes topographic effects and produces a linear measurement scale. Negative values represent areas without vegetation. The higher the index is, the higher the chlorophyll index is [<a href="#B45-sustainability-13-09462">45</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>SAVI</strong>: Soil-adjusted vegetation index</td>
+      <td style="text-align: left">\({SAVI} = \frac{\left( { {NIR} - {RED} } \right)}{\left( { {NIR} + 0.428} \right) \times \left( 1.428 \right)}\)</td>
+      <td style="text-align: left">Minimizes the effect of the soil in areas with low vegetation density [<a href="#B46-sustainability-13-09462">46</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>VARI</strong>: Visible atmospherically resistant index</td>
+      <td style="text-align: left">\({VARI} = \frac{\left( { {GREEN} - {RED} } \right)}{\left( { {GREEN} + {RED} - {BLUE} } \right)}\)</td>
+      <td style="text-align: left">It highlights vegetation in the visible part of the spectrum, while mitigating differences in lighting and atmospheric effects [<a href="#B47-sustainability-13-09462">47</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>EVI</strong>: Improved vegetation index</td>
+      <td style="text-align: left">\({ {EVI} = 2.5} \times \frac{\left( { {NIR} - {RED} } \right)}{\left( {\left( { {NIR} + 6 \times {RED} - 7.5 \times {BLUE} } \right) + 1} \right)}\)</td>
+      <td style="text-align: left">It corrects some atmospheric conditions, e.g., the background noise of the canopy, and it is more sensitive in areas with dense vegetation [<a href="#B48-sustainability-13-09462">48</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>BSI</strong>: Bare soil index</td>
+      <td style="text-align: left">\({BSI} = \frac{\left\lbrack { {SWIR} + {RED} } \right\rbrack - \left\lbrack { {NIR} + {BLUE} }  \right\rbrack}{\left\lbrack { {SWIR} + {RED} } \right\rbrack + \left\lbrack { {NIR} + {BLUE} } \right\rbrack}\)</td>
+      <td style="text-align: left">The difference in the number of areas of bare soil, land, and vegetation [<a href="#B49-sustainability-13-09462">49</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>NGRDI</strong>: Normalized red green difference index</td>
+      <td style="text-align: left">\({NGRDI} = \frac{\left( { {GREEN} - {RED} } \right)}{\left( { {GREEN} + {RED} } \right)}\)</td>
+      <td style="text-align: left">Reflectance of the green and red area of the electromagnetic spectrum, which come from a true color image [<a href="#B49-sustainability-13-09462">49</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>ARVI</strong>: Atmospheric resistant vegetation index</td>
+      <td style="text-align: left">\({ARVI} = \frac{\left( { {NIR} - \left( {2 \times {RED} } \right) + {BLUE} } \right)}{\left( { {NIR} + \left( {2 \times {RED} } \right) + {BLUE} } \right)}\)</td>
+      <td style="text-align: left">Recommended for areas with a high concentration of some type of aerosol, mist, smoke, or other type of particles suspended in the air [<a href="#B50-sustainability-13-09462">50</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>GCI</strong>: Green coverage index</td>
+      <td style="text-align: left">\({GCI} = \frac{B9}{GREEN} - 1\)</td>
+      <td style="text-align: left">It can specify the health status of the vegetation or warn of the start of temporary seasons [<a href="#B47-sustainability-13-09462">47</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>GNDVI</strong>: Green normalized difference vegetation index</td>
+      <td style="text-align: left">\({GNDVI} = \frac{\left( { {NIR} - {GREEN} } \right)}{\left( { {GREEN} + {NIR} } \right)}\)</td>
+      <td style="text-align: left">It is a measure of the “greenness” of the plant or photosynthetic activity. This index is mainly used in the intermediate and final stages of the crop cycle [<a href="#B45-sustainability-13-09462">45</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>NDMI</strong>: Normalized difference moisture index</td>
+      <td style="text-align: left">\({NDMI} = \frac{\left( { {NIR} - {SWRI} } \right)}{\left( { {NIR} + {SWRI} } \right)}\)</td>
+      <td style="text-align: left">It describes the level of water stress of the vegetation and between the difference and the sum of the radiation refracted in the near-infrared and SWIR [<a href="#B51-sustainability-13-09462">51</a>].</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><label for="table_body_display_sustainability-13-09462-t001" class="margin-toggle"> ⊕</label><input type="checkbox" id="table_body_display_sustainability-13-09462-t001" class="margin-toggle" /><span class="marginnote"><strong>Table 1.</strong> Spectral indices analyzed from the
+Sentinel-2 bands. [NIR: Near-infrared; RED: band 4; GREEN:band 3; BLUE: band 2;
+SWRI: band 11; WATER VAPOUR: band 9.] </span></p>
+
+<p><br /><br /><br />
+Categorical and topographic variables were selected from the studies
+that showed the advance of the agricultural frontier as one of the main
+causes for páramo loss
+[<a href="#B43-sustainability-13-09462">43</a>,<a href="#B44-sustainability-13-09462">44</a>].
+The GSOC and spectral indices were included since they are directly
+related to the different soil surfaces in a particular way for each of
+the covers studied; thus, they contribute significantly to the model
+fitting.</p>
+
+<p><br />
+<a id="table_body_display_sustainability-13-09462-t002"></a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Measurement</th>
+      <th style="text-align: left">Formula-Defines Each Parameter in the Description</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Producer’s accuracy  (PA)</td>
+      <td style="text-align: left">\({PA} = \frac{D_{ij} }{R_{J} }\)</td>
+      <td style="text-align: left">Producer’s accuracy is a reference-based accuracy that is computed by reviewing the predictions produced by a class and by establishing the percentage of correct predictions [<a href="#B52-sustainability-13-09462">52</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">User’s accuracy (UA)</td>
+      <td style="text-align: left">\({UA} = \frac{D_{ij} }{C_{i} }\)</td>
+      <td style="text-align: left">User’s accuracy is a map-based accuracy that is computed by reviewing the reference data for a class and establishing the percentage of correct predictions for these samples [<a href="#B53-sustainability-13-09462">53</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Overall accuracy (OA)</td>
+      <td style="text-align: left">\({UA} = \frac{\sum D_{ij} }{N}\)</td>
+      <td style="text-align: left">Indicates the proportion of all reference pixels that are correctly classified [<a href="#B53-sustainability-13-09462">53</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Kappa index</td>
+      <td style="text-align: left">\(K = \frac{\Pr_{(a)} - \Pr_{(e)} }{1 - \Pr_{(e)} }\)</td>
+      <td style="text-align: left">Concordance between the observed values of the image and the values estimated by the classifier [<a href="#B13-sustainability-13-09462">13</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Indicators of change:<br /><nbsp>Gain<br /><nbsp>Losses<br /><nbsp> Net change</nbsp></nbsp></nbsp></td>
+      <td style="text-align: left">Gain: \(G_{ij} = P_{+j} − P_{jj}\)<br />Losses: \(L_{ij} = P_{j+} − P_{jj}\)<br />Net Change: \(D_j =  \lvert L_{ij} − G_{ij} \rvert\)<br />Total change: \(D_{TJ} = G_{ij} + L_{ij}\)<br />Exchange: \(S_j = 2 × MIN (P_{j+} − P_{jj}, P_{+j} − P_{jj})\)</td>
+      <td style="text-align: left">They make it possible to determine for each category gains, losses, net change, and exchanges experienced between two points in time [<a href="#B54-sustainability-13-09462">54</a>].</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Systematic transitions in terms of gain and loss</td>
+      <td style="text-align: left">\(G_{ij}\frac{\frac{\sum_{j}\left( {Y_{t + 1} - Y_{t} } \right)}{\left( {Y_{t + 1} - Y_{t} } \right)} }{A_{ {jYt} + 1}~}\) <br />\(L_{ij}\frac{\frac{\sum_{i}\left( {Y_{t + 1} - Y_{t} } \right)}{\left( {Y_{t + 1} - Y_{t} } \right)} }{A_{iYt}~}\)</td>
+      <td style="text-align: left">A latent transition is interpreted as existing but apparently inactive and an active transition means that it works or has the capacity to act [<a href="#B54-sustainability-13-09462">54</a>].</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><label for="sustainability-13-09462-t002" class="margin-toggle"> ⊕</label><input type="checkbox" id="sustainability-13-09462-t002" class="margin-toggle" /><span class="marginnote"><strong>Table 2.</strong> Statistical values
+used to evaluate the performance of the predictive models analyzed and the
+precision of the land-use map. [\(D_{ij}\): Number of correctly classified pixels of
+a particular class; \(R_J\): number of reference pixels of the same class; \(C_i\):
+total number of predicted values belonging to a class; \(N\): total number of pixels
+in the error matrix; \(Pr_{(a)}\): total proportion of cells that match in both
+layers; \(Pr_{(e)}\): random hypothetical probability that cells will match in both
+layers; \(P_{+j}\): gain at time two; \(P_{jj}\): no coverage change; \(P_{j+}\): loss at time
+two; \(G_{ij}\): active transition; \(L_{ij}\): latent transition; \(Y_{t+1}\): time two; \(Y_t\):
+time one; \(A\): area.] </span></p>
+
+<h3 id="sec2dot7-sustainability-13-09462">2.7. Extraction of Values</h3>
+
+<p>All variables were drawn from check points. The extraction of numerical
+values was carried out using the Point Sampling Tool QGIS software
+plugin [<a href="#B55-sustainability-13-09462">55</a>]. The model
+database was generated from this operation.</p>
+
+<p>The extracted numerical values were classified in two phases with a
+maximum likelihood algorithm
+[<a href="#B56-sustainability-13-09462">56</a>]. In the first phase,
+the learning phase, a spectral study of the image was performed for each
+category at the training points. With this, the spectral response could
+be related to each category. In the second phase, the probability that
+each pixel in the images belongs to a certain category was calculated
+based on the spectral response. The pixel was assigned to the category
+with the highest probability.</p>
+
+<h3 id="sec2dot8-sustainability-13-09462">2.8. Fitting of Data in the Supervised Learning Model</h3>
+
+<p>The database was entered into Salford Predictive Modeler V8.2 software
+[<a href="#B57-sustainability-13-09462">57</a>], which includes the
+nonparametric CDT and MARS models. Using a Spearman’s rank correlation
+matrix [<a href="#B58-sustainability-13-09462">58</a>], only the
+values with a strong correlation (&gt;0.9) were evaluated to reduce the
+redundant data of the response variable.</p>
+
+<p>The importance of the variables for each of the analyzed algorithms was
+studied with the purpose of improving their performance. Through
+post-tuning, the training data were adjusted, maximizing the validation
+and simplicity of the number of branches in the tree, thus compensating
+for the lack of backtracking of the induction process
+[<a href="#B59-sustainability-13-09462">59</a>].</p>
+
+<h3 id="sec2dot9-sustainability-13-09462">2.9. Nonparametric Methods of Classification</h3>
+
+<h4 id="sec2dot9dot1-sustainability-13-09462">2.9.1. CART Decision Tree (CDT)</h4>
+
+<p>CDT is an approximation model in which a number of variables established
+in a nonparametric form are expressed
+[<a href="#B60-sustainability-13-09462">60</a>]. It establishes an
+adjustment through recursive binary partitions, in which a successive
+set of possibilities is established, which give rise to a group
+belonging to the same characteristics that define its classification.
+The algorithm is in charge of analyzing the categorical variables that
+make it possible to form a homogeneous group or create nodes with each
+other as well as the heterogeneity between each node
+[<a href="#B61-sustainability-13-09462">61</a>].</p>
+
+<p>The tree is generated from a main node (root) in which all the variables
+are represented. The algorithm defines the partition of secondary nodes
+based on increasingly different defined criteria. The separation of
+these nodes or subsets comprises a classification level. Consequently,
+if there are new partitions, new secondary nodes are created, but if the
+data are homogeneous and represent a similar characteristic, then this
+node becomes a terminal node. The process can be outlined in four
+phases: tree construction; stopping the tree growth process that
+constitutes a maximum tree that over-adjusts the information contained
+in our database; tree pruning, which simplifies the tree by leaving only
+the most important nodes; and, finally, the selection of the optimal
+tree with generalization capacity
+[<a href="#B62-sustainability-13-09462">62</a>,<a href="#B63-sustainability-13-09462">63</a>].</p>
+
+<p>The purity of the nodes must be as high as possible; thus, the CDT
+method uses the Gini index (1) as a division criterion:</p>
+
+<p><a id="FD1-sustainability-13-09462"></a>
+\(g\left( t \right) = \sum_{j \neq i}^{i}p\left( \frac{j}{t} \right)p\left( \frac{i}{t} \right)\)</p>
+
+<p>where i and j are the categories of the predictor variable, t is a node,
+and p is the proportion.</p>
+
+<h4 id="sec2dot9dot2-sustainability-13-09462">2.9.2. Multivariate Adaptive Regression Splines (MARS)</h4>
+
+<p>This algorithm, which is based on recursive partitions and multistage
+regression, uses spline functions to align data with an arbitrary
+regression function. It builds this relationship from a set of
+coefficients and basic functions, which in turn are strongly influenced
+by the regression of the data
+[<a href="#B63-sustainability-13-09462">63</a>].</p>
+
+<p>MARS generates cut-off points for the different variables. These points
+are identified through basal functions, which indicate the beginning and
+end of a region. The final model is established as a combination of the
+generated base functions. To determine these cut-off points, an
+overestimated model is generated by means of the forward stepwise
+algorithm. Later, the backward stepwise algorithm is used to eliminate
+the nodes that contribute the least to the global fit. The algorithm
+stops when the constructed approximation includes a maximum number of
+functions set by the researcher
+[<a href="#B64-sustainability-13-09462">64</a>].</p>
+
+<p>The model can be written as Equation (2):</p>
+
+<p><a id="FD2-sustainability-13-09462"></a>
+\(y_{t} = \int\left( x_{t} \right) = \mathsf{\beta}_{0} + \sum\limits_{i = 1}^{k}\mathsf{\beta}_{i}B\left( x_{it} \right)\)</p>
+
+<p>where \(y_{t}\) is the response variable at time t, and \(\mathsf{\beta}_{i}\)
+represents the model parameters for the corresponding variables \(x_{it}\),
+ranging from \(i = 1, ..., k\). The value \(\mathsf{\beta}_{0}\) represents the
+intercept and the base functions B(\(x_{it}\) ) are functions that depend on the
+corresponding variables \(x_{it}\), where each \(B(x_{it})\) can be written as
+\(B(x_{it}) = max(0, x_{it}− c)\) or \(B(x_{it}) = max (0, c − x_{it})\). \(c\)
+is a threshold value and \(k\) represents the number of explanatory variables,
+including interactions of the predictor variables
+[<a href="#B65-sustainability-13-09462">65</a>].</p>
+
+<p>For the two nonparametric models, 70% of the analyzed objects were used
+for the learning phase (L) and 30% were used for the validation phase
+(V).</p>
+
+<h2 id="sec3-sustainability-13-09462">3. Results and Discussion</h2>
+
+<p>The variables NDMI, BSI, GSOC, VARI, DEM, and NDMI were those that had
+the best relationship with the characteristics of the study area.
+Through their combination in a supervised learning method, it was
+possible to establish a set of guidelines that allowed the determination
+of land uses in the Andean páramo.</p>
+
+<h3 id="sec3dot1-sustainability-13-09462">3.1. Spearman’s Rank Correlation Matrix — Order Matrix</h3>
+
+<p><a href="#table_body_display_sustainability-13-09462-t003">Table 3</a> shows the spectral
+indices that are correlated and provide nonredundant information to the study.
+Those indices that presented a perfect correlation were eliminated (e.g., SAVI,
+EVI, BSI, NGRDI, ARVI, GCI, and GNDVI) since they were built on others;
+specifically, they provided similar data that limited the adjustment of the
+model and they did not contribute to the decrease in entropy of the resulting
+information.</p>
+
+<p><a id="table_body_display_sustainability-13-09462-t003"></a>
+<label for="sustainability-13-09462-t001" class="margin-toggle"> ⊕</label><input type="checkbox" id="sustainability-13-09462-t001" class="margin-toggle" /><span class="marginnote"><strong>Table 3.</strong> Spearman s rank correlation matrix—order matrix. </span></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: right">NDVI</th>
+      <th style="text-align: right">VARI</th>
+      <th style="text-align: right">BSI</th>
+      <th style="text-align: right">NDMI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">NDVI</td>
+      <td style="text-align: right">1.00</td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">VARI</td>
+      <td style="text-align: right">0.62</td>
+      <td style="text-align: right">1.00</td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">BSI</td>
+      <td style="text-align: right">−0.75</td>
+      <td style="text-align: right">−0.84</td>
+      <td style="text-align: right">1.00</td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">NDMI</td>
+      <td style="text-align: right">0.78</td>
+      <td style="text-align: right">0.77</td>
+      <td style="text-align: right">−0.99</td>
+      <td style="text-align: right">1.00</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>According to Charles Spearman [<a href="#B58-sustainability-13-09462">58</a>], in his
+book <em>General intelligence objectively determined and measured</em>, the correlation
+between 0.09 and 0.20 is minimal; if the value is between 0.21 and 0.40, it is
+low; values between 0.41 and 0.60 are moderate; values between 0.61 and 0.8 are
+good; and values between 0.81 and 1.0 represent a very good correlation.
+Applying these criteria to our Spearman matrix, the selected spectral indices
+showed good to very good correlations.</p>
+
+<p>The chlorophyll content (NDVI) reflected the most important direct
+correlation with the level of water stress of the vegetation (NDMI),
+while bare soil (BSI) reflected the strongest inversely proportional
+correlation with the water capacity of the site (NDMI).</p>
+
+<p>The visible vegetation spectrum (VARI) and the chlorophyll content
+(NDVI) had a good direct correlation with the level of vegetation water
+stress (NDMI). This is expected since the availability of water is
+related to the concentration of vegetation.</p>
+
+<h3 id="sec3dot2-sustainability-13-09462">3.2. Analysis of the Variables of Importance</h3>
+
+<p>The percentages of importance of the variables (<a href="#fig_body_display_sustainability-13-09462-f003">Figure
+3</a>) were relatively acceptable
+considering the difficulties in the study area (e.g., they are dry places, they
+are difficult to access, and they have complex weather conditions)
+[<a href="#B1-sustainability-13-09462">1</a>]. Furthermore, it must be considered that
+the correlation between the variables could have had an impact on the relative
+evaluation of the importance of the variables but did not affect the performance
+of the model [<a href="#B43-sustainability-13-09462">43</a>].</p>
+
+<p><a id="fig_body_display_sustainability-13-09462-f003"></a></p>
+<figure><img src="/research/articles/assets/img/2021-08/83f16145b650078bb211421d2c1c8a561e50ab41.webp" /><figcaption class="maincolumn-figure"><strong>Figure 3.</strong> Importance of variables.</figcaption></figure>
+
+<p>In the two nonparametric methods, the trends of the variables were the
+same, ranking in ascending order of importance as follows: NDMI, BSI,
+GSOC, VARI, DEM, and NDVI.</p>
+
+<p>The NDVI was 100% important within the models, making it an excellent
+exploratory tool for vegetation classes due to its high sensitivity to
+different chlorophyll concentrations
+[<a href="#B66-sustainability-13-09462">66</a>].</p>
+
+<p>The DEM obtained a relative importance of 89.12%, positioning itself as
+the second relevant variable in the statistical model; it was used to
+determine that the topographic classes analyzed were considerably
+related to altitude levels ranging from 3500 m.a.s.l. to 5000 m.a.s.l.,
+and therefore, were related to the temperatures associated with its
+microclimates that were between 2 °C and 20 °C. In other words, the
+variable directly influenced the distribution, development, and growth
+of the studied systems.</p>
+
+<p>The spectral visual atmospheric resistance index (VARI) was relevant,
+with a value of 81.03% in the analysis. It was not very sensitive to
+atmospheric effects in the visible range of the spectrum and contributed
+to adjusting the model from the quality of the plants to the analysis of
+the growth stages of crops due to their excellent correlation with the
+nitrogen content [<a href="#B47-sustainability-13-09462">47</a>].</p>
+
+<p>The GSOC variable had a relative importance of 79.45%, which reflects
+that the distribution of organic carbon in the soil is related to the
+other parameters that were analyzed.</p>
+
+<p>The bare soil index (BSI) was adjusted to 75.09% importance. Based on
+this indicator, the model will better discern the soil from areas with
+little vegetation, quantify its mineral composition, and minimize the
+influence of humidity, increasing the reliability of the algorithm
+[<a href="#B67-sustainability-13-09462">67</a>].</p>
+
+<p>The NDMI indicator had a relative importance of 70.12%. It has
+sensitivity to the absorption of leaf moisture, controlling the water
+stress of the vegetation cover
+[<a href="#B51-sustainability-13-09462">51</a>]. Despite occupying
+the last place in the hierarchical order of the selected variables of
+importance, this parameter can contribute to monitoring the distribution
+of water in the ecosystem, leading to the geolocation of areas
+vulnerable to drought
+[<a href="#B34-sustainability-13-09462">34</a>].</p>
+
+<h3 id="sec3dot3-sustainability-13-09462">3.3. Precision Assessment of Nonparametric Models</h3>
+
+<p>In the learning phase of the confusion matrix (<a href="#table_body_display_sustainability-13-09462-t004">Table
+4</a> and <a href="#table_body_display_sustainability-13-09462-t005">Table
+5</a>), the CDT algorithm correctly classified 3353 objects
+(88%) and MARS classified 2955 (81%) out of 3915 training objects, while
+in the validation phase, the CDT accurately classified 946 objects and
+MARS accurately classified 829 out of 1174 control objects.</p>
+
+<p><br />
+<a id="table_body_display_sustainability-13-09462-t004"></a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Class</th>
+      <th style="text-align: right">L</th>
+      <th style="text-align: right">V</th>
+      <th style="text-align: right">PF(L)</th>
+      <th style="text-align: right">PF(V)</th>
+      <th style="text-align: right">C(L)</th>
+      <th style="text-align: right">C(V)</th>
+      <th style="text-align: right">Pr(L)</th>
+      <th style="text-align: right">Pr(V)</th>
+      <th style="text-align: right">Gr(L)</th>
+      <th style="text-align: right">Gr(V)</th>
+      <th style="text-align: right">S(L)</th>
+      <th style="text-align: right">S(V)</th>
+      <th style="text-align: right">UA(L)</th>
+      <th style="text-align: right">UA(V)</th>
+      <th style="text-align: right">PA(L)</th>
+      <th style="text-align: right">PA(V)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>PF</strong></td>
+      <td style="text-align: right">150</td>
+      <td style="text-align: right">47</td>
+      <td style="text-align: right">117</td>
+      <td style="text-align: right">39</td>
+      <td style="text-align: right">7</td>
+      <td style="text-align: right">3</td>
+      <td style="text-align: right">6</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">19</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">78</td>
+      <td style="text-align: right">70.21</td>
+      <td style="text-align: right">73.13</td>
+      <td style="text-align: right">73.13</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>C</strong></td>
+      <td style="text-align: right">700</td>
+      <td style="text-align: right">267</td>
+      <td style="text-align: right">8</td>
+      <td style="text-align: right">13</td>
+      <td style="text-align: right">580</td>
+      <td style="text-align: right">213</td>
+      <td style="text-align: right">75</td>
+      <td style="text-align: right">18</td>
+      <td style="text-align: right">29</td>
+      <td style="text-align: right">15</td>
+      <td style="text-align: right">8</td>
+      <td style="text-align: right">8</td>
+      <td style="text-align: right">82.86</td>
+      <td style="text-align: right">79.78</td>
+      <td style="text-align: right">83.09</td>
+      <td style="text-align: right">83.09</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Pr</strong></td>
+      <td style="text-align: right">1600</td>
+      <td style="text-align: right">540</td>
+      <td style="text-align: right">16</td>
+      <td style="text-align: right">3</td>
+      <td style="text-align: right">55</td>
+      <td style="text-align: right">33</td>
+      <td style="text-align: right">1400</td>
+      <td style="text-align: right">436</td>
+      <td style="text-align: right">112</td>
+      <td style="text-align: right">43</td>
+      <td style="text-align: right">17</td>
+      <td style="text-align: right">5</td>
+      <td style="text-align: right">87.5</td>
+      <td style="text-align: right">83.85</td>
+      <td style="text-align: right">87.99</td>
+      <td style="text-align: right">87.99</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Gr</strong></td>
+      <td style="text-align: right">1290</td>
+      <td style="text-align: right">273</td>
+      <td style="text-align: right">19</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">41</td>
+      <td style="text-align: right">15</td>
+      <td style="text-align: right">101</td>
+      <td style="text-align: right">26</td>
+      <td style="text-align: right">1110</td>
+      <td style="text-align: right">226</td>
+      <td style="text-align: right">19</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">86.05</td>
+      <td style="text-align: right">82.78</td>
+      <td style="text-align: right">87.06</td>
+      <td style="text-align: right">87.06</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>S</strong></td>
+      <td style="text-align: right">175</td>
+      <td style="text-align: right">47</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">15</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">9</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">5</td>
+      <td style="text-align: right">5</td>
+      <td style="text-align: right">146</td>
+      <td style="text-align: right">38</td>
+      <td style="text-align: right">83.43</td>
+      <td style="text-align: right">80.85</td>
+      <td style="text-align: right">76.44</td>
+      <td style="text-align: right">76.44</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Total</strong></td>
+      <td style="text-align: right">3915</td>
+      <td style="text-align: right">1174</td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><label for="sustainability-13-09462-t004" class="margin-toggle"> ⊕</label><input type="checkbox" id="sustainability-13-09462-t004" class="margin-toggle" /><span class="marginnote"><strong>Table 4.</strong> Confusion learning matrix (L) 70%, validation (V) 30%. CDT. </span></p>
+
+<p><br /><br /><br /><br /></p>
+
+<p><a id="table_body_display_sustainability-13-09462-t005"></a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Class</th>
+      <th style="text-align: right">L</th>
+      <th style="text-align: right">V</th>
+      <th style="text-align: right">PF(L)</th>
+      <th style="text-align: right">PF(V)</th>
+      <th style="text-align: right">C(L)</th>
+      <th style="text-align: right">C(V)</th>
+      <th style="text-align: right">Pr(L)</th>
+      <th style="text-align: right">Pr(V)</th>
+      <th style="text-align: right">Gr(L)</th>
+      <th style="text-align: right">Gr(V)</th>
+      <th style="text-align: right">S(L)</th>
+      <th style="text-align: right">S(V)</th>
+      <th style="text-align: right">UA(L)</th>
+      <th style="text-align: right">UA(V)</th>
+      <th style="text-align: right">PA(L)</th>
+      <th style="text-align: right">PA(V)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>PF</strong></td>
+      <td style="text-align: right">150</td>
+      <td style="text-align: right">47</td>
+      <td style="text-align: right">105</td>
+      <td style="text-align: right">30</td>
+      <td style="text-align: right">10</td>
+      <td style="text-align: right">8</td>
+      <td style="text-align: right">11</td>
+      <td style="text-align: right">6</td>
+      <td style="text-align: right">18</td>
+      <td style="text-align: right">3</td>
+      <td style="text-align: right">6</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">70.00</td>
+      <td style="text-align: right">63.83</td>
+      <td style="text-align: right">65.63</td>
+      <td style="text-align: right">65.63</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>C</strong></td>
+      <td style="text-align: right">700</td>
+      <td style="text-align: right">267</td>
+      <td style="text-align: right">14</td>
+      <td style="text-align: right">10</td>
+      <td style="text-align: right">510</td>
+      <td style="text-align: right">185</td>
+      <td style="text-align: right">106</td>
+      <td style="text-align: right">61</td>
+      <td style="text-align: right">68</td>
+      <td style="text-align: right">9</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">2</td>
+      <td style="text-align: right">72.86</td>
+      <td style="text-align: right">69.29</td>
+      <td style="text-align: right">70.83</td>
+      <td style="text-align: right">70.83</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Pr</strong></td>
+      <td style="text-align: right">1600</td>
+      <td style="text-align: right">540</td>
+      <td style="text-align: right">21</td>
+      <td style="text-align: right">1</td>
+      <td style="text-align: right">110</td>
+      <td style="text-align: right">73</td>
+      <td style="text-align: right">1200</td>
+      <td style="text-align: right">380</td>
+      <td style="text-align: right">241</td>
+      <td style="text-align: right">82</td>
+      <td style="text-align: right">28</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">75.00</td>
+      <td style="text-align: right">70.37</td>
+      <td style="text-align: right">79.52</td>
+      <td style="text-align: right">79.52</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Gr</strong></td>
+      <td style="text-align: right">1290</td>
+      <td style="text-align: right">273</td>
+      <td style="text-align: right">20</td>
+      <td style="text-align: right">6</td>
+      <td style="text-align: right">80</td>
+      <td style="text-align: right">22</td>
+      <td style="text-align: right">167</td>
+      <td style="text-align: right">35</td>
+      <td style="text-align: right">1007</td>
+      <td style="text-align: right">201</td>
+      <td style="text-align: right">16</td>
+      <td style="text-align: right">9</td>
+      <td style="text-align: right">78.06</td>
+      <td style="text-align: right">73.63</td>
+      <td style="text-align: right">75.09</td>
+      <td style="text-align: right">75.09</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>S</strong></td>
+      <td style="text-align: right">175</td>
+      <td style="text-align: right">47</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">0</td>
+      <td style="text-align: right">10</td>
+      <td style="text-align: right">5</td>
+      <td style="text-align: right">25</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">7</td>
+      <td style="text-align: right">5</td>
+      <td style="text-align: right">133</td>
+      <td style="text-align: right">33</td>
+      <td style="text-align: right">76.00</td>
+      <td style="text-align: right">70.21</td>
+      <td style="text-align: right">71.89</td>
+      <td style="text-align: right">71.89</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Total</strong></td>
+      <td style="text-align: right">3915</td>
+      <td style="text-align: right">1174</td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><label for="sustainability-13-09462-t005" class="margin-toggle"> ⊕</label><input type="checkbox" id="sustainability-13-09462-t005" class="margin-toggle" /><span class="marginnote"><strong>Table 5.</strong> Confusion learning matrix (L) 70%, validation (V) 30%. MARS. </span></p>
+
+<p>The analysis of “producer accuracy” (PA) and “user accuracy” (UA; <a href="#table_body_display_sustainability-13-09462-t004">Table
+4</a> and <a href="#table_body_display_sustainability-13-09462-t005">Table
+5</a>) determined that, in both the learning and validation
+processes, the nonparametric CDT model performed better than the MARS
+model in classifying the categories analyzed based on the total number
+of control points included by the operator for each of the topographic
+coverages. The same performance trend was reflected in the
+classification of the categories based on the total number of objects
+recognized by the program.</p>
+
+<p>The general accuracy, “overall accuracy” (OA, <a href="#table_body_display_sustainability-13-09462-t006">Table
+6</a>), indicated that the proportion of objects classified
+correctly in the CDT model corresponding to the learning phase was
+88.00%, with a kappa of 86.51%, and that in the learning phase, it was
+83.34% with a kappa of 83.49%. Meanwhile, MARS correctly classified
+81.83% with a kappa of 79.86% in the learning process, and 75.46% with a
+kappa of 74.92% in the validation process.</p>
+
+<p><a id="table_body_display_sustainability-13-09462-t006"></a>
+<label for="sustainability-13-09462-t006" class="margin-toggle"> ⊕</label><input type="checkbox" id="sustainability-13-09462-t006" class="margin-toggle" /><span class="marginnote"><strong>Table 6.</strong> Summary of the main precision results of the two models. </span></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Algorithms</th>
+      <th style="text-align: right">OA (L)%</th>
+      <th style="text-align: right">OA (V)%</th>
+      <th style="text-align: right">KAPPA (L)%</th>
+      <th style="text-align: right">KAPPA (V)%</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>CDT</strong></td>
+      <td style="text-align: right">88.00</td>
+      <td style="text-align: right">83.84</td>
+      <td style="text-align: right">86.51</td>
+      <td style="text-align: right">83.49</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>MARS</strong></td>
+      <td style="text-align: right">81.83</td>
+      <td style="text-align: right">75.46</td>
+      <td style="text-align: right">79.86</td>
+      <td style="text-align: right">74.92</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The CDT algorithm, through its recursive binary partitioning adjustment
+mechanism, established an excellent successive set of possibilities for
+analyzing categorical variables and the ability to form groups or nodes
+homogeneous among themselves and heterogeneous among nodes from the
+analyzed characteristics. The multistage regressions established by MARS
+allowed obtaining reliable functions that aligned the information of the
+variables towards a reliable supervised learning model. The connection
+analysis between the variables from the categories evaluated in the two
+models was good, so it was determined that CDT and MARS are stable and
+reliable statistical models for this case study.</p>
+
+<h3 id="sec3dot4-sustainability-13-09462">3.4. Optimal Model with Higher Accuracy CDT</h3>
+
+<p>From the 3915 objects analyzed, 300 subtrees were randomly created with
+their corresponding sets of variable characteristics in the study area.
+The tree with the smallest error had 35 nodes (<a href="#fig_body_display_sustainability-13-09462-f004">Figure
+4</a>) and included all the variables analyzed in the research
+based on the categories analyzed in the páramo ecosystem.</p>
+
+<p><a id="fig_body_display_sustainability-13-09462-f004"></a></p>
+<figure><img src="/research/articles/assets/img/2021-08/f7a21bd9d8ef52710dbabecc3ec4402dbd5bac8b.webp" /><figcaption class="maincolumn-figure"><strong>Figure 4.</strong> CDT classified error curve.</figcaption></figure>
+
+<h3 id="sec3dot5-sustainability-13-09462">3.5. Optimal Model with Higher Accuracy MARS</h3>
+
+<p>The MARS model analyzed 35 basic functions in relation to the variables included
+in the study (<a href="#fig_body_display_sustainability-13-09462-f005">Figure 5</a>).
+Function 13 was the highest-performing function based on the values fitted by
+the model and the observer values.</p>
+
+<p><a id="fig_body_display_sustainability-13-09462-f005"></a></p>
+<figure><img src="/research/articles/assets/img/2021-08/23561ace84b8ad7a8affa626d0a35b5ba6776382.webp" /><figcaption class="maincolumn-figure"><strong>Figure 5.</strong> MARS classified error curve.</figcaption></figure>
+
+<p>For the analysis of land use changes in páramo ecosystems, the model
+with the highest degree of accuracy (CDT) was selected.</p>
+
+<p><a href="#fig_body_display_sustainability-13-09462-f006">Figure 6</a> shows the optimal CDT
+model; this model provides clear decision guidelines with threshold values.</p>
+
+<p><a id="fig_body_display_sustainability-13-09462-f006"></a></p>
+<figure class="fullwidth"><img src="/research/articles/assets/img/2021-08/579f1a5571f3a7ef6fdb7de429c24d5648f1f29b.webp" /><figcaption><strong>Figure 6.</strong> The best decision tree of the nonparametric CDT model.</figcaption></figure>
+
+<p><a href="#table_body_display_sustainability-13-09462-t007">Table 7</a> shows the conditions
+to be applied to determine land use coverages in the Andean region studied.
+Although the model had a high level of accuracy, future researchers could
+increase its performance considering the thresholds described; in addition,
+possible variations could cause effects in the different nodes since the whole
+system is interconnected from the main root, this could be considered a
+limitation in the method.</p>
+
+<p><a id="table_body_display_sustainability-13-09462-t007"></a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Type</th>
+      <th style="text-align: center">Conditionals</th>
+      <th style="text-align: center">Observation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>C</strong></td>
+      <td style="text-align: center">NDVI ≤ 0.31, GSOC ≤ 101.50,<br /> NDMI &gt; 0.14, VARI &gt; 0.10\ NDVI ≤ 0.31,<br /> GSOC ≤ 101.50, NDMI ≤ 0.14,<br /> BSI &gt; 0.10\ NDVI ≤ 0.31, GSOC ≤ 101.50,<br /> NDMI ≤ 0.14, BSI ≤ 0.10,<br /> VARI &gt; 0.12\ NDVI ≤ 0.31, GSOC ≤ 101.50,<br /> NDMI ≤ 0.14, BSI ≤ 0.10,<br /> VARI ≤ 0.12, DEM ≤ 3810.50</td>
+      <td style="text-align: center">NDMI is the most important variable in determining crops indicating that crop leaf sensitivity and canopy water stress are directly related to crop development.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Pr</strong></td>
+      <td style="text-align: center">NDVI ≤ 0.31, GSOC &gt; 101.50,<br /> DEM ≤ 3842.52, NDMI &gt; 0.13\ NDVI ≤ 0.31,<br /> GSOC &gt; 101.50, DEM &gt; 3842.52,<br /> GSOC ≤ 103.11\ NDVI ≤ 0.31, GSOC &gt; 101.50,<br /> DEM &gt; 3842.52, GSOC &gt; 103.11,<br /> NDVI ≤ 0.19\ NDVI ≤ 0.31, GSOC &gt; 101.50,<br /> DEM ≤ 3842.52, NDMI ≤ 0.13,<br /> GSOC &gt; 115.76, NDVI ≤ 0.16\ NDVI ≤ 0.31,<br /> GSOC &gt; 101.50, DEM &gt; 3842.52,<br /> GSOC &gt; 103.11, NDVI &gt; 0.19,<br /> GSOC &gt; 161.07</td>
+      <td style="text-align: center">Altitude is one of the variables that significantly determined the distribution of the ecosystem (Pr).\ The ecosystem can develop above 3842.52 m.a.s.l.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Gr</strong></td>
+      <td style="text-align: center">NDVI &gt; 0.31, GSOC ≤ 149.76,<br /> NDVI &gt; 0.33\ NDVI &gt; 0.31, GSOC &gt; 149.76,<br /> DEM &gt; 3682.50\ NDVI &gt; 0.31, GSOC ≤ 149.76,<br /> NDVI ≤ 0.33, VARI &gt; 0.01\ NDVI &gt; 0.31,<br /> GSOC &gt; 149.76, DEM ≤ 3682.50,<br /> NDVI &gt; 0.37</td>
+      <td style="text-align: center">The tree determined Gr coverage in two very interesting branches. In one of the branches, the DEM variable is determinant while in the other branch it is not, which leads us to think that the predictive model could be defining one category of natural pasture and another of cultivated pasture. That is, it moves towards natural areas without any control.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PF</strong></td>
+      <td style="text-align: center">NDVI &gt; 0.31, GSOC ≤ 149.76,<br /> NDVI ≤ 0.33, VARI ≤ 0.01\ NDVI ≤ 0.31,<br /> GSOC ≤ 101.50, NDMI &gt; 0.14,<br /> VARI ≤ 0.10\ NDVI &gt; 0.31, GSOC &gt; 149.76,<br /> DEM ≤ 3682.50, NDVI ≤ 0.37\ NDVI ≤ 0.31,<br /> GSOC &gt; 101.50, DEM ≤ 3842.52,<br /> NDMI ≤ 0.13, GSOC ≤ 115.76\ NDVI ≤ 0.31,<br /> GSOC &gt; 101.50, DEM ≤ 3842.52 NDMI ≤ 0.13,<br /> GSOC &gt; 115.76 &gt; 0.16\ NDVI ≤ 0.31, GSOC ≤ 101.50,<br /> NDMI ≤ 0.14, BSI ≤ 0.10,<br /> VARI ≤ 0.12, DEM &gt; 3810.50\ NDVI ≤ 0.31,<br /> GSOC &gt; 101.50, DEM &gt; 3842.52,<br /> GSOC &gt; 103.11 &gt; 0.19, GSOC ≤ 161.07</td>
+      <td style="text-align: center">Forest plantation coverage (FP) has the lowest prediction percentage. It is important to mention that it has the lowest proportioned coverage in the area, so field monitoring could improve its performance.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>S</strong></td>
+      <td style="text-align: center">NDVI ≤ 0.10</td>
+      <td style="text-align: center">The NDVI variable was sufficient to determine the ground cover.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><label for="sustainability-13-09462-t007" class="margin-toggle"> ⊕</label><input type="checkbox" id="sustainability-13-09462-t007" class="margin-toggle" /><span class="marginnote"><strong>Table 7.</strong> Conditions for the classification of coverage. </span></p>
+
+<h3 id="sec3dot6-sustainability-13-09462">3.6. Distribution of the Categories Researched in the Study Area</h3>
+
+<p><a href="#fig_body_display_sustainability-13-09462-f007">Figure 7</a> shows the páramo
+reported by the map of Ecosystems of Continental Ecuador in 2012
+[<a href="#B37-sustainability-13-09462">37</a>] and <a href="#fig_body_display_sustainability-13-09462-f008">Figure
+8</a> shows the páramo soil in 2020
+and its loss points. <a href="#fig_body_display_sustainability-13-09462-f009">Figure 9</a>
+shows the alternative land uses by which the páramo was replaced from 2012 to
+2020 in relation to the altitudinal levels and levels of organic carbon
+concentration for each of the comarcas that make up the study area.</p>
+
+<p><a id="fig_body_display_sustainability-13-09462-f007"></a></p>
+<figure><img src="/research/articles/assets/img/2021-08/c93d9ac05c5cc5cf0b8060293973e4df73ce9a2e.webp" /><figcaption class="maincolumn-figure"><strong>Figure 7.</strong> Distribution of the páramo according to the counties that comprise the Chambo sub-basin (2012)[<a href="#B37-sustainability-13-09462">37</a>].</figcaption></figure>
+
+<p><a id="fig_body_display_sustainability-13-09462-f008"></a></p>
+<figure><img src="/research/articles/assets/img/2021-08/b50300540eda4e1cf62cb549dab0e13739dc9b0a.webp" /><figcaption class="maincolumn-figure"><strong>Figure 8.</strong> Distribution of the páramo according to the counties that comprise the Chambo sub-basin (2020).</figcaption></figure>
+
+<p><a id="fig_body_display_sustainability-13-09462-f009"></a></p>
+<figure><img src="/research/articles/assets/img/2021-08/96f950fb294655d2ea01afca99471244b74707a8.webp" /><figcaption class="maincolumn-figure"><strong>Figure 9.</strong> Land uses of the páramo ecosystem (2020); ((<strong>A</strong>): Colta; (<strong>B</strong>): Alausí; (<strong>C</strong>): Guano; (<strong>D</strong>): Penipe; (<strong>E</strong>): Chambo; (<strong>F</strong>): Guamote; (<strong>G</strong>): Riobamba; Pr: páramo; Gr: grassland; C: crop; S: soil; and PF: forest plant).</figcaption></figure>
+
+<p>The comparison of the 2020 land use map generated from the model that
+obtained the highest percentage of efficiency (CDT) against the 2012 Map
+of Continental Ecuador Ecosystems allowed us to evaluate the following
+aspects: carbon concentrations in relation to the different altitudinal
+levels and land uses, systematic transitions of cover, gains, losses,
+exchanges, and net changes of the categories analyzed in the work.</p>
+
+<p>The land uses evaluated in our study are distributed throughout the sub-basin
+(<a href="#fig_body_display_sustainability-13-09462-f009">Figure 9</a>). We found that above 3500 m.a.s.l., the páramo stores 251 to
+357 tons C/ha, while forest plantations and grasslands store 81 to 165 tons
+C/ha. Between 3000 and 3500 m.a.s.l., the páramo ecosystem had a carbon
+sequestration of 191 to 250 tons C/ha; crops store from 60 to 64 tons C/ha,
+while grasslands and soils store from 39 to 80 tons C/ha. At altitudes of 2500
+to 3000 m.a.s.l., organic carbon concentrations varied in the range of 110 to
+190 tons C/ha for páramos, from 20 to 38 tons C/ha for grasslands, and from 10
+to 29 tons C/ha for crops.</p>
+
+<p><a href="#table_body_display_sustainability-13-09462-t008">Table 8</a> show the changes in the categories in relation to
+gains, losses, exchanges, and net changes between the land uses of the
+Map of Ecosystems of Continental Ecuador, MAE (2012) and the Map of Land
+Uses (2020) generated from the CDT model.</p>
+
+<p><br />
+<a id="table_body_display_sustainability-13-09462-t008"></a>
+<label for="table_body_display_sustainability-13-09462-t008" class="margin-toggle"> ⊕</label><input type="checkbox" id="table_body_display_sustainability-13-09462-t008" class="margin-toggle" /><span class="marginnote"><strong>Table 8.</strong> General index of coverage changes in the study area. </span></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Coverage</th>
+      <th style="text-align: right">Gains %</th>
+      <th style="text-align: right">Losses %</th>
+      <th style="text-align: right">Exchange %</th>
+      <th style="text-align: right">Net Change %</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>Pr</strong></td>
+      <td style="text-align: right">7.65</td>
+      <td style="text-align: right">16.65</td>
+      <td style="text-align: right">12.76</td>
+      <td style="text-align: right">7.93</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>C</strong></td>
+      <td style="text-align: right">2.15</td>
+      <td style="text-align: right">1.52</td>
+      <td style="text-align: right">3.04</td>
+      <td style="text-align: right">0.63</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Gr</strong></td>
+      <td style="text-align: right">7.84</td>
+      <td style="text-align: right">0.32</td>
+      <td style="text-align: right">0.64</td>
+      <td style="text-align: right">7.52</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PF</strong></td>
+      <td style="text-align: right">1.53</td>
+      <td style="text-align: right">0.98</td>
+      <td style="text-align: right">1.96</td>
+      <td style="text-align: right">0.55</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>S</strong></td>
+      <td style="text-align: right">5.11</td>
+      <td style="text-align: right">0.18</td>
+      <td style="text-align: right">0.36</td>
+      <td style="text-align: right">4.93</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<p>In 2012, the Ministry of Environment of Ecuador, through the map of
+ecosystems of continental Ecuador, reported that there were 128,170.48
+ha of páramo ecosystem in the Chambo sub-basin
+[<a href="#B37-sustainability-13-09462">37</a>]. Based on this
+information and with the data obtained through the land use map
+elaborated from the CDT model proposed in this research, we found that
+the overall land use changes in the study area are as follows: the
+páramo lost 16.65% (21,346.10 ha) of existing lands, while it gained
+7.65% from other soil covers. Pastures gained 7.84% while losing 0.82%;
+crops gained 2.15% and lost 1.52%; forest plantations gained 1.53% and
+lost 0.98%, and soils gained 5.11% and lost 0.18%.</p>
+
+<p>The interrelation of the cover change indexes indicates that páramo and
+pasture are the land uses with the greatest transition. Páramo is the
+land cover with greater loss than gain in relation to the land uses of
+the other land covers. Overall, the páramo had a loss of 9% in extension
+during the 8 years from 2012 to 2020.</p>
+
+<p>The loss of the páramo ecosystem is detailed below for each of the
+counties that make up the Chambo sub-basin. (<a href="#table_body_display_sustainability-13-09462-t009">Table
+9</a>).</p>
+
+<p><br />
+<a id="table_body_display_sustainability-13-09462-t009"></a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">County</th>
+      <th style="text-align: right">UTM Coordinates — <br /> X</th>
+      <th style="text-align: right">— Zone 17 Southern Hemisphere <br /> Y</th>
+      <th style="text-align: right">Pr-MAE (2012) %</th>
+      <th style="text-align: right">C (ha)</th>
+      <th style="text-align: right">Gr (ha)</th>
+      <th style="text-align: right">PF (ha)</th>
+      <th style="text-align: right">S (ha)</th>
+      <th style="text-align: right">Total (ha)</th>
+      <th style="text-align: right">C (%)</th>
+      <th style="text-align: right">Gr (%)</th>
+      <th style="text-align: right">PF (%)</th>
+      <th style="text-align: right">S (%)</th>
+      <th style="text-align: right">Total (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">ALAUSÍ</td>
+      <td style="text-align: right">676,363.14</td>
+      <td style="text-align: right">9,750,636.59</td>
+      <td style="text-align: right">5176.00</td>
+      <td style="text-align: right">181.12</td>
+      <td style="text-align: right">307.12</td>
+      <td style="text-align: right">241.14</td>
+      <td style="text-align: right">55.99</td>
+      <td style="text-align: right">785.38</td>
+      <td style="text-align: right">0.14</td>
+      <td style="text-align: right">0.24</td>
+      <td style="text-align: right">0.19</td>
+      <td style="text-align: right">0.04</td>
+      <td style="text-align: right">0.61</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">CHAMBO</td>
+      <td style="text-align: right">777,562.97</td>
+      <td style="text-align: right">9,805,829.89</td>
+      <td style="text-align: right">8220.56</td>
+      <td style="text-align: right">172.96</td>
+      <td style="text-align: right">418.00</td>
+      <td style="text-align: right">107.20</td>
+      <td style="text-align: right">645.68</td>
+      <td style="text-align: right">1343.84</td>
+      <td style="text-align: right">0.13</td>
+      <td style="text-align: right">0.33</td>
+      <td style="text-align: right">0.08</td>
+      <td style="text-align: right">0.50</td>
+      <td style="text-align: right">1.05</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">COLTA</td>
+      <td style="text-align: right">742,465.20</td>
+      <td style="text-align: right">9,799,454.32</td>
+      <td style="text-align: right">14,454.90</td>
+      <td style="text-align: right">254.01</td>
+      <td style="text-align: right">1093.07</td>
+      <td style="text-align: right">47.87</td>
+      <td style="text-align: right">5.93</td>
+      <td style="text-align: right">1400.88</td>
+      <td style="text-align: right">0.20</td>
+      <td style="text-align: right">0.85</td>
+      <td style="text-align: right">0.04</td>
+      <td style="text-align: right">0.01</td>
+      <td style="text-align: right">1.09</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">GUAMOTE</td>
+      <td style="text-align: right">770,637.10</td>
+      <td style="text-align: right">9,772,754.27</td>
+      <td style="text-align: right">48,481.67</td>
+      <td style="text-align: right">593.87</td>
+      <td style="text-align: right">2488.48</td>
+      <td style="text-align: right">687.05</td>
+      <td style="text-align: right">1590.00</td>
+      <td style="text-align: right">5359.40</td>
+      <td style="text-align: right">0.46</td>
+      <td style="text-align: right">1.94</td>
+      <td style="text-align: right">0.54</td>
+      <td style="text-align: right">1.24</td>
+      <td style="text-align: right">4.18</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">GUANO</td>
+      <td style="text-align: right">755,657.56</td>
+      <td style="text-align: right">9,833,453.54</td>
+      <td style="text-align: right">5291.30</td>
+      <td style="text-align: right">236.08</td>
+      <td style="text-align: right">824.65</td>
+      <td style="text-align: right">175.89</td>
+      <td style="text-align: right">975.87</td>
+      <td style="text-align: right">2212.49</td>
+      <td style="text-align: right">0.18</td>
+      <td style="text-align: right">0.64</td>
+      <td style="text-align: right">0.14</td>
+      <td style="text-align: right">0.76</td>
+      <td style="text-align: right">1.73</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PENIPE</td>
+      <td style="text-align: right">786,059.27</td>
+      <td style="text-align: right">9,823,700.11</td>
+      <td style="text-align: right">13,667.04</td>
+      <td style="text-align: right">182.86</td>
+      <td style="text-align: right">940.97</td>
+      <td style="text-align: right">364.46</td>
+      <td style="text-align: right">607.79</td>
+      <td style="text-align: right">2096.09</td>
+      <td style="text-align: right">0.14</td>
+      <td style="text-align: right">0.73</td>
+      <td style="text-align: right">0.28</td>
+      <td style="text-align: right">0.47</td>
+      <td style="text-align: right">1.64</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">RIOBAMBA</td>
+      <td style="text-align: right">769,782.92</td>
+      <td style="text-align: right">9,806,343.65</td>
+      <td style="text-align: right">32,879.01</td>
+      <td style="text-align: right">1148.02</td>
+      <td style="text-align: right">3988.42</td>
+      <td style="text-align: right">333.53</td>
+      <td style="text-align: right">2678.06</td>
+      <td style="text-align: right">8148.02</td>
+      <td style="text-align: right">0.90</td>
+      <td style="text-align: right">3.11</td>
+      <td style="text-align: right">0.26</td>
+      <td style="text-align: right">2.09</td>
+      <td style="text-align: right">6.36</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right">128,170.48</td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right">21,346.10</td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right">16.65</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><label for="table_body_display_sustainability-13-09462-t009" class="margin-toggle"> ⊕</label><input type="checkbox" id="table_body_display_sustainability-13-09462-t009" class="margin-toggle" /><span class="marginnote"><strong>Table 9.</strong> Loss of PÁRAMO from the Coverage Studied (distribution of land uses in the páramo ecosystem). </span></p>
+
+<p><br /></p>
+
+<p>In ascending order, the loss of páramo in each county is as follows:
+Alausí 0.61% (785.38 ha), Chambo 1.05% (1343.84 ha), Colta 1.09%
+(1400.88 ha), Penipe 1.64% (2096.09 ha), Guano 1.73% (2212.49 ha),
+Guamote 4.18% (5359.40 ha), and Riobamba 6.36% (8148.02 ha).</p>
+
+<p>Riobamba County followed by Guamote are the most affected areas since
+they are located on the western boundary of the sub-basin
+[<a href="#B68-sustainability-13-09462">68</a>]. Access to these
+high-altitude areas is easier, which has allowed the development of
+agricultural and livestock frontiers to reach the summit line. PF and
+land cover also reflect a higher concentration in these two counties.</p>
+
+<p>In all the counties, the use of land as pastures represents the greatest
+impact on the páramo ecosystem, possibly due to policies for price
+stabilization within the livestock segment, a factor that has provided
+some stability for producers, making them wager more towards this
+sector.</p>
+
+<p>The change in the ecosystem from páramo to bare soil may reflect erosion
+problems because of agricultural practices and inadequate recovery
+arrangements of natural resources.</p>
+
+<h3 id="sec3dot7-sustainability-13-09462">3.7. Systematic Land Use Change</h3>
+
+<p><a href="#table_body_display_sustainability-13-09462-t010">Table 10</a> and <a href="#table_body_display_sustainability-13-09462-t011">Table
+11</a> detail the systematic
+transitions of gains and losses of land use changes from the Ecosystem Map of
+Continental Ecuador (2012) and the Land Use Map (2020) elaborated in the study.</p>
+
+<p><br />
+<a id="table_body_display_sustainability-13-09462-t010"></a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Coverage</th>
+      <th style="text-align: right">Footprint Size</th>
+      <th style="text-align: right">Strength of the Transition</th>
+      <th style="text-align: left">Interpretation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Pr a C</td>
+      <td style="text-align: right">−0.16</td>
+      <td style="text-align: right">−0.37</td>
+      <td style="text-align: left">Cultivation gains, cultivation does not replace páramo.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Pr a Gr</td>
+      <td style="text-align: right">0.11</td>
+      <td style="text-align: right">0.02</td>
+      <td style="text-align: left">Grassland gains, grassland replaces páramo.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Pr a PF</td>
+      <td style="text-align: right">−0.81</td>
+      <td style="text-align: right">−0.95</td>
+      <td style="text-align: left">Plantation forest gains, plantation forest does not replace páramo.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Pr a S</td>
+      <td style="text-align: right">−3.11</td>
+      <td style="text-align: right">−0.93</td>
+      <td style="text-align: left">Soil gains, Soil does not replace páramo.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">C a Pr</td>
+      <td style="text-align: right">−0.03</td>
+      <td style="text-align: right">−0.33</td>
+      <td style="text-align: left">Páramo gains, páramo does not replace crop.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">C a Gr</td>
+      <td style="text-align: right">0.33</td>
+      <td style="text-align: right">0.89</td>
+      <td style="text-align: left">Grassland gains, grassland replaces crop.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">C a PF</td>
+      <td style="text-align: right">−0.35</td>
+      <td style="text-align: right">−7.00</td>
+      <td style="text-align: left">Plantation forestry gains, forest plantation does not replace cultivation.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">C a S</td>
+      <td style="text-align: right">0.11</td>
+      <td style="text-align: right">0.58</td>
+      <td style="text-align: left">Soil gains, soil replaces crop.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Gr a Pr</td>
+      <td style="text-align: right">−0.17</td>
+      <td style="text-align: right">−0.85</td>
+      <td style="text-align: left">Páramo gains, páramo does not replace grassland.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Gr a C</td>
+      <td style="text-align: right">−0.01</td>
+      <td style="text-align: right">−0.20</td>
+      <td style="text-align: left">Crop gains, crop does not replace grassland.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Gr a PF</td>
+      <td style="text-align: right">−0.01</td>
+      <td style="text-align: right">−0.09</td>
+      <td style="text-align: left">Plantation forest gains, forest plantation does not replace grassland.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Gr a S</td>
+      <td style="text-align: right">−2.58</td>
+      <td style="text-align: right">−6.14</td>
+      <td style="text-align: left">Soil gains, soil does not replaces grassland.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PF a C</td>
+      <td style="text-align: right">0.03</td>
+      <td style="text-align: right">4.00</td>
+      <td style="text-align: left">Crop gains, crop replaces forest plantation.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PFa Gr</td>
+      <td style="text-align: right">0.04</td>
+      <td style="text-align: right">0.94</td>
+      <td style="text-align: left">Grassland gains, grassland replace forest plantation.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PF a S</td>
+      <td style="text-align: right">0.15</td>
+      <td style="text-align: right">5.25</td>
+      <td style="text-align: left">Soil gains, soil replaces forest plantation.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">S a Pr</td>
+      <td style="text-align: right">−0.23</td>
+      <td style="text-align: right">−3.29</td>
+      <td style="text-align: left">Páramo gains, páramo does not replaces soil.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">S a C</td>
+      <td style="text-align: right">−0.13</td>
+      <td style="text-align: right">−6.50</td>
+      <td style="text-align: left">Crop gains, crop does not replaces soil.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">S a Gr</td>
+      <td style="text-align: right">−0.29</td>
+      <td style="text-align: right">−0.97</td>
+      <td style="text-align: left">Grassland gains, grassland does not replace soil.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">S a PF</td>
+      <td style="text-align: right">−0.46</td>
+      <td style="text-align: right">−11.50</td>
+      <td style="text-align: left">Plantation forestry gains, plantation forestry does not replaces soil.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><label for="table_body_display_sustainability-13-09462-t010" class="margin-toggle"> ⊕</label><input type="checkbox" id="table_body_display_sustainability-13-09462-t010" class="margin-toggle" /><span class="marginnote"><strong>Table 10.</strong> Systematic transitions in terms of gains from land use changes in the Chambo sub-basin. </span></p>
+
+<p><br /></p>
+
+<p>The system transitions in <a href="#table_body_display_sustainability-13-09462-t010">Table
+10</a> indicate that pastures
+replace páramo, crops, and forest plantations, but do not replace soil. Crops
+gain and replace forest plantation land uses but do not replace páramo, pasture,
+and soil. Forest plantations gain but do not replace any land cover.</p>
+
+<p><br /></p>
+
+<p><a id="table_body_display_sustainability-13-09462-t011"></a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Coverage</th>
+      <th style="text-align: right">Footprint Size</th>
+      <th style="text-align: right">Strength of the Transition</th>
+      <th style="text-align: left">Interpretation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Pr a C</td>
+      <td style="text-align: right">−0.70</td>
+      <td style="text-align: right">−0.72</td>
+      <td style="text-align: left">Páramo loses, crop does not replace páramo.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Pr a Gr</td>
+      <td style="text-align: right">2.87</td>
+      <td style="text-align: right">0.75</td>
+      <td style="text-align: left">Páramo loses, pastizal replaces páramo.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Pr a PF</td>
+      <td style="text-align: right">−0.61</td>
+      <td style="text-align: right">−0.94</td>
+      <td style="text-align: left">Páramo loses, forest plantation does not replace páramo.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Pr a S</td>
+      <td style="text-align: right">−1.56</td>
+      <td style="text-align: right">−0.86</td>
+      <td style="text-align: left">Páramo loses, soil does not replace páramo.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">C a Pr</td>
+      <td style="text-align: right">−1.05</td>
+      <td style="text-align: right">−0.95</td>
+      <td style="text-align: left">Crop loses, páramo does not replace crop.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">C a Gr</td>
+      <td style="text-align: right">0.49</td>
+      <td style="text-align: right">2.33</td>
+      <td style="text-align: left">Crop loses, grassland replaces crop.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">C a PF</td>
+      <td style="text-align: right">−0.36</td>
+      <td style="text-align: right">−9.00</td>
+      <td style="text-align: left">Crop loses, plantation forestry does not replace crop.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">C a S</td>
+      <td style="text-align: right">0.20</td>
+      <td style="text-align: right">2.00</td>
+      <td style="text-align: left">Crop loses, soil replaces crop.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Gr a Pr</td>
+      <td style="text-align: right">−2.67</td>
+      <td style="text-align: right">−0.99</td>
+      <td style="text-align: left">Grassland loses, páramo does not replace grassland.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Gr a C</td>
+      <td style="text-align: right">−0.09</td>
+      <td style="text-align: right">−0.69</td>
+      <td style="text-align: left">Grassland loses, crop does not replace grassland.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Gr a PF</td>
+      <td style="text-align: right">−0.01</td>
+      <td style="text-align: right">−0.11</td>
+      <td style="text-align: left">Grassland loses, plantation forestry does not replace grassland.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Gr a S</td>
+      <td style="text-align: right">−2.75</td>
+      <td style="text-align: right">−11.00</td>
+      <td style="text-align: left">Grassland loses, soil does not replace grassland.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PF a Pr</td>
+      <td style="text-align: right">−0.42</td>
+      <td style="text-align: right">−0.98</td>
+      <td style="text-align: left">Forest plantation loses, páramo does not replace forest plantation.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PF a C</td>
+      <td style="text-align: right">0.03</td>
+      <td style="text-align: right">1.50</td>
+      <td style="text-align: left">Forest plantation loses, crop replaces forest plantation.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PFa Gr</td>
+      <td style="text-align: right">−0.07</td>
+      <td style="text-align: right">−0.88</td>
+      <td style="text-align: left">Forest plantation loses, grassland does not replace forest plantation.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PF a S</td>
+      <td style="text-align: right">0.46</td>
+      <td style="text-align: right">11.50</td>
+      <td style="text-align: left">Forest plantation loses, grassland replaces forest plantation.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">S a Pr</td>
+      <td style="text-align: right">−0.45</td>
+      <td style="text-align: right">−0.60</td>
+      <td style="text-align: left">Soil loses, páramo does not replace soil.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">S a C</td>
+      <td style="text-align: right">−0.11</td>
+      <td style="text-align: right">−2.75</td>
+      <td style="text-align: left">Soil loses, crop does not replaces soil.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">S a Gr</td>
+      <td style="text-align: right">−0.14</td>
+      <td style="text-align: right">−0.93</td>
+      <td style="text-align: left">Soil loses, grassland does not replace soil.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">S a PF</td>
+      <td style="text-align: right">−0.48</td>
+      <td style="text-align: right">−15.00</td>
+      <td style="text-align: left">Soil loses, plantation forestry does not replace soil.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><label for="table_body_display_sustainability-13-09462-t011" class="margin-toggle"> ⊕</label><input type="checkbox" id="table_body_display_sustainability-13-09462-t011" class="margin-toggle" /><span class="marginnote"><strong>Table 11.</strong> Systematic transitions in terms of losses from land use changes in the Chambo sub-basin. </span></p>
+
+<p><br /></p>
+
+<p>The transitions in terms of losses represented in <a href="#table_body_display_sustainability-13-09462-t011">Table
+11</a> indicate that páramo and
+crops lose cover and are replaced by pastures. On the other hand, forest
+plantations are replaced by crops and pastures.</p>
+
+<p>None of the categories has a zero value in the difference between the
+values observed by the map and the expected value in the classification,
+so all changes were interpreted as relevant
+[<a href="#B69-sustainability-13-09462">69</a>,<a href="#B70-sustainability-13-09462">70</a>,<a href="#B71-sustainability-13-09462">71</a>].</p>
+
+<p>It was recognized that changes in land use of the natural resource are
+strongly linked to the economic activities of the inhabitants. This
+relationship helps to understand that in the studied area, both
+ecological and social components are complexly related to each other,
+which is why the páramo ecosystems of the study area should be
+understood as a socioecological or socioeconomic system
+[<a href="#B72-sustainability-13-09462">72</a>].</p>
+
+<p>Grasslands are the predominant land uses in the area in terms of
+profits. Pasture covers replace crops, which could mean that the
+inhabitants of the sub-basin concentrate their economic activities in
+the dairy or livestock industry.</p>
+
+<p>The degradation of the páramo ecosystem is significantly greater than its
+recovery (<a href="#table_body_display_sustainability-13-09462-t008">Table 8</a>), perhaps
+because native vegetation is completely eliminated from the Andean zones for
+alternative uses. Soil productivity begins to decrease due to the complex
+climatological and topographic conditions; after the fourth year, exploitation
+becomes unsustainable. Productive activities are moved to other Andean areas to
+take advantage of them for a new period of time
+[<a href="#B73-sustainability-13-09462">73</a>].</p>
+
+<p>The loss of Andean soils not only interferes with soil yield for
+productive activities but also causes reduction of carbon storage,
+decrease in water regulation, loss of native species, deterioration in
+ecosystem functions, and compromises the ecosystem services of the
+natural resource for future generations
+[<a href="#B74-sustainability-13-09462">74</a>]. Therefore, it is
+important to identify the synergies of land uses.</p>
+
+<p>Carbon concentrations are directly related to alternative land uses.
+From the land use changes detected in the study and the carbon
+concentrations determined for each category, it was possible to
+understand that the loss of páramo causes a loss of carbon sequestration
+in the Andean ecosystem. The release of organic carbon into the
+atmosphere contributes to climate change issues
+[<a href="#B24-sustainability-13-09462">24</a>].</p>
+
+<p>The distribution of organic carbon in the different altitudinal floors
+was diverse for the analyzed land uses. Carbon sequestration was higher
+at high altitudinal levels. At higher altitudes, carbon concentrations
+were higher, perhaps because at higher altitudes the climatological and
+topographic conditions become even more difficult, which prevents the
+use of the natural resource by anthropogenic activities.</p>
+
+<p>Based on the evaluation carried out in this work, it is considered
+necessary to implement timely conservation strategies according to the
+reality of the geographic area studied. The updating of information on
+land use changes in the country’s páramos is currently deficient or
+nonexistent. Constant monitoring in these difficult-to-access areas is a
+real challenge. Natural resource conservation strategies are usually
+developed based on assumptions or ad hoc information; there is no
+updated technical information
+[<a href="#B3-sustainability-13-09462">3</a>].</p>
+
+<p>The product of the fit model contributes to the generation of databases
+that allow the evaluation of the impact of land use changes in the
+páramo ecosystem in relation to altitudinal levels and carbon
+sequestration.</p>
+
+<p>The technical information obtained through the application of the
+proposed methodology in combination with other social inputs can
+contribute to the development of more precise programs, strategies,
+ordinances, or policies for the care of the páramo.</p>
+
+<p>Although the methodology has good results, future researchers may
+consider the extension of the set of variables included in the study as
+a limitation to replicate the study. For this research, it was not
+possible to include variables of another type, for example
+climatological variables, due to the scarce databases in the study area.
+For optimal results, we must do a good job during the initial processing
+of the data (calibration, atmospheric and topographic correction).
+Finding images with low noise and with moderate atmospheric affectations
+can be complicated by the complex climatological factors of the area,
+which could represent a difficulty in applying the method.</p>
+
+<p>The proposed methodology stands out in relation to other studies due to
+the information extracted for the determination of the thresholds of the
+variables; the data were obtained from a compilation of 20 Sentinel 2
+satellite images whose resolution is excellent to establish a
+verification of the control points established on the studied coverages;
+this guaranteed an excellent database for the elaboration of the model
+and analysis of the importance of variables. All the inputs to replicate
+the work are low cost, which makes the method an economically accessible
+tool. Based on the conditionals established in the methodology, the
+automation of the algorithm will be fast.</p>
+
+<p>It is essential to create sustainable strategies to recover and protect
+Andean areas. If the protection of the páramo is not taken seriously,
+the loss of its functionality could generate serious problems in the
+ecosystem services it provides, for example, in the water supply of its
+area of influence.</p>
+
+<h2 id="sec4-sustainability-13-09462">4. Conclusions</h2>
+
+<p>The variables NDMI, BSI, GSOC, VARI, DEM, and NDVI have important
+characteristics for the determination of land use in the páramo
+ecosystem. This set of variables integrated to a statistical method of
+supervised learning allows monitoring and documenting land use changes
+of the Andean ecosystem in relation to the rate of degradation,
+exchange, net changes, and their relationship with the carbon
+concentration in its different altitudinal floors.</p>
+
+<p>The CDT model had a performance of 88% and MARS 81.83%, so we conclude
+that both algorithms reached an efficient accuracy percentage to
+determine the land uses of the páramo from the variables selected.</p>
+
+<p>We compared the páramo extension in 2012 from the land use report of the
+Ministry of Environment in Ecuador and the map of land use of the year
+2020 generated in our study. We found that 9% less páramo exists in 2020
+compared to 2012 (16.65% degradation, 7.65% recovery). We found that
+pastures are the main replacement of the native vegetation in the
+degraded páramo.</p>
+
+<p>The interrelation of land cover change indices indicates that land use
+transitions in the páramo show a greater tendency to degradation than to
+recovery of the natural resource. Pastures are the main land use
+replacing native vegetation in the páramo.</p>
+
+<p>The information acquired through the proposed methodology can serve as
+an input that, in combination with other social and economic inputs, can
+support the creation of sustainable conservation strategies and policies
+more in line with the reality of the area.</p>
+
+<p>The methodology is efficient, economical, and easy to deploy, but could
+be improved by analyzing new spectral indices and adding more detailed
+GIS vector layers. However, it would be necessary to create them since
+there are no official databases with this type of information (in the
+case of Ecuador).</p>
+
+<h2 id="html-ack">Acknowledgments</h2>
+
+<p>The authors give their sincere gratitude to The Research and Development
+Group for the Environment and Climate Change at the Higher Polytechnic
+School of Chimborazo for its support through the project <em>“Cost benefits
+analyses from carbon sequestration through conservation to the various
+options of adaptations and building resilience to climate change through
+an ecosystem-based adaptation approach in three communities from the
+High Andean Region of Ecuador”</em>.</p>
+
+<h2 id="html-references_list">References</h2>
+
+<p>[1]<a name="B1-sustainability-13-09462"></a> Castaño, C. <em>Páramos and High Andean Ecosystems of Colombia in
+    Condition of Access Point and Global Climate Tensor</em>;
+    IDEAM: Bogotá, Colombia, 2002. <a href="https://scholar.google.com/scholar_lookup?title=P%C3%A1ramos+and+High+Andean+Ecosystems+of+Colombia+in+Condition+of+Access+Point+and+Global+Climate+Tensor&amp;author=Casta%C3%B1o,+C.&amp;publication_year=2002">Google
+    Scholar</a>.</p>
+
+<p>[2]<a name="B2-sustainability-13-09462"></a> Crespo, P.; Celleri, R.; Buytaert, W.; Feyen, J.; Iñiguez, V.;
+    Borja, P.; De Bièvre, B. <em>Land use change impacts on the hydrology of
+    wet Andean páramo ecocystems</em>. [Status Perspect. Hydrol. Small
+    Basins] <strong>2009</strong>, [336], 71–76.
+    <a href="https://scholar.google.com/scholar_lookup?title=Land+use+change+impacts+on+the+hydrology+of+wet+Andean+p%C3%A1ramo+ecocystems&amp;author=Crespo,+P.&amp;author=Celleri,+R.&amp;author=Buytaert,+W.&amp;author=Feyen,+J.&amp;author=I%C3%B1iguez,+V.&amp;author=Borja,+P.&amp;author=De+Bi%C3%A8vre,+B.&amp;publication_year=2009&amp;journal=Status+Perspect.+Hydrol.+Small+Basins&amp;volume=336&amp;pages=71%E2%80%9376&amp;doi=10.13140/2.1.5137.6320">Google
+    Scholar</a>,
+    <a href="https://doi.org/10.13140/2.1.5137.6320">CrossRef</a></p>
+
+<p>[3]<a name="B3-sustainability-13-09462"></a> Buytaert, W.; Célleri, R.; De Bievre, B.; Cisneros, F.; Wyseure,
+    G.; Deckers, J.; Hofstede, R. <em>Human impact on the hydrology of the
+    Andean paramos</em>. [Earth-Sci. Rev.] <strong>2006</strong>,
+    [79], 53–72. <a href="https://scholar.google.com/scholar_lookup?title=Human+impact+on+the+hydrology+of+the+Andean+paramos&amp;author=Buytaert,+W.&amp;author=C%C3%A9lleri,+R.&amp;author=De+Bievre,+B.&amp;author=Cisneros,+F.&amp;author=Wyseure,+G.&amp;author=Deckers,+J.&amp;author=Hofstede,+R.&amp;publication_year=2006&amp;journal=Earth-Sci.+Rev.&amp;volume=79&amp;pages=53%E2%80%9372&amp;doi=10.1016/j.earscirev.2006.06.002">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.earscirev.2006.06.002">CrossRef</a></p>
+
+<p>[4]<a name="B4-sustainability-13-09462"></a> Tonneijck, F.H.; Jansen, B.; Nierop, K.G.J.; Verstraten, J.M.;
+    Sevink, J.; De Lange, L. <em>Towards understanding of carbon stocks and
+    stabilization in volcanic ash soils in natural Andean ecosystems of
+    northern Ecuador</em>. [Eur. J. Soil Sci.] <strong>2010</strong>,
+    [61], 392–405. <a href="https://scholar.google.com/scholar_lookup?title=Towards+understanding+of+carbon+stocks+and+stabilization+in+volcanic+ash+soils+in+natural+Andean+ecosystems+of+northern+Ecuador&amp;author=Tonneijck,+F.H.&amp;author=Jansen,+B.&amp;author=Nierop,+K.G.J.&amp;author=Verstraten,+J.M.&amp;author=Sevink,+J.&amp;author=De+Lange,+L.&amp;publication_year=2010&amp;journal=Eur.+J.+Soil+Sci.&amp;volume=61&amp;pages=392%E2%80%93405&amp;doi=10.1111/j.1365-2389.2010.01241.x">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1111/j.1365-2389.2010.01241.x">CrossRef</a></p>
+
+<p>[5]<a name="B5-sustainability-13-09462"></a> Farley, K.A.; Bremer, L.L.; Harden, C.P.; Hartsig, J. <em>Changes in
+    carbon storage under alternative land uses in biodiverse Andean
+    grasslands: Implications for payment for ecosystem services</em>.
+    [Conservation] <strong>2012</strong>, [6], 21–27.
+    <a href="https://scholar.google.com/scholar_lookup?title=Changes+in+carbon+storage+under+alternative+land+uses+in+biodiverse+Andean+grasslands:+Implications+for+payment+for+ecosystem+services&amp;author=Farley,+K.A.&amp;author=Bremer,+L.L.&amp;author=Harden,+C.P.&amp;author=Hartsig,+J.&amp;publication_year=2012&amp;journal=Conservation&amp;volume=6&amp;pages=21%E2%80%9327&amp;doi=10.1111/j.1755-263X.2012.00267.x">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1111/j.1755-263X.2012.00267.x">CrossRef</a></p>
+
+<p>[6]<a name="B6-sustainability-13-09462"></a> Tonneijck, F.H.; Bouten, W.; VanLoon, E.E.; Velthuis, M.; Sevink,
+    J.; Verstraten, J.M. <em>The effect of the change in soil volume on the
+    distribution of organic matter in a volcanic ash soil</em>. [Eur. J. Soil
+    Sci.] <strong>2016</strong>, [67], 226–236.
+    <a href="https://scholar.google.com/scholar_lookup?title=The+effect+of+the+change+in+soil+volume+on+the+distribution+of+organic+matter+in+a+volcanic+ash+soil&amp;author=Tonneijck,+F.H.&amp;author=Bouten,+W.&amp;author=VanLoon,+E.E.&amp;author=Velthuis,+M.&amp;author=Sevink,+J.&amp;author=Verstraten,+J.M.&amp;publication_year=2016&amp;journal=Eur.+J.+Soil+Sci.&amp;volume=67&amp;pages=226%E2%80%93236&amp;doi=10.1111/ejss.12329">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1111/ejss.12329">CrossRef</a></p>
+
+<p>[7]<a name="B7-sustainability-13-09462"></a> Hofstede, R.; Calles, J.; López, V.; Polanco, R.; Torres, F.;
+    Ulloa, J.; Vásquez y Marcos, A.C. <em>Los Páramos Andinos ¿Qué Sabemos?
+    Estado de Conocimiento Sobre el Impacto del Cambio Climático en el
+    Ecosistema Paramo</em>. 2014. Available online:
+    <a href="https://portals.iucn.org/library/node/44760">https://portals.iucn.org/library/node/44760</a> (accessed on 12
+    February 2021).]</p>
+
+<p>[8]<a name="B8-sustainability-13-09462"></a> Tian, Q.; He, H.; Cheng, W.; Bai, Z.; Wang, Y.; Zhang, X. <em>Factors
+    controlling soil organic carbon stability along a temperate forest
+    altitudinal gradient</em>. [Sci. Rep.] <strong>2016</strong>,
+    [6], 18783. <a href="https://scholar.google.com/scholar_lookup?title=Factors+controlling+soil+organic+carbon+stability+along+a+temperate+forest+altitudinal+gradient&amp;author=Tian,+Q.&amp;author=He,+H.&amp;author=Cheng,+W.&amp;author=Bai,+Z.&amp;author=Wang,+Y.&amp;author=Zhang,+X.&amp;publication_year=2016&amp;journal=Sci.+Rep.&amp;volume=6&amp;pages=18783&amp;doi=10.1038/srep18783">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1038/srep18783">CrossRef</a></p>
+
+<p>[9]<a name="B9-sustainability-13-09462"></a> Willis, K.J.; Jeffers, E.S.; Tovar, C. <em>What makes a terrestrial
+    ecosystem resilient?</em> [Science] <strong>2018</strong>,
+    [359], 988–989. <a href="https://scholar.google.com/scholar_lookup?title=What+makes+a+terrestrial+ecosystem+resilient?&amp;author=Willis,+K.J.&amp;author=Jeffers,+E.S.&amp;author=Tovar,+C.&amp;publication_year=2018&amp;journal=Science&amp;volume=359&amp;pages=988%E2%80%93989&amp;doi=10.1126/science.aar5439&amp;pmid=29496865">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1126/science.aar5439">CrossRef</a>{.cross-ref}]
+    [<a href="https://www.ncbi.nlm.nih.gov/pubmed/29496865">PubMed</a></p>
+
+<p>[10]<a name="B10-sustainability-13-09462"></a> Chabbi, A.; Rumpel, C. <em>Organic matter dynamics in
+    agro-ecosystems–the knowledge gaps</em>. [Eur. J. Soil
+    Sci.] <strong>2009</strong>, [60], 153–157.
+    <a href="https://scholar.google.com/scholar_lookup?title=Organic+matter+dynamics+in+agro-ecosystems%E2%80%93the+knowledge+gaps&amp;author=Chabbi,+A.&amp;author=Rumpel,+C.&amp;publication_year=2009&amp;journal=Eur.+J.+Soil+Sci.&amp;volume=60&amp;pages=153%E2%80%93157&amp;doi=10.1111/j.1365-2389.2008.01116.x">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1111/j.1365-2389.2008.01116.x">CrossRef</a></p>
+
+<p>[11]<a name="B11-sustainability-13-09462"></a> Luo, Z.; Wang, E.; Sun, O.J. <em>The change of soil carbon and its
+    responses to agricultural practices in Australian agroecosystems: A
+    review and synthesis</em>. [Geoderma] <strong>2010</strong>,
+    [155], 211–223. <a href="https://scholar.google.com/scholar_lookup?title=The+change+of+soil+carbon+and+its+responses+to+agricultural+practices+in+Australian+agroecosystems:+A+review+and+synthesis&amp;author=Luo,+Z.&amp;author=Wang,+E.&amp;author=Sun,+O.J.&amp;publication_year=2010&amp;journal=Geoderma&amp;volume=155&amp;pages=211%E2%80%93223&amp;doi=10.1016/j.geoderma.2009.12.012">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.geoderma.2009.12.012">CrossRef</a></p>
+
+<p>[12]<a name="B12-sustainability-13-09462"></a> Lal, R.; Pimentel, D.; Van Oost, K.; Six, J.; Govers, G.; Quine, T.
+    <em>Soil erosion: A carbon sink or source?</em> [Science]
+    <strong>2008</strong>, [319], 1040–1042. <a href="https://scholar.google.com/scholar_lookup?title=Soil+erosion:+A+carbon+sink+or+source?&amp;author=Lal,+R.&amp;author=Pimentel,+D.&amp;author=Van+Oost,+K.&amp;author=Six,+J.&amp;author=Govers,+G.&amp;author=Quine,+T.&amp;publication_year=2008&amp;journal=Science&amp;volume=319&amp;pages=1040%E2%80%931042&amp;doi=10.1126/science.319.5866.1040">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1126/science.319.5866.1040">CrossRef</a></p>
+
+<p>[13]<a name="B13-sustainability-13-09462"></a> Cholo, T.; Fleskens, L.; Sietz, D.; Peerlings, J. <em>Is land
+    fragmentation facilitating or obstructing adoption of climate
+    adaptation measures in Ethiopia?</em> [Sustainability]
+    <strong>2018</strong>, [10], 2120. <a href="https://scholar.google.com/scholar_lookup?title=Is+land+fragmentation+facilitating+or+obstructing+adoption+of+climate+adaptation+measures+in+Ethiopia?&amp;author=Cholo,+T.&amp;author=Fleskens,+L.&amp;author=Sietz,+D.&amp;author=Peerlings,+J.&amp;publication_year=2018&amp;journal=Sustainability&amp;volume=10&amp;pages=2120&amp;doi=10.3390/su10072120">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.3390/su10072120">CrossRef</a></p>
+
+<p>[14]<a name="B14-sustainability-13-09462"></a> Ritzema, H.; Kirkpatrick, H.; Stibinger, J.; Heinhuis, H.; Belting,
+    H.; Schrijver, R.; Diemont, H. <em>Water management supporting the
+    delivery of ecosystem services for grassland, heath and moorland.</em>
+    [Sustainability] <strong>2016</strong>, [8], 440.
+    <a href="https://scholar.google.com/scholar_lookup?title=Water+management+supporting+the+delivery+of+ecosystem+services+for+grassland,+heath+and+moorland&amp;author=Ritzema,+H.&amp;author=Kirkpatrick,+H.&amp;author=Stibinger,+J.&amp;author=Heinhuis,+H.&amp;author=Belting,+H.&amp;author=Schrijver,+R.&amp;author=Diemont,+H.&amp;publication_year=2016&amp;journal=Sustainability&amp;volume=8&amp;pages=440&amp;doi=10.3390/su8050440">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.3390/su8050440">CrossRef</a></p>
+
+<p>[15]<a name="B15-sustainability-13-09462"></a> Roy, A.; Inamdar, A.B. <em>Multi-temporal Land Use Land Cover (LULC)
+    change analysis of a dry semi-arid river basin in western India
+    following a robust multi-sensor satellite image calibration
+    strategy</em>. [Heliyon] <strong>2019</strong>, [5],
+    e01478. <a href="https://scholar.google.com/scholar_lookup?title=Multi-temporal+Land+Use+Land+Cover+(LULC)+change+analysis+of+a+dry+semi-arid+river+basin+in+western+India+following+a+robust+multi-sensor+satellite+image+calibration+strategy&amp;author=Roy,+A.&amp;author=Inamdar,+A.B.&amp;publication_year=2019&amp;journal=Heliyon&amp;volume=5&amp;pages=e01478&amp;doi=10.1016/j.heliyon.2019.e01478">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.heliyon.2019.e01478">CrossRef</a></p>
+
+<p>[16]<a name="B16-sustainability-13-09462"></a> Martín, B.; García, M.; Palomo, I.; Montes, C. The conservation
+    against development paradigm in protected areas: Valuation of
+    ecosystem services in the Doñana social–ecological system
+    (southwestern Spain). [Ecol. Econ.] <strong>2011</strong>,
+    [70], 1481–1491. <a href="https://scholar.google.com/scholar_lookup?title=The+conservation+against+development+paradigm+in+protected+areas:+Valuation+of+ecosystem+services+in+the+Do%C3%B1ana+social%E2%80%93ecological+system+(southwestern+Spain)&amp;author=Mart%C3%ADn,+B.&amp;author=Garc%C3%ADa,+M.&amp;author=Palomo,+I.&amp;author=Montes,+C.&amp;publication_year=2011&amp;journal=Ecol.+Econ.&amp;volume=70&amp;pages=1481%E2%80%931491&amp;doi=10.1016/j.ecolecon.2011.03.009">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.ecolecon.2011.03.009">CrossRef</a></p>
+
+<p>[17]<a name="B17-sustainability-13-09462"></a> Naghavi, H.; Fallah, A.; Shataee, S.; Latifi, H.; Soosani, J.;
+    Ramezani, H.; Conrad, C. Canopy cover estimation across
+    semi-Mediterranean woodlands: Application of high-resolution earth
+    observation data. [J. Appl. Remote Sens.] <strong>2014</strong>,
+    [8], 083524. <a href="https://scholar.google.com/scholar_lookup?title=Canopy+cover+estimation+across+semi-Mediterranean+woodlands:+Application+of+high-resolution+earth+observation+data&amp;author=Naghavi,+H.&amp;author=Fallah,+A.&amp;author=Shataee,+S.&amp;author=Latifi,+H.&amp;author=Soosani,+J.&amp;author=Ramezani,+H.&amp;author=Conrad,+C.&amp;publication_year=2014&amp;journal=J.+Appl.+Remote+Sens.&amp;volume=8&amp;pages=083524&amp;doi=10.1117/1.JRS.8.083524">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1117/1.JRS.8.083524">CrossRef</a></p>
+
+<p>[18]<a name="B18-sustainability-13-09462"></a> Yu, X.; Hyypp, J.; Vastaranta, M.; Holopainen, M.; Viitala, R.
+    Predicting individual tree attributes from airborne laser point
+    clouds based on the random forests technique. [ISPRS J. Photogramm.
+    Remote Sens.] <strong>2011</strong>, [66], 28–37.
+    <a href="https://scholar.google.com/scholar_lookup?title=Predicting+individual+tree+attributes+from+airborne+laser+point+clouds+based+on+the+random+forests+technique&amp;author=Yu,+X.&amp;author=Hyypp,+J.&amp;author=Vastaranta,+M.&amp;author=Holopainen,+M.&amp;author=Viitala,+R.&amp;publication_year=2011&amp;journal=ISPRS+J.+Photogramm.+Remote+Sens.&amp;volume=66&amp;pages=28%E2%80%9337&amp;doi=10.1016/j.isprsjprs.2010.08.003">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.isprsjprs.2010.08.003">CrossRef</a></p>
+
+<p>[19]<a name="B19-sustainability-13-09462"></a> Steingberg, D.; Colla, P. [CART. Classification and Regression
+    Trees]; Salford Systems: San Diego, CA, USA, 2016.
+    <a href="https://scholar.google.com/scholar_lookup?title=CART.+Classification+and+Regression+Trees&amp;author=Steingberg,+D.&amp;author=Colla,+P.&amp;publication_year=2016">Google
+    Scholar</a>]</p>
+
+<p>[20]<a name="B20-sustainability-13-09462"></a> Prasad, P.R.C.; Nagabhatla, N.; Reddy, C.S.; Gupta, S.; Rajan,
+    K.S.; Raza, S.H.; Dutt, C.B.S. Assessing forest canopy closure in a
+    geospatial medium to address management concerns for tropical
+    islands-Southeast Asia. [Environ. Monit. Assess.]
+    <strong>2010</strong>, [160], 541–553. <a href="https://scholar.google.com/scholar_lookup?title=Assessing+forest+canopy+closure+in+a+geospatial+medium+to+address+management+concerns+for+tropical+islands-Southeast+Asia&amp;author=Prasad,+P.R.C.&amp;author=Nagabhatla,+N.&amp;author=Reddy,+C.S.&amp;author=Gupta,+S.&amp;author=Rajan,+K.S.&amp;author=Raza,+S.H.&amp;author=Dutt,+C.B.S.&amp;publication_year=2010&amp;journal=Environ.+Monit.+Assess.&amp;volume=160&amp;pages=541%E2%80%93553&amp;doi=10.1007/s10661-008-0717-4">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1007/s10661-008-0717-4">CrossRef</a></p>
+
+<p>[21]<a name="B21-sustainability-13-09462"></a> Suresh, S.; Lal, S. A metaheuristic framework based automated
+    Spatial-Spectral graph for land cover classification from
+    multispectral and hyperspectral satellite images. [Infrared Phys.
+    Technol.] <strong>2020</strong>, [105], 103–172.
+    <a href="https://scholar.google.com/scholar_lookup?title=A+metaheuristic+framework+based+automated+Spatial-Spectral+graph+for+land+cover+classification+from+multispectral+and+hyperspectral+satellite+images&amp;author=Suresh,+S.&amp;author=Lal,+S.&amp;publication_year=2020&amp;journal=Infrared+Phys.+Technol.&amp;volume=105&amp;pages=103%E2%80%93172&amp;doi=10.1016/j.infrared.2019.103172">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.infrared.2019.103172">CrossRef</a></p>
+
+<p>[22]<a name="B22-sustainability-13-09462"></a> Bi, X.; Chang, B.; Hou, F.; Yang, Z.; Fu, Q.; Li, B. Assessment of
+    spatio-temporal variation and driving mechanism of ecological
+    environment quality in the Arid regions of central asia, Xinjiang.
+    [Int. J. Environ. Res. Public Health] <strong>2021</strong>,
+    [18], 7111. <a href="https://scholar.google.com/scholar_lookup?title=Assessment+of+spatio-temporal+variation+and+driving+mechanism+of+ecological+environment+quality+in+the+Arid+regions+of+central+asia,+Xinjiang&amp;author=Bi,+X.&amp;author=Chang,+B.&amp;author=Hou,+F.&amp;author=Yang,+Z.&amp;author=Fu,+Q.&amp;author=Li,+B.&amp;publication_year=2021&amp;journal=Int.+J.+Environ.+Res.+Public+Health&amp;volume=18&amp;pages=7111&amp;doi=10.3390/ijerph18137111">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.3390/ijerph18137111">CrossRef</a></p>
+
+<p>[23]<a name="B23-sustainability-13-09462"></a> Guo, L.; Sun, X.; Fu, P.; Shi, T.; Dang, L.; Chen, Y.; Linderman,
+    M.; Zhang, G.; Zhang, Y.; Jiang, Q.; et al. Mapping soil organic
+    carbon stock by hyperspectral and time-series multispectral remote
+    sensing images in low-relief agricultural areas.
+    [Geoderma] <strong>2021</strong>, [398], 115118.
+    <a href="https://scholar.google.com/scholar_lookup?title=Mapping+soil+organic+carbon+stock+by+hyperspectral+and+time-series+multispectral+remote+sensing+images+in+low-relief+agricultural+areas&amp;author=Guo,+L.&amp;author=Sun,+X.&amp;author=Fu,+P.&amp;author=Shi,+T.&amp;author=Dang,+L.&amp;author=Chen,+Y.&amp;author=Linderman,+M.&amp;author=Zhang,+G.&amp;author=Zhang,+Y.&amp;author=Jiang,+Q.&amp;publication_year=2021&amp;journal=Geoderma&amp;volume=398&amp;pages=115118&amp;doi=10.1016/j.geoderma.2021.115118">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.geoderma.2021.115118">CrossRef</a></p>
+
+<p>[24]<a name="B24-sustainability-13-09462"></a> Biudes, M.S.; Vourlitis, G.L.; Velasque, M.C.S.; Machado, N.G.;
+    Danelichen, V.H.D.M.; Pavão, V.M.; Arruda, P.H.Z.; Nogueira, J.D.S.
+    Gross primary productivity of Brazilian Savanna (Cerrado) estimated
+    by different remote sensing-based models. [Agric. For.
+    Meteorol.] <strong>2021</strong>, [307], 108456.
+    <a href="https://scholar.google.com/scholar_lookup?title=Gross+primary+productivity+of+Brazilian+Savanna+(Cerrado)+estimated+by+different+remote+sensing-based+models&amp;author=Biudes,+M.S.&amp;author=Vourlitis,+G.L.&amp;author=Velasque,+M.C.S.&amp;author=Machado,+N.G.&amp;author=Danelichen,+V.H.D.M.&amp;author=Pav%C3%A3o,+V.M.&amp;author=Arruda,+P.H.Z.&amp;author=Nogueira,+J.D.S.&amp;publication_year=2021&amp;journal=Agric.+For.+Meteorol.&amp;volume=307&amp;pages=108456&amp;doi=10.1016/j.agrformet.2021.108456">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.agrformet.2021.108456">CrossRef</a></p>
+
+<p>[25]<a name="B25-sustainability-13-09462"></a> Ienco, D.; Interdonato, R.; Gaetano, R.; Ho Tong Minh, D. Combining
+    Sentinel-1 and Sentinel-2 Satellite Image Time Series for land cover
+    mapping via a multi-source deep learning architecture. [ISPRS J.
+    Photogramm. Remote. Sens.] <strong>2020</strong>,
+    [158], 11–12. <a href="https://scholar.google.com/scholar_lookup?title=Combining+Sentinel-1+and+Sentinel-2+Satellite+Image+Time+Series+for+land+cover+mapping+via+a+multi-source+deep+learning+architecture&amp;author=Ienco,+D.&amp;author=Interdonato,+R.&amp;author=Gaetano,+R.&amp;author=Ho+Tong+Minh,+D.&amp;publication_year=2020&amp;journal=ISPRS+J.+Photogramm.+Remote.+Sens.&amp;volume=158&amp;pages=11%E2%80%9312&amp;doi=10.1016/j.isprsjprs.2019.09.016">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.isprsjprs.2019.09.016">CrossRef</a></p>
+
+<p>[26]<a name="B26-sustainability-13-09462"></a> Tong, X.Y.; Xia, G.S.; Lu, Q.; Shen, H.; Li, S.; You, S.; Zhang, L.
+    Land-cover classification with high-resolution remote sensing images
+    using transferable deep models. [Remote Sens.
+    Environ.] <strong>2020</strong>, [237], 111–122.
+    <a href="https://scholar.google.com/scholar_lookup?title=Land-cover+classification+with+high-resolution+remote+sensing+images+using+transferable+deep+models&amp;author=Tong,+X.Y.&amp;author=Xia,+G.S.&amp;author=Lu,+Q.&amp;author=Shen,+H.&amp;author=Li,+S.&amp;author=You,+S.&amp;author=Zhang,+L.&amp;publication_year=2020&amp;journal=Remote+Sens.+Environ.&amp;volume=237&amp;pages=111%E2%80%93122&amp;doi=10.1016/j.rse.2019.111322">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.rse.2019.111322">CrossRef</a></p>
+
+<p>[27]<a name="B27-sustainability-13-09462"></a> Tajik, S.; Ayoubi, S.; Zeraatpisheh, M. Digital mapping of soil
+    organic carbon using ensemble learning model in Mollisols of
+    Hyrcanian forests, northern Iran. [Geoderma Reg.]
+    <strong>2020</strong>, [20], e00256. <a href="https://scholar.google.com/scholar_lookup?title=Digital+mapping+of+soil+organic+carbon+using+ensemble+learning+model+in+Mollisols+of+Hyrcanian+forests,+northern+Iran&amp;author=Tajik,+S.&amp;author=Ayoubi,+S.&amp;author=Zeraatpisheh,+M.&amp;publication_year=2020&amp;journal=Geoderma+Reg.&amp;volume=20&amp;pages=e00256&amp;doi=10.1016/j.geodrs.2020.e00256">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.geodrs.2020.e00256">CrossRef</a></p>
+
+<p>[28]<a name="B28-sustainability-13-09462"></a> Marais Sicre, C.; Fieuzal, R.; Baup, F. Contribution of
+    multispectral (optical and radar) satellite images to the
+    classification of agricultural surfaces. [Int. J. Appl. Earth Obs.
+    Geoinf.] <strong>2020</strong>, [84], 101–172.
+    <a href="https://scholar.google.com/scholar_lookup?title=Contribution+of+multispectral+(optical+and+radar)+satellite+images+to+the+classification+of+agricultural+surfaces&amp;author=Marais+Sicre,+C.&amp;author=Fieuzal,+R.&amp;author=Baup,+F.&amp;publication_year=2020&amp;journal=Int.+J.+Appl.+Earth+Obs.+Geoinf.&amp;volume=84&amp;pages=101%E2%80%93172&amp;doi=10.1016/j.jag.2019.101972">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.jag.2019.101972">CrossRef</a></p>
+
+<p>[29]<a name="B29-sustainability-13-09462"></a> Mahmoudzadeh, H.; Matinfar, H.R.; Taghizadeh-Mehrjardi, R.;
+    Kerry, R. Spatial prediction of soil organic carbon using machine
+    learning techniques in western Iran. [Geoderma Reg.]
+    <strong>2020</strong>, [12], 1095. <a href="https://scholar.google.com/scholar_lookup?title=Spatial+prediction+of+soil+organic+carbon+using+machine+learning+techniques+in+western+Iran&amp;author=Mahmoudzadeh,+H.&amp;author=Matinfar,+H.R.&amp;author=Taghizadeh-Mehrjardi,+R.&amp;author=Kerry,+R.&amp;publication_year=2020&amp;journal=Geoderma+Reg.&amp;volume=12&amp;pages=1095&amp;doi=10.1016/j.geodrs.2020.e00260">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.geodrs.2020.e00260">CrossRef</a></p>
+
+<p>[30]<a name="B30-sustainability-13-09462"></a> Castaldi, F.; Palombo, A.; Santini, F.; Pascucci, S.; Pignatti, S.
+    Evaluation of the potential of the current and forthcoming
+    multispectral and hyperspectral imagers to estimate soil texture and
+    organic carbon. [Remote Sens. Environ.] <strong>2016</strong>,
+    [179], 54–65. <a href="https://scholar.google.com/scholar_lookup?title=Evaluation+of+the+potential+of+the+current+and+forthcoming+multispectral+and+hyperspectral+imagers+to+estimate+soil+texture+and+organic+carbon&amp;author=Castaldi,+F.&amp;author=Palombo,+A.&amp;author=Santini,+F.&amp;author=Pascucci,+S.&amp;author=Pignatti,+S.&amp;publication_year=2016&amp;journal=Remote+Sens.+Environ.&amp;volume=179&amp;pages=54%E2%80%9365&amp;doi=10.1016/j.rse.2016.03.025">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.rse.2016.03.025">CrossRef</a></p>
+
+<p>[31]<a name="B31-sustainability-13-09462"></a> Guirado, E.; Tabik, S.; Alcaraz-Segura, D.; Cabello, J.; Herrera,
+    F. Deep-Learning Convolutional Neural Networks for scattered shrub
+    detection with Google Earth Imagery. [Remote Sens.]
+    <strong>2017</strong>, [9], 1706. <a href="https://scholar.google.com/scholar_lookup?title=Deep-Learning+Convolutional+Neural+Networks+for+scattered+shrub+detection+with+Google+Earth+Imagery&amp;author=Guirado,+E.&amp;author=Tabik,+S.&amp;author=Alcaraz-Segura,+D.&amp;author=Cabello,+J.&amp;author=Herrera,+F.&amp;publication_year=2017&amp;journal=Remote+Sens.&amp;volume=9&amp;pages=1706">Google
+    Scholar</a>]</p>
+
+<p>[32]<a name="B32-sustainability-13-09462"></a> Cheng, W.; Zhang, X.; Wang, K.; Dai, X. Integrating classification
+    and regression tree (CART) with GIS for assessment of heavy metals
+    pollution. [Environ. Monit. Assess.] <strong>2009</strong>,
+    [158], 419–431. <a href="https://scholar.google.com/scholar_lookup?title=Integrating+classification+and+regression+tree+(CART)+with+GIS+for+assessment+of+heavy+metals+pollution&amp;author=Cheng,+W.&amp;author=Zhang,+X.&amp;author=Wang,+K.&amp;author=Dai,+X.&amp;publication_year=2009&amp;journal=Environ.+Monit.+Assess.&amp;volume=158&amp;pages=419%E2%80%93431&amp;doi=10.1007/s10661-008-0594-x">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1007/s10661-008-0594-x">CrossRef</a></p>
+
+<p>[33]<a name="B33-sustainability-13-09462"></a> Lees, B.G.; Ritman, K. Decision-tree and rule-induction approach to
+    integration of remotely sensed and GIS data in mapping vegetation in
+    disturbed or hilly environments. [Environ. Manag.]
+    <strong>1991</strong>, [15], 823–831. <a href="https://scholar.google.com/scholar_lookup?title=Decision-tree+and+rule-induction+approach+to+integration+of+remotely+sensed+and+GIS+data+in+mapping+vegetation+in+disturbed+or+hilly+environments&amp;author=Lees,+B.G.&amp;author=Ritman,+K.&amp;publication_year=1991&amp;journal=Environ.+Manag.&amp;volume=15&amp;pages=823%E2%80%93831&amp;doi=10.1007/BF02394820">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1007/BF02394820">CrossRef</a></p>
+
+<p>[34]<a name="B34-sustainability-13-09462"></a> Lu, D.; Mausel, P.; Brondizio, E.; Moran, E. Change detection
+    techniques. [Int. J. Remote Sens.] <strong>2004</strong>,
+    [25], 2365–2407. <a href="https://scholar.google.com/scholar_lookup?title=Change+detection+techniques&amp;author=Lu,+D.&amp;author=Mausel,+P.&amp;author=Brondizio,+E.&amp;author=Moran,+E.&amp;publication_year=2004&amp;journal=Int.+J.+Remote+Sens.&amp;volume=25&amp;pages=2365%E2%80%932407&amp;doi=10.1080/0143116031000139863">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1080/0143116031000139863">CrossRef</a></p>
+
+<p>[35]<a name="B35-sustainability-13-09462"></a> Emamgolizadeh, S.; Bateni, S.M.; Shahsavani, D.; Ashrafi, T.;
+    Ghorbani, H. Estimation of soil cation exchange capacity using
+    Genetic Expression Programming (GEP) and Multivariate Adaptive
+    Regression Splines. [J. Hydrol.] <strong>2015</strong>,
+    [529], 1590–1600. <a href="https://scholar.google.com/scholar_lookup?title=Estimation+of+soil+cation+exchange+capacity+using+Genetic+Expression+Programming+(GEP)+and+Multivariate+Adaptive+Regression+Splines&amp;author=Emamgolizadeh,+S.&amp;author=Bateni,+S.M.&amp;author=Shahsavani,+D.&amp;author=Ashrafi,+T.&amp;author=Ghorbani,+H.&amp;publication_year=2015&amp;journal=J.+Hydrol.&amp;volume=529&amp;pages=1590%E2%80%931600&amp;doi=10.1016/j.jhydrol.2015.08.025">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.jhydrol.2015.08.025">CrossRef</a></p>
+
+<p>[36]<a name="B36-sustainability-13-09462"></a> Kuter, S.; Akyurek, Z.; Weber, G. Remote Sensing of Environment
+    Retrieval of fractional snow covered area from MODIS data by
+    multivariate adaptive regression splines. [Remote Sens.
+    Environ.] <strong>2018</strong>, [205], 236–252.
+    <a href="https://scholar.google.com/scholar_lookup?title=Remote+Sensing+of+Environment+Retrieval+of+fractional+snow+covered+area+from+MODIS+data+by+multivariate+adaptive+regression+splines&amp;author=Kuter,+S.&amp;author=Akyurek,+Z.&amp;author=Weber,+G.&amp;publication_year=2018&amp;journal=Remote+Sens.+Environ.&amp;volume=205&amp;pages=236%E2%80%93252&amp;doi=10.1016/j.rse.2017.11.021">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.rse.2017.11.021">CrossRef</a></p>
+
+<p>[37]<a name="B37-sustainability-13-09462"></a> MAE. [Ministerio del Ambiente del Ecuador, Sistema de Clasificación
+    de los Ecosistemas del Ecuador Continental];
+    Subsecretaría de Patrimonio Natural: Quito,
+    Ecuador, 2012.]</p>
+
+<p>[38]<a name="B38-sustainability-13-09462"></a> Padró, J.; Muñoz, F.; Ávila, L.; Pesquer, L.; Pons, X. Radiometric
+    Correction of Landsat-8 and Sentinel-2A Scenes Using Drone Imagery
+    in Synergy with Field Spectroradiometry. [Remote
+    Sens.] <strong>2018</strong>, [10], 1687. <a href="https://scholar.google.com/scholar_lookup?title=Radiometric+Correction+of+Landsat-8+and+Sentinel-2A+Scenes+Using+Drone+Imagery+in+Synergy+with+Field+Spectroradiometry&amp;author=Padr%C3%B3,+J.&amp;author=Mu%C3%B1oz,+F.&amp;author=%C3%81vila,+L.&amp;author=Pesquer,+L.&amp;author=Pons,+X.&amp;publication_year=2018&amp;journal=Remote+Sens.&amp;volume=10&amp;pages=1687&amp;doi=10.3390/rs10111687">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.3390/rs10111687">CrossRef</a></p>
+
+<p>[39]<a name="B39-sustainability-13-09462"></a> IGM, Geoportal. 2016. Available online:
+    <a href="http://www.igm.gob.ec/index.php/en/servicios">http://www.igm.gob.ec/index.php/en/servicios</a> (accessed on 16
+    February 2009).]</p>
+
+<p>[40]<a name="B40-sustainability-13-09462"></a> QGIS Development Team QGIS Geographic Information System. Open
+    Source Geospatial Foundation Project. 2020. Available online:
+    <a href="http://qgis.osgeo.org/">http://qgis.osgeo.org</a> (accessed on 14
+    September 2020).]</p>
+
+<p>[41]<a name="B41-sustainability-13-09462"></a> Comité de la Subcuenca Chambo. [Aportes a la Planificación Para la
+    Gestión Integral de Los Recursos Hídricos]; CESA:
+    Riobamba, Ecuador, 2015. <a href="https://scholar.google.com/scholar_lookup?title=Aportes+a+la+Planificaci%C3%B3n+Para+la+Gesti%C3%B3n+Integral+de+Los+Recursos+H%C3%ADdricos&amp;author=Comit%C3%A9+de+la+Subcuenca+Chambo&amp;publication_year=2015">Google
+    Scholar</a>]</p>
+
+<p>[42]<a name="B42-sustainability-13-09462"></a> FAO. [Food and Agriculture Organization of the United
+    Nations]; Global Soil Organic Carbon: Roma,
+    Italy, 2017. <a href="https://scholar.google.com/scholar_lookup?title=Food+and+Agriculture+Organization+of+the+United+Nations&amp;author=FAO&amp;publication_year=2017">Google
+    Scholar</a>]</p>
+
+<p>[43]<a name="B43-sustainability-13-09462"></a> Ayala, J.; Márquez, C.; García, V.; Recalde-Moreno, C.G.;
+    Rodríguez-Llerena, M.V.; Damián-Carrión, D.A. Land cover
+    classification in an Ecuadorian mountain geosystem using a random
+    forest classifier, spectral vegetation indices, and ancillary
+    geographic data. [Geoscience] <strong>2017</strong>,
+    [7], 34. <a href="https://scholar.google.com/scholar_lookup?title=Land+cover+classification+in+an+Ecuadorian+mountain+geosystem+using+a+random+forest+classifier,+spectral+vegetation+indices,+and+ancillary+geographic+data&amp;author=Ayala,+J.&amp;author=M%C3%A1rquez,+C.&amp;author=Garc%C3%ADa,+V.&amp;author=Recalde-Moreno,+C.G.&amp;author=Rodr%C3%ADguez-Llerena,+M.V.&amp;author=Dami%C3%A1n-Carri%C3%B3n,+D.A.&amp;publication_year=2017&amp;journal=Geoscience&amp;volume=7&amp;pages=34&amp;doi=10.3390/geosciences7020034">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.3390/geosciences7020034">CrossRef</a></p>
+
+<p>[44]<a name="B44-sustainability-13-09462"></a> Conoscenti, C.; Ciaccio, M.; Caraballo-arias, N.A.;
+    Gómez-gutiérrez, A.; Rotigliano, E.; Agnesi, V. Geomorphology
+    Assessment of susceptibility to earth- flow landslide using logistic
+    regression and multivariate adaptive regression splines: A case of
+    the Belice River basin (western Sicily, Italy).
+    [Geomorphology] <strong>2015</strong>, [242], 49–64.
+    <a href="https://scholar.google.com/scholar_lookup?title=Geomorphology+Assessment+of+susceptibility+to+earth-+flow+landslide+using+logistic+regression+and+multivariate+adaptive+regression+splines:+A+case+of+the+Belice+River+basin+(western+Sicily,+Italy)&amp;author=Conoscenti,+C.&amp;author=Ciaccio,+M.&amp;author=Caraballo-arias,+N.A.&amp;author=G%C3%B3mez-guti%C3%A9rrez,+A.&amp;author=Rotigliano,+E.&amp;author=Agnesi,+V.&amp;publication_year=2015&amp;journal=Geomorphology&amp;volume=242&amp;pages=49%E2%80%9364&amp;doi=10.1016/j.geomorph.2014.09.020">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.geomorph.2014.09.020">CrossRef</a></p>
+
+<p>[45]<a name="B45-sustainability-13-09462"></a> Rouse, J.W.; Haas, R.H.; Schell, J.A.; Deering, D.W. [Monitoring
+    Vegetation Systems in the Great Plains with ERTS];
+    Freden, S.C., Mercanti, E.P., Becker, M.A., Eds.; Third Earth
+    Resources Technology Satellite-1 Symposium-Volume I: Technical
+    Presentations. NASA SP-351; NASA: Washington, DC, USA, 1974; pp.
+    309–335.]</p>
+
+<p>[46]<a name="B46-sustainability-13-09462"></a> Huete, A.R. A soil-adjusted vegetation index (SAVI). [Remote Sens.
+    Environ.] <strong>1988</strong>, [25], 295–309.
+    <a href="https://scholar.google.com/scholar_lookup?title=A+soil-adjusted+vegetation+index+(SAVI)&amp;author=Huete,+A.R.&amp;publication_year=1988&amp;journal=Remote+Sens.+Environ.&amp;volume=25&amp;pages=295%E2%80%93309&amp;doi=10.1016/0034-4257(88)90106-X">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/0034-4257(88)90106-X">CrossRef</a></p>
+
+<p>[47]<a name="B47-sustainability-13-09462"></a> Gitelson, A.A.; Kaufman, Y.J.; Stark, R.; Rundquist, D. New
+    algorithms for remote estimation of the vegetation fraction. [Remote
+    Sens.] <strong>2002</strong>, [80], 76–87. <a href="https://scholar.google.com/scholar_lookup?title=New+algorithms+for+remote+estimation+of+the+vegetation+fraction&amp;author=Gitelson,+A.A.&amp;author=Kaufman,+Y.J.&amp;author=Stark,+R.&amp;author=Rundquist,+D.&amp;publication_year=2002&amp;journal=Remote+Sens.&amp;volume=80&amp;pages=76%E2%80%9387">Google
+    Scholar</a>]</p>
+
+<p>[48]<a name="B48-sustainability-13-09462"></a> Jiang, Z.; Huete, A.R.; Didan, K.; Miura, T. Development of a
+    two-band enhanced vegetation index without a blue band. [Remote
+    Sens. Environ.] <strong>2008</strong>, [112],
+    3833–3845. <a href="https://scholar.google.com/scholar_lookup?title=Development+of+a+two-band+enhanced+vegetation+index+without+a+blue+band&amp;author=Jiang,+Z.&amp;author=Huete,+A.R.&amp;author=Didan,+K.&amp;author=Miura,+T.&amp;publication_year=2008&amp;journal=Remote+Sens.+Environ.&amp;volume=112&amp;pages=3833%E2%80%933845&amp;doi=10.1016/j.rse.2008.06.006">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.rse.2008.06.006">CrossRef</a></p>
+
+<p>[49]<a name="B49-sustainability-13-09462"></a> Chen, W.; Liu, L.; Zhang, C.; Li, S.; Chen, X. A new bare-soil
+    index for rapid mapping developing areas using LANDSAT 8 data. [Int.
+    Soc. Photohrammetry Remote Sens.] <strong>2004</strong>,
+    [40], 139. <a href="https://scholar.google.com/scholar_lookup?title=A+new+bare-soil+index+for+rapid+mapping+developing+areas+using+LANDSAT+8+data&amp;author=Chen,+W.&amp;author=Liu,+L.&amp;author=Zhang,+C.&amp;author=Li,+S.&amp;author=Chen,+X.&amp;publication_year=2004&amp;journal=Int.+Soc.+Photohrammetry+Remote+Sens.&amp;volume=40&amp;pages=139&amp;doi=10.5194/isprsarchives-XL-4-139-2014">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.5194/isprsarchives-XL-4-139-2014">CrossRef</a></p>
+
+<p>[50]<a name="B50-sustainability-13-09462"></a> Fisher, R.A. [Statistical Methods and Scientific
+    Inference]; Oxford University Press: Oxford, UK, 1991.
+    <a href="https://scholar.google.com/scholar_lookup?title=Statistical+Methods+and+Scientific+Inference&amp;author=Fisher,+R.A.&amp;publication_year=1991">Google
+    Scholar</a>]</p>
+
+<p>[51]<a name="B51-sustainability-13-09462"></a> Awiti, A.; Walsh, M.; Shepherd,
+    K.; Kinyamario, J. <em>Soil Condition classification using infrared
+    spectroscopy: A proposition for assessment of soil condition along a
+    tropical forest-cropland chronosequence</em>. [Geoderma] <strong>2008</strong>, [143],
+    73–84. <a href="https://scholar.google.com/scholar_lookup?title=Soil+Condition+classification+using+infrared+spectroscopy:+A+proposition+for+assessment+of+soil+condition+along+a+tropical+forest-cropland+chronosequence&amp;author=Awiti,+A.&amp;author=Walsh,+M.&amp;author=Shepherd,+K.&amp;author=Kinyamario,+J.&amp;publication_year=2008&amp;journal=Geoderma&amp;volume=143&amp;pages=73%E2%80%9384&amp;doi=10.1016/j.geoderma.2007.08.021">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.geoderma.2007.08.021">CrossRef</a></p>
+
+<p>[52]<a name="B52-sustainability-13-09462"></a> Michaelsen, J.; Schimel, D.S.; Friedl, M.A.; Davis, F.W.; Dubayah,
+    R.C. <em>Regression Tree Analysis of satellite and terrain data to guide
+    vegetation sampling and surveys</em>. [J. Veg. Sci.]
+    <strong>1994</strong>, [5], 673–686. <a href="https://scholar.google.com/scholar_lookup?title=Regression+Tree+Analysis+of+satellite+and+terrain+data+to+guide+vegetation+sampling+and+surveys&amp;author=Michaelsen,+J.&amp;author=Schimel,+D.S.&amp;author=Friedl,+M.A.&amp;author=Davis,+F.W.&amp;author=Dubayah,+R.C.&amp;publication_year=1994&amp;journal=J.+Veg.+Sci.&amp;volume=5&amp;pages=673%E2%80%93686&amp;doi=10.2307/3235882">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.2307/3235882">CrossRef</a></p>
+
+<p>[53]<a name="B53-sustainability-13-09462"></a> Asrar, G.; Fuchs, M.; Kanemasu,
+    E.T.; Hatfield, J.L.; Yoshida, M. <em>Estimates of leaf area index from
+    spectral reflectance of wheat under different cultural practices and solar
+    angle</em>. [Remote Sens. Environ.] <strong>1984</strong>, [17], 300–306. <a href="https://scholar.google.com/scholar_lookup?title=Estimates+of+leaf+area+index+from+spectral+reflectance+of+wheat+under+different+cultural+practices+and+solar+angle&amp;author=Asrar,+G.&amp;author=Fuchs,+M.&amp;author=Kanemasu,+E.T.&amp;author=Hatfield,+J.L.&amp;author=Yoshida,+M.&amp;publication_year=1984&amp;journal=Remote+Sens.+Environ.&amp;volume=17&amp;pages=300%E2%80%93306&amp;doi=10.1016/0034-4257(85)90108-7">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/0034-4257(85)90108-7">CrossRef</a></p>
+
+<p>[54]<a name="B54-sustainability-13-09462"></a> Pontius, R.G.; Shusas, E.; McEachern, M. <em>Detecting important
+    categorical land changes while accounting for persistence</em>. [Agric.
+    Ecosyst. Environ.] <strong>2004</strong>, [101],
+    251–268. <a href="https://scholar.google.com/scholar_lookup?title=Detecting+important+categorical+land+changes+while+accounting+for+persistence&amp;author=Pontius,+R.G.&amp;author=Shusas,+E.&amp;author=McEachern,+M.&amp;publication_year=2004&amp;journal=Agric.+Ecosyst.+Environ.&amp;volume=101&amp;pages=251%E2%80%93268&amp;doi=10.1016/j.agee.2003.09.008">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.agee.2003.09.008">CrossRef</a></p>
+
+<p>[55]<a name="B55-sustainability-13-09462"></a> Sherman, G. <em>The PyQGIS Programmer′s Guide</em>; Locate
+    Press: London, UK, 2014. <a href="https://scholar.google.com/scholar_lookup?title=The+PyQGIS+Programmer%E2%80%B2s+Guide&amp;author=Sherman,+G.&amp;publication_year=2014">Google
+    Scholar</a>]</p>
+
+<p>[56]<a name="B56-sustainability-13-09462"></a> Fernández, G.F.; Obermeier, W.A.;
+    Gerique, A.; López, M.F.; Lehnert, L.W. <em>Land cover change in the Andes of
+    Southern Ecuador—Patterns and drivers</em>. [Remote Sens.] <strong>2015</strong>, [7],
+    2509–2542. <a href="https://scholar.google.com/scholar_lookup?title=Land+cover+change+in+the+Andes+of+Southern+Ecuador%E2%80%94Patterns+and+drivers&amp;author=Fern%C3%A1ndez,+G.F.&amp;author=Obermeier,+W.A.&amp;author=Gerique,+A.&amp;author=L%C3%B3pez,+M.F.&amp;author=Lehnert,+L.W.&amp;publication_year=2015&amp;journal=Remote+Sens.&amp;volume=7&amp;pages=2509%E2%80%932542&amp;doi=10.3390/rs70302509">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.3390/rs70302509">CrossRef</a></p>
+
+<p>[57]<a name="B57-sustainability-13-09462"></a> <em>Salford Predictive Modeler Machine Learning and Predictive
+    Analytics Software</em>. 2018. Available online:
+    <a href="https://www.salford-systems.com/">https://www.salford-systems.com</a>
+    (accessed on 12 February 2019).]</p>
+
+<p>[58]<a name="B58-sustainability-13-09462"></a> Spearman, C.E. <em>“General
+    intelligence”, objectively determined and measured</em>. [Am. J. Psychol.]
+    <strong>1904</strong>, [15], 201–293. <a href="https://scholar.google.com/scholar_lookup?title=%E2%80%9CGeneral+intelligence%E2%80%9D,+objectively+determined+and+measured&amp;author=Spearman,+C.E.&amp;publication_year=1904&amp;journal=Am.+J.+Psychol.&amp;volume=15&amp;pages=201%E2%80%93293&amp;doi=10.2307/1412107">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.2307/1412107">CrossRef</a></p>
+
+<p>[59]<a name="B59-sustainability-13-09462"></a> Kweku, M.; Osei, B. <em>Post-pruning
+    in regression tree induction: An integrated approach</em>. [Expert Syst. Appl.]
+    <strong>2008</strong>, [34], 1481–1490. <a href="https://scholar.google.com/scholar_lookup?title=Post-pruning+in+regression+tree+induction:+An+integrated+approach&amp;author=Kweku,+M.&amp;author=Osei,+B.&amp;publication_year=2008&amp;journal=Expert+Syst.+Appl.&amp;volume=34&amp;pages=1481%E2%80%931490&amp;doi=10.1016/j.eswa.2007.01.017">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.eswa.2007.01.017">CrossRef</a></p>
+
+<p>[60]<a name="B60-sustainability-13-09462"></a> Breiman, L.; Friedman, J.; Olshen, R.; Stone, C. <em>Classification
+    and Regression Trees</em>; Mathematics &amp; Statistics: Boca
+    Raton, FL, USA, 1984. <a href="https://scholar.google.com/scholar_lookup?title=Classification+and+Regression+Trees&amp;author=Breiman,+L.&amp;author=Friedman,+J.&amp;author=Olshen,+R.&amp;author=Stone,+C.&amp;publication_year=1984">Google
+    Scholar</a>]</p>
+
+<p>[61]<a name="B61-sustainability-13-09462"></a> Heredia, S.E.; Bruno, C.;
+    Balzarini, M. <em>Identification of relationships between yields and
+    environmental variables via classification and regression trees (CART)</em>.
+    [Interciencia] <strong>2010</strong>, [35], 876–882. <a href="https://scholar.google.com/scholar_lookup?title=Identification+of+relationships+between+yields+and+environmental+variables+via+classification+and+regression+trees+(CART)&amp;author=Heredia,+S.E.&amp;author=Bruno,+C.&amp;author=Balzarini,+M.&amp;publication_year=2010&amp;journal=Interciencia&amp;volume=35&amp;pages=876%E2%80%93882">Google
+    Scholar</a>]</p>
+
+<p>[62]<a name="B62-sustainability-13-09462"></a> Chen, W.; Xie, X.; Wang, J.;
+    Pradhan, B.; Hong, H.; Bui, D.T.; Duan, Z.; Ma, J. <em>A comparative study of
+    logistic model tree, random forest, and classification and regression tree
+    models for spatial prediction of landslide susceptibility</em>. [CATENA]
+    <strong>2017</strong>, [151], 147–160. <a href="https://scholar.google.com/scholar_lookup?title=A+comparative+study+of+logistic+model+tree,+random+forest,+and+classification+and+regression+tree+models+for+spatial+prediction+of+landslide+susceptibility&amp;author=Chen,+W.&amp;author=Xie,+X.&amp;author=Wang,+J.&amp;author=Pradhan,+B.&amp;author=Hong,+H.&amp;author=Bui,+D.T.&amp;author=Duan,+Z.&amp;author=Ma,+J.&amp;publication_year=2017&amp;journal=CATENA&amp;volume=151&amp;pages=147%E2%80%93160&amp;doi=10.1016/j.catena.2016.11.032">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.catena.2016.11.032">CrossRef</a></p>
+
+<p>[63]<a name="B63-sustainability-13-09462"></a> Friedman, J.H.; Hastie, T.;
+    Tibshirani, R. <em>Additive logistic regression: A statistical view of
+    boosting</em>. [Ann. Stat.] <strong>2000</strong>, [28], 337–407. <a href="https://scholar.google.com/scholar_lookup?title=Additive+logistic+regression:+A+statistical+view+of+boosting&amp;author=Friedman,+J.H.&amp;author=Hastie,+T.&amp;author=Tibshirani,+R.&amp;publication_year=2000&amp;journal=Ann.+Stat.&amp;volume=28&amp;pages=337%E2%80%93407&amp;doi=10.1214/aos/1016218223">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1214/aos/1016218223">CrossRef</a></p>
+
+<p>[64]<a name="B64-sustainability-13-09462"></a> Francis, L. <em>Neural Networks
+    Demystified</em>. In Proceedings of the Casualty Actuarial Society Forum,
+    Winter, Las Vegas, NV, USA, 12–13 March 2001; pp. 253–320. <a href="https://scholar.google.com/scholar_lookup?title=Neural+Networks+Demystified&amp;conference=Proceedings+of+the+Casualty+Actuarial+Society+Forum,+Winter&amp;author=Francis,+L.&amp;publication_year=2001&amp;pages=253%E2%80%93320">Google
+    Scholar</a>]</p>
+
+<p>[65]<a name="B65-sustainability-13-09462"></a> Lewis, P.A.; Stevens, J.G.
+    <em>Nonlinear Modeling of Time Series Using Multivariate Adaptive Regression
+    Splines (MARS)</em>. [J. Am. Stat. Assoc.] <strong>1991</strong>, [86], 416–450. <a href="https://scholar.google.com/scholar_lookup?title=Nonlinear+Modeling+of+Time+Series+Using+Multivariate+Adaptive+Regression+Splines+(MARS)&amp;author=Lewis,+P.A.&amp;author=Stevens,+J.G.&amp;publication_year=1991&amp;journal=J.+Am.+Stat.+Assoc.&amp;volume=86&amp;pages=416%E2%80%93450&amp;doi=10.1080/01621459.1991.10475126">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1080/01621459.1991.10475126">CrossRef</a></p>
+
+<p>[66]<a name="B66-sustainability-13-09462"></a> Hansen, P.M.; Schjoerring, J.K.
+    <em>Reflectance measurement of canopy biomass and nitrogen status in wheat
+    crops using normalized difference vegetation indices and partial least
+    squares regression.</em> [Remote Sens. Environ.] <strong>2003</strong>, [86], 542–553.
+    <a href="https://scholar.google.com/scholar_lookup?title=Reflectance+measurement+of+canopy+biomass+and+nitrogen+status+in+wheat+crops+using+normalized+difference+vegetation+indices+and+partial+least+squares+regression&amp;author=Hansen,+P.M.&amp;author=Schjoerring,+J.K.&amp;publication_year=2003&amp;journal=Remote+Sens.+Environ.&amp;volume=86&amp;pages=542%E2%80%93553&amp;doi=10.1016/S0034-4257(03)00131-7">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/S0034-4257(03)00131-7">CrossRef</a></p>
+
+<p>[67]<a name="B67-sustainability-13-09462"></a> Bhunia, G.S.; Shit, P.K.;
+    Pourghasemi, H.R. <em>Soil organic carbon mapping using remote sensing
+    techniques and multivariate regression model</em>. [Geocarto Int.] <strong>2017</strong>,
+    [5], 2–25. <a href="https://scholar.google.com/scholar_lookup?title=Soil+organic+carbon+mapping+using+remote+sensing+techniques+and+multivariate+regression+model&amp;author=Bhunia,+G.S.&amp;author=Shit,+P.K.&amp;author=Pourghasemi,+H.R.&amp;publication_year=2017&amp;journal=Geocarto+Int.&amp;volume=5&amp;pages=2%E2%80%9325&amp;doi=10.1080/10106049.2017.1381179">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1080/10106049.2017.1381179">CrossRef</a></p>
+
+<p>[68]<a name="B68-sustainability-13-09462"></a> García, V.; Márquez, C.;
+    Isenhart, T.; Rodríguez, M.; Crespo, S.; Cifuentes, A. <em>Evaluating the
+    conservation state of the paramo ecosystem: An object-based image analysis
+    and CART algorithm approach for central Ecuador</em>. [Heliyon] <strong>2019</strong>, [5],
+    e02701. <a href="https://scholar.google.com/scholar_lookup?title=Evaluating+the+conservation+state+of+the+paramo+ecosystem:+An+object-based+image+analysis+and+CART+algorithm+approach+for+central+Ecuador&amp;author=Garc%C3%ADa,+V.&amp;author=M%C3%A1rquez,+C.&amp;author=Isenhart,+T.&amp;author=Rodr%C3%ADguez,+M.&amp;author=Crespo,+S.&amp;author=Cifuentes,+A.&amp;publication_year=2019&amp;journal=Heliyon&amp;volume=5&amp;pages=e02701&amp;doi=10.1016/j.heliyon.2019.e02701&amp;pmid=31720462">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1016/j.heliyon.2019.e02701">CrossRef</a>{.cross-ref}]
+    [<a href="https://www.ncbi.nlm.nih.gov/pubmed/31720462">PubMed</a></p>
+
+<p>[69]<a name="B69-sustainability-13-09462"></a> Fisher, R.A. <em>On the Probable
+    Error of a Coefficient of Correlation Deduced from a Small Sample</em>. [Metron]
+    <strong>1921</strong>, [2], 3–32. <a href="https://scholar.google.com/scholar_lookup?title=On+the+Probable+Error+of+a+Coefficient+of+Correlation+Deduced+from+a+Small+Sample&amp;author=Fisher,+R.A.&amp;publication_year=1921&amp;journal=Metron&amp;volume=2&amp;pages=3%E2%80%9332">Google
+    Scholar</a>]</p>
+
+<p>[70]<a name="B70-sustainability-13-09462"></a> Fleishman, A. <em>A method for simulating non-normal distributions</em>.
+    [Psychometrika] <strong>1978</strong>, [43],
+    521–531. <a href="https://scholar.google.com/scholar_lookup?title=A+method+for+simulating+non-normal+distributions&amp;author=Fleishman,+A.&amp;publication_year=1978&amp;journal=Psychometrika&amp;volume=43&amp;pages=521%E2%80%93531&amp;doi=10.1007/BF02293811">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1007/BF02293811">CrossRef</a></p>
+
+<p>[71]<a name="B71-sustainability-13-09462"></a> Dempsted, A.P.; Laird, N.M.; Rubin, D.B. <em>Maximun likelihood from
+    incomplete data via the EM algorithm</em>. [J. Am. Stat.
+    Assoc.] <strong>1977</strong>, [81], 41–60.
+    <a href="https://scholar.google.com/scholar_lookup?title=Maximun+likelihood+from+incomplete+data+via+the+EM+algorithm&amp;author=Dempsted,+A.P.&amp;author=Laird,+N.M.&amp;author=Rubin,+D.B.&amp;publication_year=1977&amp;journal=J.+Am.+Stat.+Assoc.&amp;volume=81&amp;pages=41%E2%80%9360">Google
+    Scholar</a>]</p>
+
+<p>[72]<a name="B72-sustainability-13-09462"></a> Kuhn, N.; Hoffmann, T.; Schwanghart, W.; Dotterweich, M.
+    <em>Agricultural soil erosion and global carbon cycle: Controversy over?</em>
+    [Earth Surf. Process. Landf.] <strong>2009</strong>,
+    [34], 1033–1038. <a href="https://scholar.google.com/scholar_lookup?title=Agricultural+soil+erosion+and+global+carbon+cycle:+Controversy+over?&amp;author=Kuhn,+N.&amp;author=Hoffmann,+T.&amp;author=Schwanghart,+W.&amp;author=Dotterweich,+M.&amp;publication_year=2009&amp;journal=Earth+Surf.+Process.+Landf.&amp;volume=34&amp;pages=1033%E2%80%931038&amp;doi=10.1002/esp.1796">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1002/esp.1796">CrossRef</a></p>
+
+<p>[73]<a name="B73-sustainability-13-09462"></a> Peters, M.K.; Hemp, A.; Appelhans, T.; Becker, J.N.; Behler, C.;
+    Classen, A.; Detsch, F.; Ensslin, A.; Ferger, S.W.; Frederiksen,
+    S.B.; et al. <em>Climate–land-use interactions shape tropical mountain
+    biodiversity and ecosystem functions</em>. [Nature]
+    <strong>2019</strong>, [568], 88–92. <a href="https://scholar.google.com/scholar_lookup?title=Climate%E2%80%93land-use+interactions+shape+tropical+mountain+biodiversity+and+ecosystem+functions&amp;author=Peters,+M.K.&amp;author=Hemp,+A.&amp;author=Appelhans,+T.&amp;author=Becker,+J.N.&amp;author=Behler,+C.&amp;author=Classen,+A.&amp;author=Detsch,+F.&amp;author=Ensslin,+A.&amp;author=Ferger,+S.W.&amp;author=Frederiksen,+S.B.&amp;publication_year=2019&amp;journal=Nature&amp;volume=568&amp;pages=88%E2%80%9392&amp;doi=10.1038/s41586-019-1048-z">Google
+    Scholar</a>
+    , <a href="https://doi.org/10.1038/s41586-019-1048-z">CrossRef</a></p>
+
+<p>[74]<a name="74-sustainability-13-09462"></a> Rubin, D.B.; Schenker, N. <em>Interval estimation from multiply-imputed
+    data: A case study using census agriculture industry codes</em>. [J. Off.
+    Stat.] <strong>1987</strong>, [60], 375–387.
+    <a href="https://scholar.google.com/scholar_lookup?title=Interval+estimation+from+multiply-imputed+data:+A+case+study+using+census+agriculture+industry+codes&amp;author=Rubin,+D.B.&amp;author=Schenker,+N.&amp;publication_year=1987&amp;journal=J.+Off.+Stat.&amp;volume=60&amp;pages=375%E2%80%93387">Google
+    Scholar</a>]</p>
+
+
+
+
+    </article>
+    <span class="print-footer">Identification of a set of variables for the classification of páramo soils using a nonparametric model, remote sensing, and organic carbon - August 23, 2021 - marc vallbé</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:marc.vallbe@upc.edu"><span class="icon-mail3"></span></a></li>    
+    
+      <li>
+        <a href="//vallbe.github.io"><span class="icon-html-five"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.twitter.com/fisica_profe"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/vallbe"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="/research/articles/feed.xml"><span class="icon-rss2"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+    <span>&#127279; 2021 &nbsp;&nbsp;<a href="mailto:marc.vallbe@upc.edu">MARC VALLBÉ</a></span></br> <br>
+<!-- <span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for Remote Sensing and Natural Resources </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> -->
+</div>  
+</footer>
+
+  </body>
+</html>
