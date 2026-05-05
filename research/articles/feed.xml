@@ -5,8 +5,8 @@
     <description>Articles on own resarch</description>
     <link>http://localhost:4000/research/articles/</link>
     <atom:link href="http://localhost:4000/research/articles/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Mar 2026 20:05:10 +0100</pubDate>
-    <lastBuildDate>Sat, 21 Mar 2026 20:05:10 +0100</lastBuildDate>
+    <pubDate>Tue, 05 May 2026 09:47:13 +0200</pubDate>
+    <lastBuildDate>Tue, 05 May 2026 09:47:13 +0200</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -78,7 +78,7 @@
 
 &lt;p&gt;&lt;label for=&quot;fig_2&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fig_2&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/research/articles//assets/img/2025-12/20260313.png&quot; /&gt;&lt;br /&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; &lt;a href=&quot;https://www.youtube.com/watch?v=kOvgMw4DCJk&quot;&gt;Video sample&lt;/a&gt; of the VR drill&amp;amp;blast training simulator.&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;The narrative of the MineXR project begins not in a classroom, but with a stark reminder of human vulnerability within the industrial landscape. Recent incidents underscored a persistent truth: injuries and fatalities resulting from accidents during student practical training remain among the most pressing concerns for universities offering mining engineering degrees. This served as the catalyst for an interdisciplinary team of researchers to unite under the banner of the Unite! Seed Fund for Teaching and Learning. They recognized that, while real-world mining operations demand seamless team coordination for safety, traditional teaching methods were fundamentally limited, unable to safely expose students to collaborative, high-risk environments. Thus, the project was framed with a mission to develop Extended Reality (XR) mine environments specifically for students pursuing Bachelor’s and Master’s degrees, serving as a complementary approach to safety learning.&lt;/p&gt;
+&lt;p&gt;The narrative of the MineXR project begins not in a classroom, but with a stark reminder of human vulnerability within the industrial landscape. &lt;a href=&quot;https://www.euronews.com/2023/03/09/three-killed-after-tunnel-collapses-in-spanish-potash-mine&quot;&gt;Recent incidents&lt;/a&gt; underscored a persistent truth: injuries and fatalities resulting from accidents during student practical training remain among &lt;a href=&quot;https://elpais.com/espana/catalunya/2023-11-24/la-upc-rinde-homenaje-a-dos-de-los-geologos-muertos-en-el-accidente-de-la-mina-de-suria-alumnos-de-un-master.html&quot;&gt;the most pressing concerns for universities&lt;/a&gt; offering mining engineering degrees. This served as the catalyst for an interdisciplinary team of researchers to unite under the banner of the Unite! Seed Fund for Teaching and Learning. They recognized that, while real-world mining operations demand seamless team coordination for safety, traditional teaching methods were fundamentally limited, unable to safely expose students to collaborative, high-risk environments. Thus, the project was framed with a mission to develop Extended Reality (XR) mine environments specifically for students pursuing Bachelor’s and Master’s degrees, serving as a complementary approach to safety learning.&lt;/p&gt;
 
 &lt;p&gt;&lt;label for=&quot;fig_3&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fig_3&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/research/articles//assets/img/2025-12/quarry.jpg&quot; /&gt;&lt;br /&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; The 360° Cam App offering an immersive walkthrough of the Piramida-Kostrza granite quarry in Poland.&lt;/span&gt;&lt;/p&gt;
 
